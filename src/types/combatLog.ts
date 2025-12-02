@@ -5,6 +5,8 @@ export interface CombatLogEntry {
   target: string;
   damage: number;
   damageType: string;
+  isCritical: boolean;
+  isHeavyHit: boolean;
 }
 
 export interface PlayerStats {
@@ -28,4 +30,27 @@ export interface PlayerDPSData {
   dataPoints: DPSDataPoint[];
   totalDamage: number;
   duration: number;
+}
+
+export interface SkillDamage {
+  skill: string;
+  damage: number;
+  hits: number;
+}
+
+export interface SkillBreakdown {
+  skill: string;
+  normalHits: number;
+  criticalHits: number;
+  heavyCriticalHits: number;
+  heavyHits: number;
+}
+
+export interface SkillHitRate {
+  skill: string;
+  totalHits: number;
+  criticalHitCount: number;
+  heavyHitCount: number;
+  criticalHitRate: number;
+  heavyHitRate: number;
 }

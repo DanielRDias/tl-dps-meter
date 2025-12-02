@@ -20,7 +20,8 @@ export class CombatLogParser {
         try {
           const timestamp = this.parseTimestamp(parts[0].trim());
           const damage = parseInt(parts[4].trim());
-          const isCrit = parseInt(parts[5].trim()) === 1;
+          const isCritical = parseInt(parts[5].trim()) === 1;
+          const isHeavyHit = parseInt(parts[6].trim()) === 1;
           const abilityName = parts[2].trim();
           const playerName = parts[8].trim();
           const targetName = parts[9].trim();
@@ -35,7 +36,9 @@ export class CombatLogParser {
             action: abilityName,
             target: targetName,
             damage,
-            damageType: isCrit ? 'Critical' : 'Normal',
+            damageType: isCritical ? 'Critical' : 'Normal',
+            isCritical,
+            isHeavyHit,
           });
         } catch (e) {
           console.debug('Failed to parse line:', line);

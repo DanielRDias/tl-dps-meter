@@ -20,6 +20,24 @@ const COLORS = [
   '#F7DC6F', '#BB8FCE', '#85C1E2', '#F8B739', '#52C19B',
 ];
 
+// Deterministic color by string (stable across renders)
+const stringToColor = (s: string) => {
+  // simple hash
+  let hash = 0;
+  for (let i = 0; i < s.length; i++) {
+    // eslint-disable-next-line no-bitwise
+    hash = s.charCodeAt(i) + ((hash << 5) - hash);
+    // keep in 32-bit int
+    // eslint-disable-next-line no-bitwise
+    hash = hash & hash;
+  }
+  // Use HSL for broad palette
+  const hue = Math.abs(hash) % 360;
+  const saturation = 65;
+  const lightness = 50;
+  return `hsl(${hue} ${saturation}% ${lightness}%)`;
+};
+
 const DPSChart: React.FC<DPSChartProps> = ({ data }) => {
   if (data.length === 0) {
     return <div className="empty-state">No DPS data available</div>;
@@ -60,7 +78,7 @@ const DPSChart: React.FC<DPSChartProps> = ({ data }) => {
               key={player.playerName}
               type="monotone"
               dataKey={player.playerName}
-              stroke={COLORS[index % COLORS.length]}
+              stroke={index < COLORS.length ? COLORS[index] : stringToColor(player.playerName)}
               dot={false}
               isAnimationActive={false}
               strokeWidth={2}

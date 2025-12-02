@@ -1,10 +1,13 @@
 import React, { useRef } from 'react';
 
 interface FileUploadProps {
-  onFileUpload: (file: File) => void;
+  // New: supports uploading multiple files
+  onFilesUpload?: (files: File[]) => void;
+  // Backwards-compatible single-file handler (optional)
+  onFileUpload?: (file: File) => void;
 }
 
-const FileUpload: React.FC<FileUploadProps> = ({ onFileUpload }) => {
+const FileUpload: React.FC<FileUploadProps> = ({ onFilesUpload, onFileUpload }) => {
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handleClick = () => {
@@ -12,11 +15,12 @@ const FileUpload: React.FC<FileUploadProps> = ({ onFileUpload }) => {
   };
 
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0];
-    if (file) {
-      onFileUpload(file);
+    const files = event.target.files ? Array.from(event.target.files) : [];
+    if (files.length > 0) {
+      if (onFilesUpload) onFilesUpload(files);
+      else if (onFileUpload) onFileUpload(files[0]);
     }
-    // Reset input so same file can be selected again
+    // Reset input so same file(s) can be selected again
     if (fileInputRef.current) {
       fileInputRef.current.value = '';
     }
@@ -30,9 +34,10 @@ const FileUpload: React.FC<FileUploadProps> = ({ onFileUpload }) => {
   const handleDrop = (e: React.DragEvent<HTMLDivElement>) => {
     e.preventDefault();
     e.stopPropagation();
-    const file = e.dataTransfer.files?.[0];
-    if (file) {
-      onFileUpload(file);
+    const files = e.dataTransfer.files ? Array.from(e.dataTransfer.files) : [];
+    if (files.length > 0) {
+      if (onFilesUpload) onFilesUpload(files);
+      else if (onFileUpload) onFileUpload(files[0]);
     }
   };
 
@@ -52,6 +57,7 @@ const FileUpload: React.FC<FileUploadProps> = ({ onFileUpload }) => {
         ref={fileInputRef}
         type="file"
         accept=".txt"
+        multiple
         onChange={handleFileChange}
         style={{ display: 'none' }}
       />
