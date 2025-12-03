@@ -171,6 +171,84 @@ body {
   gap: 8px;
 }
 
+/* DamageByTarget styles */
+.damage-by-target {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.target-card {
+  border: 1px solid var(--border-color);
+  background: rgba(0,0,0,0.25);
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.target-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.target-toggle {
+  background: transparent;
+  color: var(--text-primary);
+  border: none;
+  font-size: 1.05em;
+  cursor: pointer;
+}
+
+.target-name {
+  font-size: 1.05em;
+  color: var(--secondary-color);
+  margin: 0;
+}
+
+.target-summary {
+  margin-left: auto;
+  color: var(--text-secondary);
+}
+
+.caster-block {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px dashed rgba(255,255,255,0.03);
+}
+
+.caster-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.caster-name {
+  color: var(--text-primary);
+}
+
+.caster-damage {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.skills-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 8px;
+}
+
+.skills-table th,
+.skills-table td {
+  padding: 6px 8px;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-secondary);
+}
+
+.skills-table td.skill-name {
+  color: var(--text-primary);
+}
+
 .file-item {
   display: flex;
   justify-content: space-between;

@@ -7,6 +7,7 @@ import FileUpload from './FileUpload';
 import SkillChart from './SkillChart';
 import SkillBreakdownChart from './SkillBreakdownChart';
 import SkillHitRateChart from './SkillHitRateChart';
+import DamageByTarget from './DamageByTarget';
 import '../styles/DPSMeter.css';
 
 interface UploadedFile {
@@ -16,6 +17,23 @@ interface UploadedFile {
   uploadedAt: Date;
 }
 
+interface DamageByTargetSkill {
+  skill: string;
+  damage: number;
+  hits: number;
+}
+
+interface DamageByCaster {
+  caster: string;
+  totalDamage: number;
+  skills: DamageByTargetSkill[];
+}
+
+interface DamageByTargetType {
+  target: string;
+  casters: DamageByCaster[];
+}
+
 const DPSMeter: React.FC = () => {
   const [uploadedFiles, setUploadedFiles] = useState<UploadedFile[]>([]);
   const [playerStats, setPlayerStats] = useState<PlayerStats[]>([]);
@@ -23,6 +41,7 @@ const DPSMeter: React.FC = () => {
   const [skillDamage, setSkillDamage] = useState<SkillDamage[]>([]);
   const [skillBreakdown, setSkillBreakdown] = useState<SkillBreakdown[]>([]);
   const [skillHitRates, setSkillHitRates] = useState<SkillHitRate[]>([]);
+  const [damageByTarget, setDamageByTarget] = useState<DamageByTargetType[]>([]);
   const [isLoaded, setIsLoaded] = useState(false);
 
   // Recompute stats whenever uploadedFiles changes
@@ -103,6 +122,34 @@ const DPSMeter: React.FC = () => {
       heavyHitRate: (hitRateMap[k].heavyHitCount / hitRateMap[k].totalHits) * 100,
     }));
     setSkillHitRates(hitRateArr);
+    
+    // Build damage-by-target aggregation: target -> caster -> skills
+    const targetMap: Record<string, Record<string, { totalDamage: number; skills: Record<string, { damage: number; hits: number }> }>> = {};
+    allEntries.forEach((e) => {
+      const target = e.target || 'Unknown';
+      const caster = e.source || 'Unknown';
+      const skill = e.action || 'Unknown';
+      if (!targetMap[target]) targetMap[target] = {};
+      if (!targetMap[target][caster]) targetMap[target][caster] = { totalDamage: 0, skills: {} };
+      targetMap[target][caster].totalDamage += e.damage || 0;
+      if (!targetMap[target][caster].skills[skill]) targetMap[target][caster].skills[skill] = { damage: 0, hits: 0 };
+      targetMap[target][caster].skills[skill].damage += e.damage || 0;
+      targetMap[target][caster].skills[skill].hits += 1;
+    });
+
+    const damageByTargetArr: DamageByTargetType[] = Object.keys(targetMap).map((t) => ({
+      target: t,
+      casters: Object.keys(targetMap[t]).map((c) => ({
+        caster: c,
+        totalDamage: targetMap[t][c].totalDamage,
+        skills: Object.keys(targetMap[t][c].skills).map((s) => ({
+          skill: s,
+          damage: targetMap[t][c].skills[s].damage,
+          hits: targetMap[t][c].skills[s].hits,
+        })).sort((a, b) => b.damage - a.damage),
+      })).sort((a, b) => b.totalDamage - a.totalDamage),
+    }));
+    setDamageByTarget(damageByTargetArr);
     setIsLoaded(true);
   };
   // Handle multiple files uploaded - accumulate logs
@@ -228,6 +275,11 @@ const DPSMeter: React.FC = () => {
           <div className="charts-section">
             <h2>Damage By Skill</h2>
             <SkillChart data={skillDamage} />
+          </div>
+
+          <div className="charts-section">
+            <h2>Damage To Targets</h2>
+            <DamageByTarget data={damageByTarget} />
           </div>
 
           <div className="charts-section">
