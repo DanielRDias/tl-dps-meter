@@ -9,7 +9,6 @@ import {
   Tooltip,
   CartesianGrid,
   Legend,
-  Cell,
 } from 'recharts';
 
 interface SkillBreakdownChartProps {
