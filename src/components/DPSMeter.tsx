@@ -9,17 +9,103 @@ import SkillBreakdownChart from './SkillBreakdownChart';
 import SkillHitRateChart from './SkillHitRateChart';
 import '../styles/DPSMeter.css';
 
+interface UploadedFile {
+  id: string;
+  fileName: string;
+  entries: CombatLogEntry[];
+  uploadedAt: Date;
+}
+
 const DPSMeter: React.FC = () => {
-  const [entries, setEntries] = useState<CombatLogEntry[]>([]);
+  const [uploadedFiles, setUploadedFiles] = useState<UploadedFile[]>([]);
   const [playerStats, setPlayerStats] = useState<PlayerStats[]>([]);
   const [dpsData, setDpsData] = useState<PlayerDPSData[]>([]);
   const [skillDamage, setSkillDamage] = useState<SkillDamage[]>([]);
   const [skillBreakdown, setSkillBreakdown] = useState<SkillBreakdown[]>([]);
   const [skillHitRates, setSkillHitRates] = useState<SkillHitRate[]>([]);
-  const [sessions, setSessions] = useState<Array<{ fileName: string; entries: CombatLogEntry[] }>>([]);
   const [isLoaded, setIsLoaded] = useState(false);
-  const [fileName, setFileName] = useState<string>('');
-  // Handle multiple files uploaded
+
+  // Recompute stats whenever uploadedFiles changes
+  const recalculateStats = (files: UploadedFile[]) => {
+    const allEntries = files.flatMap(f => f.entries);
+    
+    if (allEntries.length === 0) {
+      setPlayerStats([]);
+      setDpsData([]);
+      setSkillDamage([]);
+      setSkillBreakdown([]);
+      setSkillHitRates([]);
+      setIsLoaded(false);
+      return;
+    }
+
+    setPlayerStats(CombatLogParser.getPlayerStats(allEntries));
+    setDpsData(CombatLogParser.calculatePlayerDPS(allEntries));
+
+    // Aggregate damage by skill/ability
+    const skillMap: Record<string, { damage: number; hits: number }> = {};
+    allEntries.forEach((e) => {
+      const key = e.action || 'Unknown';
+      if (!skillMap[key]) skillMap[key] = { damage: 0, hits: 0 };
+      skillMap[key].damage += e.damage || 0;
+      skillMap[key].hits += 1;
+    });
+
+    const skillArr: SkillDamage[] = Object.keys(skillMap).map((k) => ({
+      skill: k,
+      damage: skillMap[k].damage,
+      hits: skillMap[k].hits,
+    }));
+    setSkillDamage(skillArr);
+
+    // Compute skill breakdown by hit type
+    const breakdownMap: Record<string, { normalHits: number; criticalHits: number; heavyHits: number; heavyCriticalHits: number }> = {};
+    allEntries.forEach((e) => {
+      const key = e.action || 'Unknown';
+      if (!breakdownMap[key]) {
+        breakdownMap[key] = { normalHits: 0, criticalHits: 0, heavyHits: 0, heavyCriticalHits: 0 };
+      }
+      if (e.isCritical && e.isHeavyHit) {
+        breakdownMap[key].heavyCriticalHits += 1;
+      } else if (e.isCritical) {
+        breakdownMap[key].criticalHits += 1;
+      } else if (e.isHeavyHit) {
+        breakdownMap[key].heavyHits += 1;
+      } else {
+        breakdownMap[key].normalHits += 1;
+      }
+    });
+
+    const breakdownArr: SkillBreakdown[] = Object.keys(breakdownMap).map((k) => ({
+      skill: k,
+      ...breakdownMap[k],
+    }));
+    setSkillBreakdown(breakdownArr);
+
+    // Compute hit rates per skill
+    const hitRateMap: Record<string, { totalHits: number; criticalHitCount: number; heavyHitCount: number }> = {};
+    allEntries.forEach((e) => {
+      const key = e.action || 'Unknown';
+      if (!hitRateMap[key]) {
+        hitRateMap[key] = { totalHits: 0, criticalHitCount: 0, heavyHitCount: 0 };
+      }
+      hitRateMap[key].totalHits += 1;
+      if (e.isCritical) hitRateMap[key].criticalHitCount += 1;
+      if (e.isHeavyHit) hitRateMap[key].heavyHitCount += 1;
+    });
+
+    const hitRateArr: SkillHitRate[] = Object.keys(hitRateMap).map((k) => ({
+      skill: k,
+      totalHits: hitRateMap[k].totalHits,
+      criticalHitCount: hitRateMap[k].criticalHitCount,
+      heavyHitCount: hitRateMap[k].heavyHitCount,
+      criticalHitRate: (hitRateMap[k].criticalHitCount / hitRateMap[k].totalHits) * 100,
+      heavyHitRate: (hitRateMap[k].heavyHitCount / hitRateMap[k].totalHits) * 100,
+    }));
+    setSkillHitRates(hitRateArr);
+    setIsLoaded(true);
+  };
+  // Handle multiple files uploaded - accumulate logs
   const handleFilesUpload = async (files: File[]) => {
     // Read all files in parallel
     const readers = files.map(
@@ -34,88 +120,28 @@ const DPSMeter: React.FC = () => {
 
     try {
       const results = await Promise.all(readers);
+      const newUploadedFiles: UploadedFile[] = [];
 
-      const fileSessions: Array<{ fileName: string; entries: CombatLogEntry[] }> = [];
       results.forEach(({ fileName: fName, content }) => {
         const parsed = CombatLogParser.parseLog(content);
-        fileSessions.push({ fileName: fName, entries: parsed });
-        if (parsed.length === 0) {
+        if (parsed.length > 0) {
+          newUploadedFiles.push({
+            id: `${fName}-${Date.now()}-${Math.random()}`,
+            fileName: fName,
+            entries: parsed,
+            uploadedAt: new Date(),
+          });
+        } else {
           console.warn(`No entries parsed from ${fName}`);
           console.debug('First 5 lines of file:', content.split('\n').slice(0, 5));
         }
       });
 
-      // Merge entries from all sessions
-      const merged = fileSessions.flatMap((s) => s.entries);
-
-      if (merged.length > 0) {
-        setSessions(fileSessions);
-        setEntries(merged);
-        setPlayerStats(CombatLogParser.getPlayerStats(merged));
-        setDpsData(CombatLogParser.calculatePlayerDPS(merged));
-        // Aggregate damage by skill/ability
-        const skillMap: Record<string, { damage: number; hits: number }> = {};
-        merged.forEach((e) => {
-          const key = e.action || 'Unknown';
-          if (!skillMap[key]) skillMap[key] = { damage: 0, hits: 0 };
-          skillMap[key].damage += e.damage || 0;
-          skillMap[key].hits += 1;
-        });
-
-        const skillArr: SkillDamage[] = Object.keys(skillMap).map((k) => ({
-          skill: k,
-          damage: skillMap[k].damage,
-          hits: skillMap[k].hits,
-        }));
-        setSkillDamage(skillArr);
-
-        // Compute skill breakdown by hit type
-        const breakdownMap: Record<string, { normalHits: number; criticalHits: number; heavyHits: number; heavyCriticalHits: number }> = {};
-        merged.forEach((e) => {
-          const key = e.action || 'Unknown';
-          if (!breakdownMap[key]) {
-            breakdownMap[key] = { normalHits: 0, criticalHits: 0, heavyHits: 0, heavyCriticalHits: 0 };
-          }
-          if (e.isCritical && e.isHeavyHit) {
-            breakdownMap[key].heavyCriticalHits += 1;
-          } else if (e.isCritical) {
-            breakdownMap[key].criticalHits += 1;
-          } else if (e.isHeavyHit) {
-            breakdownMap[key].heavyHits += 1;
-          } else {
-            breakdownMap[key].normalHits += 1;
-          }
-        });
-
-        const breakdownArr: SkillBreakdown[] = Object.keys(breakdownMap).map((k) => ({
-          skill: k,
-          ...breakdownMap[k],
-        }));
-        setSkillBreakdown(breakdownArr);
-
-        // Compute hit rates per skill
-        const hitRateMap: Record<string, { totalHits: number; criticalHitCount: number; heavyHitCount: number }> = {};
-        merged.forEach((e) => {
-          const key = e.action || 'Unknown';
-          if (!hitRateMap[key]) {
-            hitRateMap[key] = { totalHits: 0, criticalHitCount: 0, heavyHitCount: 0 };
-          }
-          hitRateMap[key].totalHits += 1;
-          if (e.isCritical) hitRateMap[key].criticalHitCount += 1;
-          if (e.isHeavyHit) hitRateMap[key].heavyHitCount += 1;
-        });
-
-        const hitRateArr: SkillHitRate[] = Object.keys(hitRateMap).map((k) => ({
-          skill: k,
-          totalHits: hitRateMap[k].totalHits,
-          criticalHitCount: hitRateMap[k].criticalHitCount,
-          heavyHitCount: hitRateMap[k].heavyHitCount,
-          criticalHitRate: (hitRateMap[k].criticalHitCount / hitRateMap[k].totalHits) * 100,
-          heavyHitRate: (hitRateMap[k].heavyHitCount / hitRateMap[k].totalHits) * 100,
-        }));
-        setSkillHitRates(hitRateArr);
-        setFileName(fileSessions.map(s => s.fileName).join(', '));
-        setIsLoaded(true);
+      if (newUploadedFiles.length > 0) {
+        // Accumulate files instead of replacing
+        const updatedFiles = [...uploadedFiles, ...newUploadedFiles];
+        setUploadedFiles(updatedFiles);
+        recalculateStats(updatedFiles);
       } else {
         const totalLines = results.reduce((acc, r) => acc + r.content.split('\n').length, 0);
         alert(`No combat entries found in the uploaded files.\n\nFiles: ${files.length} | Total lines: ${totalLines}.\nCheck browser console for details.`);
@@ -123,6 +149,22 @@ const DPSMeter: React.FC = () => {
     } catch (err) {
       console.error('Failed to read uploaded files', err);
       alert('Failed to read uploaded files. See console for details.');
+    }
+  };
+
+  // Remove a file from the list
+  const handleRemoveFile = (fileId: string) => {
+    const updated = uploadedFiles.filter(f => f.id !== fileId);
+    setUploadedFiles(updated);
+    recalculateStats(updated);
+  };
+
+  // Clear all files
+  const handleClearAll = () => {
+    if (uploadedFiles.length === 0) return;
+    if (window.confirm('Are you sure you want to clear all uploaded files?')) {
+      setUploadedFiles([]);
+      recalculateStats([]);
     }
   };
 
@@ -138,10 +180,44 @@ const DPSMeter: React.FC = () => {
       {isLoaded && (
         <div className="meter-content">
           <div className="file-info">
-            <span className="file-name">📄 {fileName}</span>
-            <span className="entry-count">
-              {sessions.length > 0 ? `${sessions.length} file(s) · ` : ''}{entries.length} combat entries | {playerStats.length} players
-            </span>
+            <div className="file-info-header">
+              <div className="file-summary">
+                <span className="entry-count">
+                  📊 {uploadedFiles.length} file(s) · {uploadedFiles.reduce((sum, f) => sum + f.entries.length, 0)} combat entries | {playerStats.length} players
+                </span>
+              </div>
+              {uploadedFiles.length > 0 && (
+                <button className="btn-clear-all" onClick={handleClearAll}>
+                  Clear All
+                </button>
+              )}
+            </div>
+            
+            {uploadedFiles.length > 0 && (
+              <div className="uploaded-files-list">
+                <h3>Uploaded Files:</h3>
+                <ul>
+                  {uploadedFiles.map((file) => (
+                    <li key={file.id} className="file-item">
+                      <div className="file-item-info">
+                        <span className="file-name">📄 {file.fileName}</span>
+                        <span className="file-entries">({file.entries.length} entries)</span>
+                        <span className="file-time">
+                          {file.uploadedAt.toLocaleTimeString()}
+                        </span>
+                      </div>
+                      <button
+                        className="btn-remove"
+                        onClick={() => handleRemoveFile(file.id)}
+                        title="Remove this file"
+                      >
+                        ✕
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
           </div>
 
           <div className="charts-section">

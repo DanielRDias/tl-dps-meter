@@ -118,13 +118,24 @@ body {
 
 .file-info {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  gap: 15px;
   margin-bottom: 30px;
-  padding: 15px 20px;
+  padding: 20px;
   background: rgba(78, 205, 196, 0.05);
   border-left: 4px solid var(--secondary-color);
   border-radius: 8px;
+}
+
+.file-info-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.file-summary {
+  flex: 1;
 }
 
 .file-name {
@@ -136,6 +147,121 @@ body {
 .entry-count {
   color: var(--text-secondary);
   font-size: 0.95em;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Uploaded Files List */
+.uploaded-files-list {
+  margin-top: 10px;
+}
+
+.uploaded-files-list h3 {
+  font-size: 0.95em;
+  color: var(--text-secondary);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.uploaded-files-list ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.file-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.file-item:hover {
+  background: rgba(78, 205, 196, 0.1);
+  border-color: var(--secondary-color);
+}
+
+.file-item-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  min-width: 0;
+}
+
+.file-item .file-name {
+  font-size: 0.95em;
+  color: var(--text-primary);
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.file-entries {
+  color: var(--text-secondary);
+  font-size: 0.85em;
+  white-space: nowrap;
+}
+
+.file-time {
+  color: var(--text-secondary);
+  font-size: 0.8em;
+  white-space: nowrap;
+}
+
+/* Buttons */
+.btn-remove {
+  background: rgba(255, 107, 107, 0.2);
+  color: var(--primary-color);
+  border: 1px solid rgba(255, 107, 107, 0.4);
+  border-radius: 4px;
+  padding: 6px 10px;
+  cursor: pointer;
+  font-size: 0.9em;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  margin-left: 8px;
+}
+
+.btn-remove:hover {
+  background: rgba(255, 107, 107, 0.4);
+  border-color: var(--primary-color);
+  transform: scale(1.05);
+}
+
+.btn-remove:active {
+  transform: scale(0.95);
+}
+
+.btn-clear-all {
+  background: rgba(255, 107, 107, 0.15);
+  color: var(--primary-color);
+  border: 1px solid rgba(255, 107, 107, 0.3);
+  border-radius: 6px;
+  padding: 8px 14px;
+  cursor: pointer;
+  font-size: 0.9em;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn-clear-all:hover {
+  background: rgba(255, 107, 107, 0.25);
+  border-color: var(--primary-color);
+  box-shadow: 0 2px 8px rgba(255, 107, 107, 0.2);
+}
+
+.btn-clear-all:active {
+  transform: scale(0.98);
 }
 
 /* Charts Section */
@@ -328,10 +454,26 @@ body {
     font-size: 1.8em;
   }
 
-  .file-info {
+  .file-info-header {
     flex-direction: column;
     align-items: flex-start;
-    gap: 10px;
+  }
+
+  .file-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .file-item-info {
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+    width: 100%;
+  }
+
+  .btn-remove {
+    align-self: flex-end;
+    margin-left: 0;
+    margin-top: -30px;
   }
 
   .stats-table {
