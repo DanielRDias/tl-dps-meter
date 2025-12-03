@@ -17,7 +17,7 @@ The **Throne and Liberty DPS Meter** is a professional-grade React application d
 
 ### Installation
 ```bash
-cd workspace
+cd tl-dps-meter
 npm install
 npm run dev
 ```
@@ -83,20 +83,37 @@ workspace/
 
 ## 📊 Combat Log Format
 
-The parser expects logs in this exact format:
+The parser expects logs in CSV format with the following structure:
 
 ```
-[HH:MM:SS] SourceName -> TargetName: ActionName Damage (DamageType)
+CombatLogVersion,4
+20251202-04:34:24:465,DamageDone,Manaball,948361757,596,1,0,kMaxDamageByCriticalDecision,Livingg,Practice Dummy
+20251202-04:34:25:351,DamageDone,Manaball,948692280,181,0,0,kNormalHit,Livingg,Practice Dummy
+20251202-04:34:26:570,DamageDone,Manaball,948823370,340,0,0,kNormalHit,Livingg,Practice Dummy
+20251202-04:34:27:887,DamageDone,Manaball,948361757,220,0,0,kNormalHit,Livingg,Practice Dummy
+20251202-04:34:28:787,DamageDone,Manaball,948692280,317,0,0,kNormalHit,Livingg,Practice Dummy
+20251202-04:34:30:054,DamageDone,Manaball,948823370,596,1,0,kMaxDamageByCriticalDecision,Livingg,Practice Dummy
+20251202-04:34:32:666,DamageDone,Hellfire Rain,968464227,4501,1,0,kMaxDamageByCriticalDecision,Livingg,Practice Dummy
+20251202-04:34:32:667,DamageDone,Hellfire Rain,968464227,4096,0,0,kNormalHit,Livingg,Practice Dummy
+20251202-04:34:32:667,DamageDone,Hellfire Rain,968464227,4074,0,0,kNormalHit,Livingg,Practice Dummy
+20251202-04:34:33:350,DamageDone,Hellfire Rain,968464227,1421,0,0,kNormalHit,Livingg,Practice Dummy
+20251202-04:34:33:350,DamageDone,Hellfire Rain,968464227,5000,1,0,kMaxDamageByCriticalDecision,Livingg,Practice Dummy
+20251202-04:34:33:350,DamageDone,Hellfire Rain,968464227,5000,1,0,kMaxDamageByCriticalDecision,Livingg,Practice Dummy
+20251202-04:34:33:351,DamageDone,Hellfire Rain,968464227,5314,0,1,kNormalHit,Livingg,Practice Dummy
+20251202-04:34:33:351,DamageDone,Hellfire Rain,968464227,2650,0,0,kNormalHit,Livingg,Practice Dummy
 ```
 
 ### Format Breakdown
-- **[HH:MM:SS]**: Timestamp in 24-hour format
-- **SourceName**: Attacker/player name (can contain spaces or special chars)
-- **->**: Literal arrow separator
-- **TargetName**: Target/boss name
-- **ActionName**: Type of action (Attack, Spell, Skill, etc.)
-- **Damage**: Integer damage value
-- **(DamageType)**: Damage category in parentheses
+- **Timestamp**: Date-time in format `YYYYMMDD-HH:MM:SS:mmm` (milliseconds)
+- **LogType**: Event type, typically `DamageDone`
+- **SkillName**: Name of the skill/ability used
+- **SkillId**: Unique identifier for the skill
+- **DamageAmount**: Integer damage value dealt
+- **CriticalHit**: Binary flag (0 or 1) indicating critical strike
+- **HeavyHit**: Binary flag (0 or 1) indicating heavy/enhanced hit
+- **DamageType**: Damage classification (e.g., `kNormalHit`, `kMaxDamageByCriticalDecision`)
+- **CasterName**: Name of attacker/player
+- **TargetName**: Name of target/enemy
 
 ### Valid Examples
 ```
@@ -257,7 +274,7 @@ npm run preview  # Test production build locally
 
 ### Parse Issues
 **Problem**: "No combat entries found"
-- **Solution**: Verify log format matches exactly: `[HH:MM:SS] Name -> Target: Action Damage (Type)`
+- **Solution**: Verify log format is CSV with columns: Timestamp,LogType,SkillName,SkillId,DamageAmount,CriticalHit,HeavyHit,DamageType,CasterName,TargetName
 
 **Problem**: Only some entries parse
 - **Solution**: Check timestamps and damage values are correctly formatted

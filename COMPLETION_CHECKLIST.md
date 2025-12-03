@@ -285,7 +285,7 @@ npm run preview
 | **TypeScript Version** | 5.x |
 | **Bundle Size** | 541 KB (minified) |
 | **Supported Browsers** | Chrome, Firefox, Safari, Edge (90+) |
-| **Log Format** | `[HH:MM:SS] Source -> Target: Action Damage (Type)` |
+| **Log Format** | CSV with Timestamp,LogType,SkillName,SkillId,DamageAmount,CriticalHit,HeavyHit,DamageType,CasterName,TargetName |
 | **Max Log Entries** | 100,000+ (performance dependent) |
 | **Chart Resolution** | 1 second intervals |
 | **Player Limit** | Unlimited |

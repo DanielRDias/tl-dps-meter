@@ -44,12 +44,25 @@
 
 ### Log Format
 
-Parser expects: `[HH:MM:SS] Source -> Target: Action Damage (Type)`
+Parser expects CSV format with columns: `Timestamp,LogType,SkillName,SkillId,DamageAmount,CriticalHit,HeavyHit,DamageType,CasterName,TargetName`
 
 Example:
 ```
-[12:34:56] Player1 -> Boss: Attack 1500 (Physical)
-[12:34:57] Player2 -> Boss: Spell 1200 (Magic)
+CombatLogVersion,4
+20251202-04:34:24:465,DamageDone,Manaball,948361757,596,1,0,kMaxDamageByCriticalDecision,Livingg,Practice Dummy
+20251202-04:34:25:351,DamageDone,Manaball,948692280,181,0,0,kNormalHit,Livingg,Practice Dummy
+20251202-04:34:26:570,DamageDone,Manaball,948823370,340,0,0,kNormalHit,Livingg,Practice Dummy
+20251202-04:34:27:887,DamageDone,Manaball,948361757,220,0,0,kNormalHit,Livingg,Practice Dummy
+20251202-04:34:28:787,DamageDone,Manaball,948692280,317,0,0,kNormalHit,Livingg,Practice Dummy
+20251202-04:34:30:054,DamageDone,Manaball,948823370,596,1,0,kMaxDamageByCriticalDecision,Livingg,Practice Dummy
+20251202-04:34:32:666,DamageDone,Hellfire Rain,968464227,4501,1,0,kMaxDamageByCriticalDecision,Livingg,Practice Dummy
+20251202-04:34:32:667,DamageDone,Hellfire Rain,968464227,4096,0,0,kNormalHit,Livingg,Practice Dummy
+20251202-04:34:32:667,DamageDone,Hellfire Rain,968464227,4074,0,0,kNormalHit,Livingg,Practice Dummy
+20251202-04:34:33:350,DamageDone,Hellfire Rain,968464227,1421,0,0,kNormalHit,Livingg,Practice Dummy
+20251202-04:34:33:350,DamageDone,Hellfire Rain,968464227,5000,1,0,kMaxDamageByCriticalDecision,Livingg,Practice Dummy
+20251202-04:34:33:350,DamageDone,Hellfire Rain,968464227,5000,1,0,kMaxDamageByCriticalDecision,Livingg,Practice Dummy
+20251202-04:34:33:351,DamageDone,Hellfire Rain,968464227,5314,0,1,kNormalHit,Livingg,Practice Dummy
+20251202-04:34:33:351,DamageDone,Hellfire Rain,968464227,2650,0,0,kNormalHit,Livingg,Practice Dummy
 ```
 
 ### Testing

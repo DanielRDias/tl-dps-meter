@@ -114,7 +114,7 @@ A sample combat log is included at `public/sample-log.txt` with 30 test entries 
 ## 🐛 Troubleshooting
 
 ### No entries parsed
-- Verify log format matches: `[HH:MM:SS] Name -> Target: Action Damage (Type)`
+- Verify log format is CSV with columns: Timestamp,LogType,SkillName,SkillId,DamageAmount,CriticalHit,HeavyHit,DamageType,CasterName,TargetName
 - Check timestamps are valid (00:00:00 to 23:59:59)
 - Ensure damage values are integers
 
