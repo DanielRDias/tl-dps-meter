@@ -195,9 +195,12 @@ The app handles large combat logs efficiently:
 
 ## Future Enhancements
 
-- [ ] Export statistics as CSV/JSON
-- [ ] Multi-file comparison
-- [ ] Damage type breakdown charts
+- [x] Multi-file comparison
+- [x] Damage type breakdown charts
+- [ ] Save DPS metrics
+- [ ] Share DPS metrics
+- [ ] Class statistics
+- [ ] Analyse rotation
 - [ ] Session recording and playback
 - [ ] Real-time log streaming
 - [ ] Raid/Guild statistics
