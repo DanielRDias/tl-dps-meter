@@ -101,26 +101,28 @@ const DPSMeter: React.FC = () => {
     }));
     setSkillBreakdown(breakdownArr);
 
-    // Compute hit rates per skill
-    const hitRateMap: Record<string, { totalHits: number; criticalHitCount: number; heavyHitCount: number }> = {};
+    // Compute hit rates per skill and caster
+    const hitRateMap: Record<string, { caster: string; skill: string; totalHits: number; normalHits: number; criticalHits: number; heavyHits: number; heavyCriticalHits: number }> = {};
     allEntries.forEach((e) => {
-      const key = e.action || 'Unknown';
+      const caster = e.source || 'Unknown';
+      const skill = e.action || 'Unknown';
+      const key = `${caster}:${skill}`;
       if (!hitRateMap[key]) {
-        hitRateMap[key] = { totalHits: 0, criticalHitCount: 0, heavyHitCount: 0 };
+        hitRateMap[key] = { caster, skill, totalHits: 0, normalHits: 0, criticalHits: 0, heavyHits: 0, heavyCriticalHits: 0 };
       }
       hitRateMap[key].totalHits += 1;
-      if (e.isCritical) hitRateMap[key].criticalHitCount += 1;
-      if (e.isHeavyHit) hitRateMap[key].heavyHitCount += 1;
+      if (e.isCritical && e.isHeavyHit) {
+        hitRateMap[key].heavyCriticalHits += 1;
+      } else if (e.isCritical) {
+        hitRateMap[key].criticalHits += 1;
+      } else if (e.isHeavyHit) {
+        hitRateMap[key].heavyHits += 1;
+      } else {
+        hitRateMap[key].normalHits += 1;
+      }
     });
 
-    const hitRateArr: SkillHitRate[] = Object.keys(hitRateMap).map((k) => ({
-      skill: k,
-      totalHits: hitRateMap[k].totalHits,
-      criticalHitCount: hitRateMap[k].criticalHitCount,
-      heavyHitCount: hitRateMap[k].heavyHitCount,
-      criticalHitRate: (hitRateMap[k].criticalHitCount / hitRateMap[k].totalHits) * 100,
-      heavyHitRate: (hitRateMap[k].heavyHitCount / hitRateMap[k].totalHits) * 100,
-    }));
+    const hitRateArr: SkillHitRate[] = Object.keys(hitRateMap).map((k) => hitRateMap[k]);
     setSkillHitRates(hitRateArr);
     
     // Build damage-by-target aggregation: target -> caster -> skills

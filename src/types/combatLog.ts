@@ -47,10 +47,11 @@ export interface SkillBreakdown {
 }
 
 export interface SkillHitRate {
+  caster: string;
   skill: string;
   totalHits: number;
-  criticalHitCount: number;
-  heavyHitCount: number;
-  criticalHitRate: number;
-  heavyHitRate: number;
+  normalHits: number;
+  criticalHits: number;
+  heavyHits: number;
+  heavyCriticalHits: number;
 }
