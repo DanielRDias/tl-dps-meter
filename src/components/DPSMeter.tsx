@@ -287,7 +287,7 @@ const DPSMeter: React.FC = () => {
           </div>
 
           <div className="charts-section">
-            <h2>Skill Damage Breakdown by Hit Type</h2>
+            <h2>Skill Hits Breakdown by Hit Type</h2>
             <SkillBreakdownChart data={skillBreakdown} />
           </div>
 
