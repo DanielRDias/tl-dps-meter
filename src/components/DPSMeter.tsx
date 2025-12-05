@@ -228,6 +228,19 @@ const DPSMeter: React.FC = () => {
 
       <FileUpload onFilesUpload={handleFilesUpload} />
 
+      {!isLoaded && (
+        <div style={{ width: '100%', maxWidth: 1200, margin: '20px auto', aspectRatio: '16 / 9' }}>
+          <iframe
+            width="100%"
+            height="100%"
+            src="https://www.youtube.com/embed/xwcH8_fV97k"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            style={{ borderRadius: 8, border: 'none' }}
+          />
+        </div>
+      )}
+
       {isLoaded && (
         <div className="meter-content">
           <div className="file-info">
