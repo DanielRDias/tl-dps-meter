@@ -222,8 +222,17 @@ const DPSMeter: React.FC = () => {
   return (
     <div className="dps-meter-container">
       <header className="dps-meter-header">
-        <h1>🗡️ Throne and Liberty DPS Meter</h1>
-        <p>Upload and analyze combat logs</p>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
+          <div>
+            <h1>🗡️ Throne and Liberty DPS Meter</h1>
+            <p>Upload and analyze combat logs</p>
+          </div>
+          <a href="https://buymeacoffee.com/droprate" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+            <button style={{ padding: '10px 16px', background: '#FFDD00', border: 'none', borderRadius: 6, cursor: 'pointer', fontWeight: 'bold', color: '#000' }}>
+              ☕ Buy Me a Coffee
+            </button>
+          </a>
+        </div>
       </header>
 
       <FileUpload onFilesUpload={handleFilesUpload} />
