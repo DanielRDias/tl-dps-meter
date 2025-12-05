@@ -113,6 +113,8 @@ const DPSMeter: React.FC = () => {
       hitRateMap[key].totalHits += 1;
       if (e.isCritical && e.isHeavyHit) {
         hitRateMap[key].heavyCriticalHits += 1;
+        hitRateMap[key].criticalHits += 1;
+        hitRateMap[key].heavyHits += 1;
       } else if (e.isCritical) {
         hitRateMap[key].criticalHits += 1;
       } else if (e.isHeavyHit) {
