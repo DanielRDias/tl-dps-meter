@@ -9,6 +9,8 @@ interface SkillRow {
 interface CasterRow {
   caster: string;
   totalDamage: number;
+  dps: number;
+  duration: number;
   skills: SkillRow[];
 }
 
@@ -50,7 +52,10 @@ const DamageByTarget: React.FC<Props> = ({ data }) => {
                 <div key={`${t.target}-${c.caster}`} className="caster-block">
                   <div className="caster-header">
                     <strong className="caster-name">{c.caster}</strong>
-                    <span className="caster-damage">{c.totalDamage.toLocaleString()} dmg</span>
+                    <span className="caster-damage">
+                      {c.totalDamage.toLocaleString()} dmg · {c.dps.toFixed(1)} dps
+                      <span style={{ opacity: 0.7 }}> ({c.duration}s)</span>
+                    </span>
                   </div>
                   <div className="caster-skills">
                     <table className="skills-table">
