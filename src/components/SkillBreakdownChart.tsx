@@ -36,7 +36,17 @@ const SkillBreakdownChart: React.FC<SkillBreakdownChartProps> = ({ data }) => {
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis type="number" />
           <YAxis type="category" dataKey="skill" width={220} interval={0}/>
-          <Tooltip formatter={(value: any) => [value, 'Hits']} />
+          <Tooltip 
+            formatter={(value: any, name: string) => {
+              const hitTypeMap: Record<string, string> = {
+                normalHits: 'Normal',
+                criticalHits: 'Critical',
+                heavyHits: 'Heavy',
+                heavyCriticalHits: 'Heavy + Critical',
+              };
+              return [value, hitTypeMap[name] || name];
+            }} 
+          />
           <Legend />
           <Bar dataKey="normalHits" stackId="a" fill="#8884d8" name="Normal" barSize={BAR_THICKNESS} />
           <Bar dataKey="criticalHits" stackId="a" fill="#ff7f50" name="Critical" barSize={BAR_THICKNESS} />

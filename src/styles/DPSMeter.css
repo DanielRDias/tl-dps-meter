@@ -524,8 +524,14 @@ body {
   border: 1px solid var(--border-color) !important;
   border-radius: 8px !important;
   padding: 10px !important;
+  color: var(--text-primary) !important;
 }
 
+.recharts-tooltip-label,
+.recharts-tooltip-label-list,
+.recharts-tooltip-item {
+  color: var(--text-primary) !important;
+  
 /* Responsive Design */
 @media (max-width: 768px) {
   .dps-meter-header h1 {
