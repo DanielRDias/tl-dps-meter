@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { retrieveSharedLog } from '../utils/api';
 import type { SharedLogData } from '../utils/api';
 import { CombatLogParser } from '../utils/logParser';
@@ -156,7 +157,23 @@ const SharedView: React.FC<SharedViewProps> = ({ shareId }) => {
   return (
     <div className="shared-view">
       <div className="shared-header">
-        <h1>Combat Log Results</h1>
+        <div className="shared-header-top">
+          <div>
+            <h1>🗡️ Combat Log Results</h1>
+          </div>
+          <div className="shared-header-buttons">
+            <Link to="/" style={{ textDecoration: 'none' }}>
+              <button className="btn-home">
+                📊 Analyze Your Own Logs
+              </button>
+            </Link>
+            <a href="https://buymeacoffee.com/droprate" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+              <button className="btn-coffee">
+                ☕ Buy Me a Coffee
+              </button>
+            </a>
+          </div>
+        </div>
         <div className="shared-info">
           <p>
             <strong>Player:</strong> {sharedData.playerName}
