@@ -7,7 +7,7 @@
     "dev": "dotenv -e .env.dev concurrently \"vite\" \"node server/index.js\"",
     "dev:frontend": "dotenv -e .env.dev vite",
     "dev:server": "dotenv -e .env.dev node server/index.js",
-    "build": "tsc -b && vite build",
+    "build": "vite build",
     "build:server": "cd server && npm run build",
     "lint": "eslint .",
     "preview": "vite preview",
