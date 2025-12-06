@@ -26,6 +26,8 @@ interface DamageByTargetSkill {
 interface DamageByCaster {
   caster: string;
   totalDamage: number;
+  dps: number;
+  duration: number;
   skills: DamageByTargetSkill[];
 }
 
@@ -128,17 +130,29 @@ const DPSMeter: React.FC = () => {
     setSkillHitRates(hitRateArr);
     
     // Build damage-by-target aggregation: target -> caster -> skills
-    const targetMap: Record<string, Record<string, { totalDamage: number; skills: Record<string, { damage: number; hits: number }> }>> = {};
+    const targetMap: Record<string, Record<string, { totalDamage: number; skills: Record<string, { damage: number; hits: number }>; start: number; end: number }>> = {};
     allEntries.forEach((e) => {
       const target = e.target || 'Unknown';
       const caster = e.source || 'Unknown';
       const skill = e.action || 'Unknown';
       if (!targetMap[target]) targetMap[target] = {};
-      if (!targetMap[target][caster]) targetMap[target][caster] = { totalDamage: 0, skills: {} };
-      targetMap[target][caster].totalDamage += e.damage || 0;
-      if (!targetMap[target][caster].skills[skill]) targetMap[target][caster].skills[skill] = { damage: 0, hits: 0 };
-      targetMap[target][caster].skills[skill].damage += e.damage || 0;
-      targetMap[target][caster].skills[skill].hits += 1;
+      if (!targetMap[target][caster]) {
+        targetMap[target][caster] = {
+          totalDamage: 0,
+          skills: {},
+          start: e.timestamp,
+          end: e.timestamp,
+        };
+      }
+
+      const bucket = targetMap[target][caster];
+      bucket.totalDamage += e.damage || 0;
+      bucket.start = Math.min(bucket.start, e.timestamp);
+      bucket.end = Math.max(bucket.end, e.timestamp);
+
+      if (!bucket.skills[skill]) bucket.skills[skill] = { damage: 0, hits: 0 };
+      bucket.skills[skill].damage += e.damage || 0;
+      bucket.skills[skill].hits += 1;
     });
 
     const damageByTargetArr: DamageByTargetType[] = Object.keys(targetMap).map((t) => ({
@@ -146,6 +160,8 @@ const DPSMeter: React.FC = () => {
       casters: Object.keys(targetMap[t]).map((c) => ({
         caster: c,
         totalDamage: targetMap[t][c].totalDamage,
+        duration: Math.max(targetMap[t][c].end - targetMap[t][c].start, 1),
+        dps: targetMap[t][c].totalDamage / Math.max(targetMap[t][c].end - targetMap[t][c].start, 1),
         skills: Object.keys(targetMap[t][c].skills).map((s) => ({
           skill: s,
           damage: targetMap[t][c].skills[s].damage,
