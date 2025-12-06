@@ -1,0 +1,130 @@
+.shared-view {
+  min-height: 100vh;
+  background-color: #0a0a0a;
+  color: #fff;
+}
+
+.shared-header {
+  background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%);
+  padding: 40px 20px;
+  border-bottom: 1px solid #333;
+}
+
+.shared-header h1 {
+  margin: 0 0 20px 0;
+  font-size: 32px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.shared-info {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.shared-info p {
+  margin: 0;
+  color: #ccc;
+  font-size: 14px;
+}
+
+.shared-info strong {
+  color: #ff6b6b;
+  font-weight: 600;
+}
+
+.shared-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.stats-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.stat-card {
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 24px;
+  text-align: center;
+  transition: transform 0.2s, border-color 0.2s;
+  border-left: 4px solid #ff6b6b;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  border-color: #555;
+}
+
+.stat-label {
+  color: #999;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+}
+
+.stat-value {
+  color: #fff;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.chart-section {
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.chart-section h2 {
+  margin: 0 0 20px 0;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.loading,
+.error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-size: 16px;
+  color: #ccc;
+}
+
+.error {
+  color: #ff6b6b;
+}
+
+@media (max-width: 768px) {
+  .shared-header {
+    padding: 24px 16px;
+  }
+
+  .shared-header h1 {
+    font-size: 24px;
+  }
+
+  .shared-info {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .stats-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .chart-section {
+    padding: 16px;
+  }
+}

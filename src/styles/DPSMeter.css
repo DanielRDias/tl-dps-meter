@@ -342,6 +342,37 @@ body {
   transform: scale(0.98);
 }
 
+.button-group {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.btn-share {
+  background: linear-gradient(135deg, var(--primary-color) 0%, #ff5252 100%);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 0.9em;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(255, 107, 107, 0.2);
+}
+
+.btn-share:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 107, 107, 0.4);
+}
+
+.btn-share:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(255, 107, 107, 0.2);
+}
+
 /* Charts Section */
 .charts-section {
   margin-bottom: 50px;

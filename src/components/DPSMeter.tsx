@@ -8,6 +8,7 @@ import SkillChart from './SkillChart';
 import SkillBreakdownChart from './SkillBreakdownChart';
 import SkillHitRateChart from './SkillHitRateChart';
 import DamageByTarget from './DamageByTarget';
+import ShareModal from './ShareModal';
 import '../styles/DPSMeter.css';
 
 interface UploadedFile {
@@ -43,6 +44,8 @@ const DPSMeter: React.FC = () => {
   const [skillHitRates, setSkillHitRates] = useState<SkillHitRate[]>([]);
   const [damageByTarget, setDamageByTarget] = useState<DamageByTargetType[]>([]);
   const [isLoaded, setIsLoaded] = useState(false);
+  const [shareModalOpen, setShareModalOpen] = useState(false);
+  const [selectedPlayer, setSelectedPlayer] = useState<PlayerStats | null>(null);
 
   // Recompute stats whenever uploadedFiles changes
   const recalculateStats = (files: UploadedFile[]) => {
@@ -259,11 +262,24 @@ const DPSMeter: React.FC = () => {
                   📊 {uploadedFiles.length} file(s) · {uploadedFiles.reduce((sum, f) => sum + f.entries.length, 0)} combat entries | {playerStats.length} players
                 </span>
               </div>
-              {uploadedFiles.length > 0 && (
-                <button className="btn-clear-all" onClick={handleClearAll}>
-                  Clear All
-                </button>
-              )}
+              <div className="button-group">
+                {playerStats.length > 0 && (
+                  <button 
+                    className="btn-share" 
+                    onClick={() => {
+                      setSelectedPlayer(playerStats[0]);
+                      setShareModalOpen(true);
+                    }}
+                  >
+                    🔗 Share Results
+                  </button>
+                )}
+                {uploadedFiles.length > 0 && (
+                  <button className="btn-clear-all" onClick={handleClearAll}>
+                    Clear All
+                  </button>
+                )}
+              </div>
             </div>
             
             {uploadedFiles.length > 0 && (
@@ -323,6 +339,19 @@ const DPSMeter: React.FC = () => {
             <StatsTable stats={playerStats} />
           </div>
         </div>
+      )}
+
+      {selectedPlayer && (
+        <ShareModal
+          isOpen={shareModalOpen}
+          playerName={selectedPlayer.name}
+          totalDamage={selectedPlayer.totalDamage}
+          damagePerSecond={selectedPlayer.damagePerSecond}
+          duration={selectedPlayer.endTime - selectedPlayer.startTime}
+          timestamp={selectedPlayer.startTime}
+          logData={uploadedFiles.flatMap(f => f.entries)}
+          onClose={() => setShareModalOpen(false)}
+        />
       )}
     </div>
   );

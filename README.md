@@ -14,6 +14,7 @@ An interactive React application for parsing and analyzing Throne and Liberty co
   - Maximum Hit
   - Combat Duration
 
+- **🔗 Share Your Results**: Generate unique shareable links to let others view your combat analysis without uploading files
 - **Drag & Drop Upload**: Easily upload combat log files with drag and drop or click to browse
 - **Responsive Design**: Works on desktop, tablet, and mobile devices
 - **Dark Theme**: Eye-friendly dark UI optimized for gaming
@@ -33,17 +34,31 @@ git clone <repository-url>
 cd workspace
 ```
 
-2. Install dependencies:
+2. Install dependencies (frontend and backend):
 ```bash
 npm install
+cd server && npm install && cd ..
 ```
 
-3. Start the development server:
+3. Configure environment (optional):
 ```bash
-npm run dev
+# Create .env file with API configuration
+# Default values work for local development
 ```
 
-4. Open your browser and navigate to `http://localhost:5173`
+4. Start the development servers:
+
+   **Terminal 1 - Frontend:**
+   ```bash
+   npm run dev
+   ```
+
+   **Terminal 2 - Backend (for sharing feature):**
+   ```bash
+   npm run dev:server
+   ```
+
+5. Open your browser and navigate to `http://localhost:5173`
 
 ## Usage
 
@@ -63,7 +78,19 @@ After uploading a log file, you'll see:
 
 1. **DPS Chart**: Line graph showing DPS progression for each player over time
 2. **Statistics Table**: Ranked table with detailed stats for each player
-3. **File Information**: Total entries and number of players in the log
+3. **Skill Breakdown**: Analysis of damage by skill/ability
+4. **Damage by Target**: See which enemies took the most damage
+5. **File Information**: Total entries and number of players in the log
+
+### 🔗 Sharing Your Results (NEW!)
+
+1. Click the **"🔗 Share Results"** button after uploading a log
+2. Review your stats in the modal
+3. Click **"Generate Share Link"**
+4. Copy the unique URL and share it with others
+5. Friends can open the link to view your full combat analysis
+
+**For detailed sharing instructions, see [SHARING_QUICKSTART.md](SHARING_QUICKSTART.md)**
 
 ## Combat Log Format
 
