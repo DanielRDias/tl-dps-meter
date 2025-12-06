@@ -1,7 +1,8 @@
+import 'dotenv/config';
 import express, { Request, Response } from 'express';
 import cors from 'cors';
 import bodyParser from 'body-parser';
-import db from './db.js';
+import db from './db-abstract.js';
 import { v4 as uuidv4 } from 'uuid';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -14,6 +15,9 @@ const PORT = process.env.PORT || 3001;
 app.use(cors());
 app.use(bodyParser.json({ limit: '50mb' }));
 app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
+
+// Initialize database on startup
+await db.initialize();
 
 // Routes
 

@@ -12,6 +12,19 @@ dist
 dist-ssr
 *.local
 
+# Environment variables (keep examples, ignore actual configs)
+.env
+.env.dev
+.env.production
+.env.local
+.env.*.local
+!.env.example
+!.env.dev.example
+
+# Compiled TypeScript (keep .ts, ignore .js)
+server/**/*.js
+!server/node_modules/**
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
