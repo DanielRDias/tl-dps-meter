@@ -9,7 +9,7 @@ import {
   Legend,
   ResponsiveContainer,
 } from 'recharts';
-import type { PlayerDPSData } from '../types/combatLog';
+import type { PlayerDPSData } from '../../modules/types/combatLog';
 
 interface DPSChartProps {
   data: PlayerDPSData[];

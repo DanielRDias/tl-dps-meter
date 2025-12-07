@@ -1,5 +1,5 @@
 import React from 'react';
-import type { SkillDamage } from '../types/combatLog';
+import type { SkillDamage } from '../../modules/types/combatLog';
 import {
   ResponsiveContainer,
   BarChart,

@@ -1,4 +1,4 @@
-import type { CombatLogEntry, PlayerStats, PlayerDPSData, DPSDataPoint } from '../types/combatLog';
+import type { CombatLogEntry, PlayerStats, PlayerDPSData, DPSDataPoint } from '../../modules/types/combatLog';
 
 export class CombatLogParser {
   // Parse the Throne and Liberty combat log CSV format

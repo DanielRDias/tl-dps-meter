@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
 import DPSMeter from './components/DPSMeter'
 import About from './components/About'
-import './App.css'
+import '/static/styles/App.css'
 
 function App() {
   return (
