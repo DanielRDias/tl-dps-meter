@@ -62,6 +62,65 @@ body {
   margin-bottom: 40px;
 }
 
+.log-location-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  padding: 12px 20px;
+  background: rgba(78, 205, 196, 0.1);
+  border-radius: 8px;
+  border: 1px solid rgba(78, 205, 196, 0.3);
+}
+
+.location-label {
+  color: var(--text-secondary);
+  font-size: 0.95em;
+  font-weight: 500;
+}
+
+.location-path {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-family: 'Courier New', Courier, monospace;
+  color: var(--secondary-color);
+  font-size: 0.9em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(78, 205, 196, 0.3);
+  user-select: all;
+}
+
+.location-path:hover {
+  background: rgba(78, 205, 196, 0.2);
+  border-color: var(--secondary-color);
+  transform: scale(1.02);
+}
+
+.location-path:active {
+  transform: scale(0.98);
+}
+
+.copy-success {
+  color: var(--success-color);
+  font-size: 0.9em;
+  font-weight: 600;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .upload-box {
   border: 2px dashed var(--border-color);
   border-radius: 12px;
@@ -251,13 +310,19 @@ body {
 
 .file-item {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
   padding: 10px 12px;
   background: rgba(0, 0, 0, 0.3);
   border: 1px solid var(--border-color);
   border-radius: 6px;
   transition: all 0.2s ease;
+}
+
+.file-item > div:first-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
 .file-item:hover {
@@ -317,6 +382,49 @@ body {
 
 .btn-remove:active {
   transform: scale(0.95);
+}
+
+.btn-remove-inline {
+  background: transparent;
+  color: rgba(255, 107, 107, 0.7);
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+  padding: 4px;
+  transition: all 0.2s ease;
+  border-radius: 4px;
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-remove-inline:hover {
+  background: rgba(255, 107, 107, 0.2);
+  transform: scale(1.15);
+}
+
+.btn-remove-inline:active {
+  transform: scale(0.95);
+}
+
+.file-preview {
+  margin-top: 12px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+  border-left: 3px solid var(--secondary-color);
+}
+
+.preview-line {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.8em;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 2px 0;
 }
 
 .btn-clear-all {
@@ -609,4 +717,82 @@ body {
   .stats-table td {
     padding: 8px 5px;
   }
+}
+
+/* Raw Log Viewer Styles */
+.raw-log-viewer {
+  margin-top: 20px;
+  background: var(--background-light);
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+}
+
+.raw-log-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: rgba(78, 205, 196, 0.05);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.raw-log-header h3 {
+  margin: 0;
+  color: var(--text-primary);
+  font-size: 1.3em;
+}
+
+.raw-log-info {
+  color: var(--text-secondary);
+  font-size: 0.9em;
+}
+
+.raw-log-content {
+  max-height: 600px;
+  overflow-y: auto;
+  background: #0d0d0d;
+}
+
+.raw-log-content pre {
+  margin: 0;
+  padding: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.85em;
+  line-height: 1.5;
+  color: #00ff00;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.raw-log-content code {
+  color: #00ff00;
+}
+
+.raw-log-footer {
+  padding: 15px 20px;
+  text-align: center;
+  border-top: 1px solid var(--border-color);
+  background: rgba(78, 205, 196, 0.03);
+}
+
+.btn-load-more {
+  padding: 10px 20px;
+  background: var(--secondary-color);
+  color: var(--background-dark);
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-load-more:hover {
+  background: #3db5ad;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(78, 205, 196, 0.3);
+}
+
+.btn-load-more:active {
+  transform: translateY(0);
 }

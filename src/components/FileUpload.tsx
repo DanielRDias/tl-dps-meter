@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 
 interface FileUploadProps {
   // New: supports uploading multiple files
@@ -9,6 +9,7 @@ interface FileUploadProps {
 
 const FileUpload: React.FC<FileUploadProps> = ({ onFilesUpload, onFileUpload }) => {
   const fileInputRef = useRef<HTMLInputElement>(null);
+  const [copySuccess, setCopySuccess] = useState(false);
 
   const handleClick = () => {
     fileInputRef.current?.click();
@@ -41,13 +42,33 @@ const FileUpload: React.FC<FileUploadProps> = ({ onFilesUpload, onFileUpload }) 
     }
   };
 
+  const handleCopyPath = async () => {
+    const path = '%LOCALAPPDATA%\\TL\\SAVED\\COMBATLOGS';
+    try {
+      await navigator.clipboard.writeText(path);
+      setCopySuccess(true);
+      setTimeout(() => setCopySuccess(false), 2000);
+    } catch (err) {
+      console.error('Failed to copy path:', err);
+    }
+  };
+
   return (
-    <div
-      className="file-upload-container"
-      onDragOver={handleDragOver}
-      onDrop={handleDrop}
-    >
-      <div className="upload-box" onClick={handleClick}>
+    <div className="file-upload-container">
+      <div className="log-location-info">
+        <span className="location-label">📂 Combat logs location:</span>
+        <code className="location-path" onClick={handleCopyPath} title="Click to copy path">
+          %LOCALAPPDATA%\TL\SAVED\COMBATLOGS
+        </code>
+        {copySuccess && <span className="copy-success">✓ Copied!</span>}
+      </div>
+      
+      <div
+        className="upload-box"
+        onClick={handleClick}
+        onDragOver={handleDragOver}
+        onDrop={handleDrop}
+      >
         <div className="upload-icon">📁</div>
         <h3>Drop your combat log here</h3>
         <p>or click to browse</p>

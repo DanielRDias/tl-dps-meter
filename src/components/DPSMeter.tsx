@@ -8,12 +8,14 @@ import SkillChart from './SkillChart';
 import SkillBreakdownChart from './SkillBreakdownChart';
 import SkillHitRateChart from './SkillHitRateChart';
 import DamageByTarget from './DamageByTarget';
+import RawLogViewer from './RawLogViewer';
 import '../styles/DPSMeter.css';
 
 interface UploadedFile {
   id: string;
   fileName: string;
   entries: CombatLogEntry[];
+  rawContent: string;
   uploadedAt: Date;
 }
 
@@ -196,6 +198,7 @@ const DPSMeter: React.FC = () => {
             id: `${fName}-${Date.now()}-${Math.random()}`,
             fileName: fName,
             entries: parsed,
+            rawContent: content,
             uploadedAt: new Date(),
           });
         } else {
@@ -238,17 +241,8 @@ const DPSMeter: React.FC = () => {
   return (
     <div className="dps-meter-container">
       <header className="dps-meter-header">
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
-          <div>
-            <h1>🗡️ Throne and Liberty DPS Meter</h1>
-            <p>Upload and analyze combat logs</p>
-          </div>
-          <a href="https://buymeacoffee.com/droprate" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
-            <button style={{ padding: '10px 16px', background: '#FFDD00', border: 'none', borderRadius: 6, cursor: 'pointer', fontWeight: 'bold', color: '#000' }}>
-              ☕ Buy Me a Coffee
-            </button>
-          </a>
-        </div>
+        <h1>🗡️ Throne and Liberty DPS Meter</h1>
+        <p>Upload and analyze combat logs</p>
       </header>
 
       <FileUpload onFilesUpload={handleFilesUpload} />
@@ -286,24 +280,37 @@ const DPSMeter: React.FC = () => {
               <div className="uploaded-files-list">
                 <h3>Uploaded Files:</h3>
                 <ul>
-                  {uploadedFiles.map((file) => (
-                    <li key={file.id} className="file-item">
-                      <div className="file-item-info">
-                        <span className="file-name">📄 {file.fileName}</span>
-                        <span className="file-entries">({file.entries.length} entries)</span>
-                        <span className="file-time">
-                          {file.uploadedAt.toLocaleTimeString()}
-                        </span>
-                      </div>
-                      <button
-                        className="btn-remove"
-                        onClick={() => handleRemoveFile(file.id)}
-                        title="Remove this file"
-                      >
-                        ✕
-                      </button>
-                    </li>
-                  ))}
+                  {uploadedFiles.map((file) => {
+                    // Get first 4 lines (skip first line, show next 3)
+                    const lines = file.rawContent.split('\n');
+                    const previewLines = lines.slice(1, 4).filter(line => line.trim());
+                    
+                    return (
+                      <li key={file.id} className="file-item">
+                        <div className="file-item-info">
+                          <button
+                            className="btn-remove-inline"
+                            onClick={() => handleRemoveFile(file.id)}
+                            title="Remove this file"
+                          >
+                            🗑️
+                          </button>
+                          <span className="file-name">📄 {file.fileName}</span>
+                          <span className="file-entries">({file.entries.length} entries)</span>
+                          <span className="file-time">
+                            {file.uploadedAt.toLocaleTimeString()}
+                          </span>
+                        </div>
+                        {previewLines.length > 0 && (
+                          <div className="file-preview">
+                            {previewLines.map((line, idx) => (
+                              <div key={idx} className="preview-line">{line}</div>
+                            ))}
+                          </div>
+                        )}
+                      </li>
+                    );
+                  })}
                 </ul>
               </div>
             )}
@@ -337,6 +344,10 @@ const DPSMeter: React.FC = () => {
           <div className="stats-section">
             <h2>Player Statistics</h2>
             <StatsTable stats={playerStats} />
+          </div>
+
+          <div className="charts-section">
+            <RawLogViewer files={uploadedFiles} />
           </div>
         </div>
       )}
