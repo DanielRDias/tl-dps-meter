@@ -1,5 +1,5 @@
 import React from 'react';
-import type { PlayerStats } from '../types/combatLog';
+import type { PlayerStats } from '../../modules/types/combatLog';
 
 interface StatsTableProps {
   stats: PlayerStats[];

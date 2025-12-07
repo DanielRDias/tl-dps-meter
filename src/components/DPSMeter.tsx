@@ -1,23 +1,24 @@
 import React, { useState } from 'react';
 import { CombatLogParser } from '../utils/logParser';
-import type { CombatLogEntry, PlayerStats, PlayerDPSData, SkillDamage, SkillBreakdown, SkillHitRate } from '../types/combatLog';
+import type { PlayerStats, PlayerDPSData, SkillDamage, SkillBreakdown, SkillHitRate } from '@/types/combatLog';
 import DPSChart from './DPSChart';
 import StatsTable from './StatsTable';
-import FileUpload from './FileUpload';
+
 import SkillChart from './SkillChart';
 import SkillBreakdownChart from './SkillBreakdownChart';
 import SkillHitRateChart from './SkillHitRateChart';
 import DamageByTarget from './DamageByTarget';
 import RawLogViewer from './RawLogViewer';
-import '../styles/DPSMeter.css';
 
-interface UploadedFile {
-  id: string;
-  fileName: string;
-  entries: CombatLogEntry[];
-  rawContent: string;
-  uploadedAt: Date;
-}
+
+//FileHandler
+import { FileUpload } from '@/files/FileUpload';
+import type { UploadedFile } from '@/files/FileUploadInterface'
+
+//STYLES
+import '/static/styles/DPSMeter.css';
+
+
 
 interface DamageByTargetSkill {
   skill: string;

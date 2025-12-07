@@ -1,6 +1,6 @@
 import React from 'react';
-import type { SkillHitRate } from '../types/combatLog';
-import '../styles/DPSMeter.css';
+import type { SkillHitRate } from '../../modules/types/combatLog';
+import '/static/styles/DPSMeter.css';
 
 interface SkillHitRateChartProps {
   data: SkillHitRate[];
