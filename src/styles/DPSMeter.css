@@ -639,6 +639,7 @@ body {
 .recharts-tooltip-label-list,
 .recharts-tooltip-item {
   color: var(--text-primary) !important;
+}
   
 /* Responsive Design */
 @media (max-width: 768px) {
