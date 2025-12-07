@@ -240,10 +240,6 @@ const DPSMeter: React.FC = () => {
 
   return (
     <div className="dps-meter-container">
-      <header className="dps-meter-header">
-        <h1>🗡️ Throne and Liberty DPS Meter</h1>
-        <p>Upload and analyze combat logs</p>
-      </header>
 
       <FileUpload onFilesUpload={handleFilesUpload} />
 

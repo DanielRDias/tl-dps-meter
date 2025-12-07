@@ -1,16 +1,16 @@
 /* DPS Meter Styles */
 
 :root {
-  --primary-color: #FF6B6B;
-  --secondary-color: #4ECDC4;
-  --background-dark: #1a1a2e;
-  --background-light: #16213e;
-  --text-primary: #eaeaea;
-  --text-secondary: #a8a8a8;
-  --border-color: #2d3561;
-  --success-color: #52C19B;
-  --warning-color: #F7DC6F;
-  --danger-color: #FF6B6B;
+  --primary-color: #c0c0c0;
+  --secondary-color: #808080;
+  --background-dark: #0a0a0a;
+  --background-light: #1a1a1a;
+  --text-primary: #e0e0e0;
+  --text-secondary: #999999;
+  --border-color: #333333;
+  --success-color: #888888;
+  --warning-color: #999999;
+  --danger-color: #777777;
 }
 
 * {
@@ -27,6 +27,7 @@ body {
 }
 
 .dps-meter-container {
+  width: 100%;
   max-width: 1400px;
   margin: 0 auto;
   padding: 20px;
@@ -35,21 +36,20 @@ body {
 
 /* Header Styles */
 .dps-meter-header {
+  width: 100%;
   text-align: center;
   margin-bottom: 40px;
   padding: 30px 20px;
-  background: linear-gradient(135deg, rgba(255, 107, 107, 0.1) 0%, rgba(78, 205, 196, 0.1) 100%);
+  background: rgba(30, 30, 30, 0.5);
   border-radius: 12px;
   border: 1px solid var(--border-color);
+  box-sizing: border-box;
 }
 
 .dps-meter-header h1 {
   font-size: 2.5em;
   margin-bottom: 10px;
-  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #ffffff;
 }
 
 .dps-meter-header p {
@@ -69,9 +69,9 @@ body {
   gap: 12px;
   margin-bottom: 20px;
   padding: 12px 20px;
-  background: rgba(78, 205, 196, 0.1);
+  background: rgba(60, 60, 60, 0.3);
   border-radius: 8px;
-  border: 1px solid rgba(78, 205, 196, 0.3);
+  border: 1px solid rgba(80, 80, 80, 0.5);
 }
 
 .location-label {
@@ -85,17 +85,17 @@ body {
   padding: 8px 16px;
   border-radius: 6px;
   font-family: 'Courier New', Courier, monospace;
-  color: var(--secondary-color);
+  color: #cccccc;
   font-size: 0.9em;
   cursor: pointer;
   transition: all 0.3s ease;
-  border: 1px solid rgba(78, 205, 196, 0.3);
+  border: 1px solid rgba(80, 80, 80, 0.5);
   user-select: all;
 }
 
 .location-path:hover {
-  background: rgba(78, 205, 196, 0.2);
-  border-color: var(--secondary-color);
+  background: rgba(100, 100, 100, 0.3);
+  border-color: #999999;
   transform: scale(1.02);
 }
 
@@ -128,12 +128,12 @@ body {
   text-align: center;
   cursor: pointer;
   transition: all 0.3s ease;
-  background: rgba(78, 205, 196, 0.02);
+  background: rgba(40, 40, 40, 0.3);
 }
 
 .upload-box:hover {
-  border-color: var(--secondary-color);
-  background: rgba(78, 205, 196, 0.08);
+  border-color: #666666;
+  background: rgba(50, 50, 50, 0.4);
   transform: translateY(-2px);
 }
 
@@ -326,8 +326,8 @@ body {
 }
 
 .file-item:hover {
-  background: rgba(78, 205, 196, 0.1);
-  border-color: var(--secondary-color);
+  background: rgba(80, 80, 80, 0.2);
+  border-color: #666666;
 }
 
 .file-item-info {

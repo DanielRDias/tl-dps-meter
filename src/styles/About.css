@@ -15,10 +15,7 @@
 .about-header h1 {
   font-size: 3em;
   margin-bottom: 10px;
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #ffffff;
 }
 
 .about-header .subtitle {
@@ -34,8 +31,8 @@
 .about-section h2 {
   font-size: 2em;
   margin-bottom: 20px;
-  color: var(--primary-color);
-  border-left: 4px solid var(--secondary-color);
+  color: #cccccc;
+  border-left: 4px solid #666666;
   padding-left: 15px;
 }
 
@@ -61,21 +58,21 @@
   padding: 20px;
   margin-bottom: 15px;
   background: rgba(0, 0, 0, 0.3);
-  border-left: 4px solid var(--secondary-color);
+  border-left: 4px solid #555555;
   border-radius: 8px;
   transition: all 0.3s ease;
 }
 
 .features-list li:hover {
   background: rgba(0, 0, 0, 0.5);
-  border-left-color: var(--primary-color);
+  border-left-color: #888888;
   transform: translateX(5px);
 }
 
 .features-list li strong {
   display: block;
   font-size: 1.2em;
-  color: var(--primary-color);
+  color: #dddddd;
   margin-bottom: 8px;
 }
 
@@ -106,16 +103,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  background: #666666;
   border-radius: 50%;
   font-size: 1.5em;
   font-weight: bold;
-  color: #0d0d0d;
+  color: #ffffff;
 }
 
 .step-content h3 {
   font-size: 1.3em;
-  color: var(--primary-color);
+  color: #cccccc;
   margin: 0 0 10px 0;
 }
 
@@ -129,7 +126,7 @@
   padding: 2px 8px;
   border-radius: 4px;
   font-family: 'Courier New', Courier, monospace;
-  color: var(--secondary-color);
+  color: #bbbbbb;
   font-size: 0.9em;
 }
 
@@ -137,7 +134,7 @@
 .code-block {
   background: rgba(0, 0, 0, 0.5);
   border: 1px solid var(--border-color);
-  border-left: 4px solid var(--secondary-color);
+  border-left: 4px solid #555555;
   padding: 20px;
   border-radius: 8px;
   margin: 20px 0;
@@ -146,7 +143,7 @@
 
 .code-block code {
   font-family: 'Courier New', Courier, monospace;
-  color: #00ff00;
+  color: #bbbbbb;
   font-size: 0.9em;
   line-height: 1.6;
   white-space: pre-wrap;
@@ -165,7 +162,7 @@
   padding: 2px 6px;
   border-radius: 3px;
   font-family: 'Courier New', Courier, monospace;
-  color: var(--secondary-color);
+  color: #bbbbbb;
 }
 
 /* Technology Grid */
