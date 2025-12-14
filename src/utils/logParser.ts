@@ -50,6 +50,48 @@ export class CombatLogParser {
     return entries;
   }
 
+  // Parse a chunk of lines (for async processing)
+  static parseLogChunk(lines: string[], _startIndex?: number): CombatLogEntry[] {
+    const entries: CombatLogEntry[] = [];
+    
+    lines.forEach((line) => {
+      if (!line.trim()) return;
+      if (line.includes('CombatLogVersion')) return;
+      
+      const parts = line.split(',');
+      
+      if (parts.length >= 10 && parts[1].trim() === 'DamageDone') {
+        try {
+          const timestamp = this.parseTimestamp(parts[0].trim());
+          const damage = parseInt(parts[4].trim());
+          const isCritical = parseInt(parts[5].trim()) === 1;
+          const isHeavyHit = parseInt(parts[6].trim()) === 1;
+          const abilityName = parts[2].trim();
+          const playerName = parts[8].trim();
+          const targetName = parts[9].trim();
+          const hitType = parts[7].trim();
+          
+          if (damage === 0 && hitType === 'kMiss') return;
+          
+          entries.push({
+            timestamp,
+            source: playerName,
+            action: abilityName,
+            target: targetName,
+            damage,
+            damageType: isCritical ? 'Critical' : 'Normal',
+            isCritical,
+            isHeavyHit,
+          });
+        } catch (e) {
+          // Silently skip bad lines in chunks
+        }
+      }
+    });
+    
+    return entries;
+  }
+
   // Parse TL timestamp format: 20251202-04:34:24:465 -> seconds since start
   private static parseTimestamp(timestampStr: string): number {
     // Format: YYYYMMDD-HH:MM:SS:mmm
@@ -81,15 +123,24 @@ export class CombatLogParser {
       const endTime = sortedEntries[sortedEntries.length - 1].timestamp;
       const duration = endTime - startTime || 1;
       
-      const totalDamage = playerEntries.reduce((sum, entry) => sum + entry.damage, 0);
+      // Use loop instead of reduce to avoid stack overflow
+      let totalDamage = 0;
+      for (const entry of playerEntries) {
+        totalDamage += entry.damage;
+      }
+      
       const dataPoints: DPSDataPoint[] = [];
       
       // Create data points every second for smooth DPS curve
       let currentTime = startTime;
       while (currentTime <= endTime) {
-        const damageInWindow = playerEntries
-          .filter(e => e.timestamp <= currentTime)
-          .reduce((sum, e) => sum + e.damage, 0);
+        // Use loop instead of filter().reduce() to avoid stack overflow
+        let damageInWindow = 0;
+        for (const e of playerEntries) {
+          if (e.timestamp <= currentTime) {
+            damageInWindow += e.damage;
+          }
+        }
         
         const elapsedTime = Math.max(currentTime - startTime, 1);
         dataPoints.push({
@@ -129,8 +180,14 @@ export class CombatLogParser {
       const startTime = sortedEntries[0].timestamp;
       const endTime = sortedEntries[sortedEntries.length - 1].timestamp;
       const duration = endTime - startTime || 1;
-      const totalDamage = playerEntries.reduce((sum, e) => sum + e.damage, 0);
-      const maxHit = Math.max(...playerEntries.map(e => e.damage));
+      
+      // Use loops instead of reduce/spread to avoid stack overflow
+      let totalDamage = 0;
+      let maxHit = 0;
+      for (const e of playerEntries) {
+        totalDamage += e.damage;
+        if (e.damage > maxHit) maxHit = e.damage;
+      }
       
       stats.push({
         name: playerName,

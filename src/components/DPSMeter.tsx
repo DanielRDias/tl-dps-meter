@@ -47,10 +47,17 @@ const DPSMeter: React.FC = () => {
   const [skillHitRates, setSkillHitRates] = useState<SkillHitRate[]>([]);
   const [damageByTarget, setDamageByTarget] = useState<DamageByTargetType[]>([]);
   const [isLoaded, setIsLoaded] = useState(false);
+  const [isProcessing, setIsProcessing] = useState(false);
+  const [processingProgress, setProcessingProgress] = useState({ current: 0, total: 0, stage: '' });
 
   // Recompute stats whenever uploadedFiles changes
-  const recalculateStats = (files: UploadedFile[]) => {
+  const recalculateStats = async (files: UploadedFile[]) => {
+    setIsProcessing(true);
     const allEntries = files.flatMap(f => f.entries);
+    
+    // Helper to yield to browser
+    const yieldToMain = () => new Promise(resolve => setTimeout(resolve, 0));
+    const CHUNK_SIZE = 5000;
     
     if (allEntries.length === 0) {
       setPlayerStats([]);
@@ -58,21 +65,37 @@ const DPSMeter: React.FC = () => {
       setSkillDamage([]);
       setSkillBreakdown([]);
       setSkillHitRates([]);
+      setDamageByTarget([]);
       setIsLoaded(false);
+      setIsProcessing(false);
       return;
     }
 
+    setProcessingProgress({ current: 1, total: 6, stage: 'Calculating player stats...' });
     setPlayerStats(CombatLogParser.getPlayerStats(allEntries));
+    await yieldToMain();
+    
+    setProcessingProgress({ current: 2, total: 6, stage: 'Calculating DPS...' });
     setDpsData(CombatLogParser.calculatePlayerDPS(allEntries));
+    await yieldToMain();
 
     // Aggregate damage by skill/ability
+    setProcessingProgress({ current: 3, total: 6, stage: 'Analyzing skill damage...' });
     const skillMap: Record<string, { damage: number; hits: number }> = {};
-    allEntries.forEach((e) => {
-      const key = e.action || 'Unknown';
-      if (!skillMap[key]) skillMap[key] = { damage: 0, hits: 0 };
-      skillMap[key].damage += e.damage || 0;
-      skillMap[key].hits += 1;
-    });
+    
+    for (let i = 0; i < allEntries.length; i += CHUNK_SIZE) {
+      const chunk = allEntries.slice(i, i + CHUNK_SIZE);
+      chunk.forEach((e) => {
+        const key = e.action || 'Unknown';
+        if (!skillMap[key]) skillMap[key] = { damage: 0, hits: 0 };
+        skillMap[key].damage += e.damage || 0;
+        skillMap[key].hits += 1;
+      });
+      
+      if (i % (CHUNK_SIZE * 4) === 0 && i > 0) {
+        await yieldToMain();
+      }
+    }
 
     const skillArr: SkillDamage[] = Object.keys(skillMap).map((k) => ({
       skill: k,
@@ -80,82 +103,112 @@ const DPSMeter: React.FC = () => {
       hits: skillMap[k].hits,
     }));
     setSkillDamage(skillArr);
+    await yieldToMain();
 
     // Compute skill breakdown by hit type
+    setProcessingProgress({ current: 4, total: 6, stage: 'Processing skill breakdown...' });
     const breakdownMap: Record<string, { normalHits: number; criticalHits: number; heavyHits: number; heavyCriticalHits: number }> = {};
-    allEntries.forEach((e) => {
-      const key = e.action || 'Unknown';
-      if (!breakdownMap[key]) {
-        breakdownMap[key] = { normalHits: 0, criticalHits: 0, heavyHits: 0, heavyCriticalHits: 0 };
+    
+    for (let i = 0; i < allEntries.length; i += CHUNK_SIZE) {
+      const chunk = allEntries.slice(i, i + CHUNK_SIZE);
+      chunk.forEach((e) => {
+        const key = e.action || 'Unknown';
+        if (!breakdownMap[key]) {
+          breakdownMap[key] = { normalHits: 0, criticalHits: 0, heavyHits: 0, heavyCriticalHits: 0 };
+        }
+        if (e.isCritical && e.isHeavyHit) {
+          breakdownMap[key].heavyCriticalHits += 1;
+        } else if (e.isCritical) {
+          breakdownMap[key].criticalHits += 1;
+        } else if (e.isHeavyHit) {
+          breakdownMap[key].heavyHits += 1;
+        } else {
+          breakdownMap[key].normalHits += 1;
+        }
+      });
+      
+      if (i % (CHUNK_SIZE * 4) === 0 && i > 0) {
+        await yieldToMain();
       }
-      if (e.isCritical && e.isHeavyHit) {
-        breakdownMap[key].heavyCriticalHits += 1;
-      } else if (e.isCritical) {
-        breakdownMap[key].criticalHits += 1;
-      } else if (e.isHeavyHit) {
-        breakdownMap[key].heavyHits += 1;
-      } else {
-        breakdownMap[key].normalHits += 1;
-      }
-    });
+    }
 
     const breakdownArr: SkillBreakdown[] = Object.keys(breakdownMap).map((k) => ({
       skill: k,
       ...breakdownMap[k],
     }));
     setSkillBreakdown(breakdownArr);
+    await yieldToMain();
 
     // Compute hit rates per skill and caster
+    setProcessingProgress({ current: 5, total: 6, stage: 'Calculating hit rates...' });
     const hitRateMap: Record<string, { caster: string; skill: string; totalHits: number; normalHits: number; criticalHits: number; heavyHits: number; heavyCriticalHits: number }> = {};
-    allEntries.forEach((e) => {
-      const caster = e.source || 'Unknown';
-      const skill = e.action || 'Unknown';
-      const key = `${caster}:${skill}`;
-      if (!hitRateMap[key]) {
-        hitRateMap[key] = { caster, skill, totalHits: 0, normalHits: 0, criticalHits: 0, heavyHits: 0, heavyCriticalHits: 0 };
+    
+    for (let i = 0; i < allEntries.length; i += CHUNK_SIZE) {
+      const chunk = allEntries.slice(i, i + CHUNK_SIZE);
+      chunk.forEach((e) => {
+        const caster = e.source || 'Unknown';
+        const skill = e.action || 'Unknown';
+        const key = `${caster}:${skill}`;
+        if (!hitRateMap[key]) {
+          hitRateMap[key] = { caster, skill, totalHits: 0, normalHits: 0, criticalHits: 0, heavyHits: 0, heavyCriticalHits: 0 };
+        }
+        hitRateMap[key].totalHits += 1;
+        if (e.isCritical && e.isHeavyHit) {
+          hitRateMap[key].heavyCriticalHits += 1;
+          hitRateMap[key].criticalHits += 1;
+          hitRateMap[key].heavyHits += 1;
+        } else if (e.isCritical) {
+          hitRateMap[key].criticalHits += 1;
+        } else if (e.isHeavyHit) {
+          hitRateMap[key].heavyHits += 1;
+        } else {
+          hitRateMap[key].normalHits += 1;
+        }
+      });
+      
+      if (i % (CHUNK_SIZE * 4) === 0 && i > 0) {
+        await yieldToMain();
       }
-      hitRateMap[key].totalHits += 1;
-      if (e.isCritical && e.isHeavyHit) {
-        hitRateMap[key].heavyCriticalHits += 1;
-        hitRateMap[key].criticalHits += 1;
-        hitRateMap[key].heavyHits += 1;
-      } else if (e.isCritical) {
-        hitRateMap[key].criticalHits += 1;
-      } else if (e.isHeavyHit) {
-        hitRateMap[key].heavyHits += 1;
-      } else {
-        hitRateMap[key].normalHits += 1;
-      }
-    });
+    }
 
     const hitRateArr: SkillHitRate[] = Object.keys(hitRateMap).map((k) => hitRateMap[k]);
     setSkillHitRates(hitRateArr);
+    await yieldToMain();
     
     // Build damage-by-target aggregation: target -> caster -> skills
+    setProcessingProgress({ current: 6, total: 6, stage: 'Analyzing damage by target...' });
     const targetMap: Record<string, Record<string, { totalDamage: number; skills: Record<string, { damage: number; hits: number }>; start: number; end: number }>> = {};
-    allEntries.forEach((e) => {
-      const target = e.target || 'Unknown';
-      const caster = e.source || 'Unknown';
-      const skill = e.action || 'Unknown';
-      if (!targetMap[target]) targetMap[target] = {};
-      if (!targetMap[target][caster]) {
-        targetMap[target][caster] = {
-          totalDamage: 0,
-          skills: {},
-          start: e.timestamp,
-          end: e.timestamp,
-        };
+    
+    for (let i = 0; i < allEntries.length; i += CHUNK_SIZE) {
+      const chunk = allEntries.slice(i, i + CHUNK_SIZE);
+      chunk.forEach((e) => {
+        const target = e.target || 'Unknown';
+        const caster = e.source || 'Unknown';
+        const skill = e.action || 'Unknown';
+        if (!targetMap[target]) targetMap[target] = {};
+        if (!targetMap[target][caster]) {
+          targetMap[target][caster] = {
+            totalDamage: 0,
+            skills: {},
+            start: e.timestamp,
+            end: e.timestamp,
+          };
+        }
+
+        const bucket = targetMap[target][caster];
+        bucket.totalDamage += e.damage || 0;
+        bucket.start = Math.min(bucket.start, e.timestamp);
+        bucket.end = Math.max(bucket.end, e.timestamp);
+
+        if (!bucket.skills[skill]) bucket.skills[skill] = { damage: 0, hits: 0 };
+        bucket.skills[skill].damage += e.damage || 0;
+        bucket.skills[skill].hits += 1;
+      });
+      
+      if (i % (CHUNK_SIZE * 4) === 0 && i > 0) {
+        await yieldToMain();
       }
-
-      const bucket = targetMap[target][caster];
-      bucket.totalDamage += e.damage || 0;
-      bucket.start = Math.min(bucket.start, e.timestamp);
-      bucket.end = Math.max(bucket.end, e.timestamp);
-
-      if (!bucket.skills[skill]) bucket.skills[skill] = { damage: 0, hits: 0 };
-      bucket.skills[skill].damage += e.damage || 0;
-      bucket.skills[skill].hits += 1;
-    });
+    }
 
     const damageByTargetArr: DamageByTargetType[] = Object.keys(targetMap).map((t) => ({
       target: t,
@@ -173,51 +226,59 @@ const DPSMeter: React.FC = () => {
     }));
     setDamageByTarget(damageByTargetArr);
     setIsLoaded(true);
+    setIsProcessing(false);
   };
   // Handle multiple files uploaded - accumulate logs
   const handleFilesUpload = async (files: File[]) => {
-    // Read all files in parallel
-    const readers = files.map(
-      (file) =>
-        new Promise<{ fileName: string; content: string }>((resolve, reject) => {
-          const r = new FileReader();
-          r.onload = (e) => resolve({ fileName: file.name, content: e.target?.result as string });
-          r.onerror = (e) => reject(e);
-          r.readAsText(file);
-        })
-    );
+    setIsProcessing(true);
+    const newUploadedFiles: UploadedFile[] = [];
+    let totalLines = 0;
 
     try {
-      const results = await Promise.all(readers);
-      const newUploadedFiles: UploadedFile[] = [];
+      // Read files sequentially to avoid memory spikes
+      for (let i = 0; i < files.length; i++) {
+        const file = files[i];
+        setProcessingProgress({ 
+          current: i + 1, 
+          total: files.length + 1, 
+          stage: `Reading ${file.name}...` 
+        });
 
-      results.forEach(({ fileName: fName, content }) => {
+        const content = await new Promise<string>((resolve, reject) => {
+          const r = new FileReader();
+          r.onload = (e) => resolve(e.target?.result as string);
+          r.onerror = (e) => reject(e);
+          r.readAsText(file);
+        });
+
+        totalLines += content.split('\n').length;
         const parsed = CombatLogParser.parseLog(content);
         if (parsed.length > 0) {
           newUploadedFiles.push({
-            id: `${fName}-${Date.now()}-${Math.random()}`,
-            fileName: fName,
+            id: `${file.name}-${Date.now()}-${Math.random()}`,
+            fileName: file.name,
             entries: parsed,
             rawContent: content,
             uploadedAt: new Date(),
           });
         } else {
-          console.warn(`No entries parsed from ${fName}`);
+          console.warn(`No entries parsed from ${file.name}`);
           console.debug('First 5 lines of file:', content.split('\n').slice(0, 5));
         }
-      });
+      }
 
       if (newUploadedFiles.length > 0) {
         // Accumulate files instead of replacing
         const updatedFiles = [...uploadedFiles, ...newUploadedFiles];
         setUploadedFiles(updatedFiles);
-        recalculateStats(updatedFiles);
+        await recalculateStats(updatedFiles);
       } else {
-        const totalLines = results.reduce((acc, r) => acc + r.content.split('\n').length, 0);
+        setIsProcessing(false);
         alert(`No combat entries found in the uploaded files.\n\nFiles: ${files.length} | Total lines: ${totalLines}.\nCheck browser console for details.`);
       }
     } catch (err) {
       console.error('Failed to read uploaded files', err);
+      setIsProcessing(false);
       alert('Failed to read uploaded files. See console for details.');
     }
   };
@@ -344,6 +405,23 @@ const DPSMeter: React.FC = () => {
 
           <div className="charts-section">
             <RawLogViewer files={uploadedFiles} />
+          </div>
+        </div>
+      )}
+
+      {isProcessing && (
+        <div className="processing-overlay">
+          <div className="processing-modal">
+            <div className="processing-spinner"></div>
+            <h3>Processing Combat Logs</h3>
+            <p className="processing-stage">{processingProgress.stage}</p>
+            <div className="progress-bar">
+              <div 
+                className="progress-fill" 
+                style={{ width: `${processingProgress.total > 0 ? (processingProgress.current / processingProgress.total) * 100 : 0}%` }}
+              />
+            </div>
+            <p className="processing-count">{processingProgress.current} / {processingProgress.total}</p>
           </div>
         </div>
       )}
