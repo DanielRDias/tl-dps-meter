@@ -51,7 +51,8 @@ const DPSChart: React.FC<DPSChartProps> = ({ data }) => {
     const point: any = { time: i };
     data.forEach(player => {
       const dataPoint = player.dataPoints.find(dp => dp.time === i);
-      point[player.playerName] = dataPoint?.dps || 0;
+      point[`${player.playerName}`] = dataPoint?.dps || 0; // Cumulative average DPS
+      point[`${player.playerName} (Instant)`] = dataPoint?.instantDps || 0; // Instantaneous DPS
     });
     mergedData.push(point);
   }
@@ -73,17 +74,35 @@ const DPSChart: React.FC<DPSChartProps> = ({ data }) => {
             labelFormatter={(label) => `${label}s`}
           />
           <Legend />
-          {data.map((player, index) => (
-            <Line
-              key={player.playerName}
-              type="monotone"
-              dataKey={player.playerName}
-              stroke={index < COLORS.length ? COLORS[index] : stringToColor(player.playerName)}
-              dot={false}
-              isAnimationActive={false}
-              strokeWidth={2}
-            />
-          ))}
+          {data.map((player, index) => {
+            const baseColor = index < COLORS.length ? COLORS[index] : stringToColor(player.playerName);
+            return (
+              <React.Fragment key={player.playerName}>
+                {/* Cumulative average DPS line */}
+                <Line
+                  type="monotone"
+                  dataKey={player.playerName}
+                  stroke={baseColor}
+                  dot={false}
+                  isAnimationActive={false}
+                  strokeWidth={2}
+                  name={`${player.playerName} (Average)`}
+                />
+                {/* Instantaneous DPS line */}
+                <Line
+                  type="monotone"
+                  dataKey={`${player.playerName} (Instant)`}
+                  stroke={baseColor}
+                  dot={false}
+                  isAnimationActive={false}
+                  strokeWidth={1}
+                  strokeDasharray="3 3"
+                  name={`${player.playerName} (Per Second)`}
+                  opacity={0.6}
+                />
+              </React.Fragment>
+            );
+          })}
         </LineChart>
       </ResponsiveContainer>
     </div>

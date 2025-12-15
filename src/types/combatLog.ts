@@ -22,7 +22,8 @@ export interface PlayerStats {
 
 export interface DPSDataPoint {
   time: number;
-  dps: number;
+  dps: number; // Cumulative average DPS
+  instantDps: number; // DPS at this specific second
 }
 
 export interface PlayerDPSData {

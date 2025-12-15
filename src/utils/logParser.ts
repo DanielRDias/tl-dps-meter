@@ -142,7 +142,7 @@ export class CombatLogParser {
       // Create data points every second for smooth DPS curve
       let currentTime = startTime;
       while (currentTime <= endTime) {
-        // Use loop instead of filter().reduce() to avoid stack overflow
+        // Calculate cumulative average DPS (total damage up to this point / elapsed time)
         let damageInWindow = 0;
         for (const e of playerEntries) {
           if (e.timestamp <= currentTime) {
@@ -150,10 +150,20 @@ export class CombatLogParser {
           }
         }
         
+        // Calculate instantaneous DPS (damage dealt in this specific second)
+        let instantDamage = 0;
+        const nextTime = currentTime + 1;
+        for (const e of playerEntries) {
+          if (e.timestamp > currentTime && e.timestamp <= nextTime) {
+            instantDamage += e.damage;
+          }
+        }
+        
         const elapsedTime = Math.max(currentTime - startTime, 1);
         dataPoints.push({
           time: currentTime - startTime,
           dps: damageInWindow / elapsedTime,
+          instantDps: instantDamage,
         });
         
         currentTime += 1;
