@@ -92,15 +92,23 @@ export class CombatLogParser {
     return entries;
   }
 
-  // Parse TL timestamp format: 20251202-04:34:24:465 -> seconds since start
+  // Parse TL timestamp format: 20251202-04:34:24:465 -> milliseconds since epoch
   private static parseTimestamp(timestampStr: string): number {
     // Format: YYYYMMDD-HH:MM:SS:mmm
-    // We only care about time portion for DPS calculation
-    const timePart = timestampStr.split('-')[1];
-    if (!timePart) return 0;
+    const [datePart, timePart] = timestampStr.split('-');
+    if (!datePart || !timePart) return 0;
     
-    const [hours, minutes, seconds] = timePart.split(':').map(x => parseInt(x) || 0);
-    return hours * 3600 + minutes * 60 + seconds;
+    // Parse date: YYYYMMDD
+    const year = parseInt(datePart.substring(0, 4));
+    const month = parseInt(datePart.substring(4, 6)) - 1; // JS months are 0-indexed
+    const day = parseInt(datePart.substring(6, 8));
+    
+    // Parse time: HH:MM:SS:mmm
+    const [hours, minutes, seconds, milliseconds] = timePart.split(':').map(x => parseInt(x) || 0);
+    
+    // Create Date object and return timestamp in seconds (for compatibility with existing code)
+    const date = new Date(year, month, day, hours, minutes, seconds, milliseconds);
+    return date.getTime() / 1000; // Convert to seconds
   }
 
   // Calculate DPS for each player
