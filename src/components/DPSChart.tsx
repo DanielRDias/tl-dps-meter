@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   LineChart,
   Line,
@@ -42,6 +42,8 @@ const stringToColor = (s: string) => {
 };
 
 const DPSChart: React.FC<DPSChartProps> = ({ data }) => {
+  const [showTargetSections, setShowTargetSections] = useState(false);
+
   if (data.length === 0) {
     return <div className="empty-state">No DPS data available</div>;
   }
@@ -79,58 +81,72 @@ const DPSChart: React.FC<DPSChartProps> = ({ data }) => {
     return `${hours}:${minutes}:${seconds}`;
   };
 
-  // Create target engagement periods from target changes
-  // Combine all players' target changes to show overall combat flow
-  const allTargetChanges: Array<{ time: number; target: string }> = [];
-  data.forEach(player => {
-    player.targetChanges.forEach(tc => {
-      // Only add if not already present at this time
-      if (!allTargetChanges.find(existing => 
-        Math.abs(existing.time - tc.time) < 0.5 && existing.target === tc.target
-      )) {
-        allTargetChanges.push(tc);
+  // Only calculate target periods if the feature is enabled
+  let targetPeriods: Array<{ target: string; start: number; end: number }> = [];
+  let targetColors = new Map<string, string>();
+
+  if (showTargetSections) {
+    // Create target engagement periods from target changes
+    // Combine all players' target changes to show overall combat flow
+    const allTargetChanges: Array<{ time: number; target: string }> = [];
+    data.forEach(player => {
+      player.targetChanges.forEach(tc => {
+        // Only add if not already present at this time
+        if (!allTargetChanges.find(existing => 
+          Math.abs(existing.time - tc.time) < 0.5 && existing.target === tc.target
+        )) {
+          allTargetChanges.push(tc);
+        }
+      });
+    });
+    
+    // Sort by time
+    allTargetChanges.sort((a, b) => a.time - b.time);
+    
+    // Create engagement periods with start and end times
+    // Round to match the integer time values in mergedData
+    const rawPeriods = allTargetChanges.map((change, index) => {
+      const nextChange = allTargetChanges[index + 1];
+      return {
+        target: change.target,
+        start: Math.floor(change.time),
+        end: nextChange ? Math.floor(nextChange.time) : Math.floor(maxDuration),
+      };
+    });
+
+    // Merge consecutive periods with the same target only if they're within 60 seconds
+    rawPeriods.forEach(period => {
+      const lastPeriod = targetPeriods[targetPeriods.length - 1];
+      const timeSinceLastPeriod = lastPeriod ? period.start - lastPeriod.end : Infinity;
+      
+      if (lastPeriod && lastPeriod.target === period.target && timeSinceLastPeriod <= 60) {
+        // Extend the last period to include this one (same target, less than 60 seconds gap)
+        lastPeriod.end = period.end;
+      } else {
+        // Add new period (different target or gap > 60 seconds)
+        targetPeriods.push({ ...period });
       }
     });
-  });
-  
-  // Sort by time
-  allTargetChanges.sort((a, b) => a.time - b.time);
-  
-  // Create engagement periods with start and end times
-  // Round to match the integer time values in mergedData
-  const rawPeriods = allTargetChanges.map((change, index) => {
-    const nextChange = allTargetChanges[index + 1];
-    return {
-      target: change.target,
-      start: Math.floor(change.time),
-      end: nextChange ? Math.floor(nextChange.time) : Math.floor(maxDuration),
-    };
-  });
 
-  // Merge consecutive periods with the same target only if they're within 60 seconds
-  const targetPeriods: Array<{ target: string; start: number; end: number }> = [];
-  rawPeriods.forEach(period => {
-    const lastPeriod = targetPeriods[targetPeriods.length - 1];
-    const timeSinceLastPeriod = lastPeriod ? period.start - lastPeriod.end : Infinity;
-    
-    if (lastPeriod && lastPeriod.target === period.target && timeSinceLastPeriod <= 60) {
-      // Extend the last period to include this one (same target, less than 60 seconds gap)
-      lastPeriod.end = period.end;
-    } else {
-      // Add new period (different target or gap > 60 seconds)
-      targetPeriods.push({ ...period });
-    }
-  });
-
-  // Assign colors to unique targets
-  const uniqueTargets = Array.from(new Set(targetPeriods.map(p => p.target)));
-  const targetColors = new Map<string, string>();
-  uniqueTargets.forEach((target) => {
-    targetColors.set(target, stringToColor(target));
-  });
+    // Assign colors to unique targets
+    const uniqueTargets = Array.from(new Set(targetPeriods.map(p => p.target)));
+    uniqueTargets.forEach((target) => {
+      targetColors.set(target, stringToColor(target));
+    });
+  }
 
   return (
     <div className="dps-chart-wrapper">
+      <div style={{ marginBottom: '10px' }}>
+        <label style={{ display: 'flex', alignItems: 'center', gap: '8px', cursor: 'pointer' }}>
+          <input
+            type="checkbox"
+            checked={showTargetSections}
+            onChange={(e) => setShowTargetSections(e.target.checked)}
+          />
+          <span>Show Target Sections</span>
+        </label>
+      </div>
       <ResponsiveContainer width="100%" height={400}>
         <LineChart data={mergedData} margin={{ top: 5, right: 30, left: 0, bottom: 5 }}>
           <CartesianGrid strokeDasharray="3 3" />
