@@ -137,6 +137,61 @@ export class CombatLogParser {
         totalDamage += entry.damage;
       }
       
+      // Track target changes (only if target is hit for more than 1 second)
+      const targetChanges: { time: number; target: string }[] = [];
+      
+      // Build list of all target engagements, ending them if there's a 60+ second gap
+      const engagements: Array<{ target: string; start: number; end: number }> = [];
+      let lastTarget = '';
+      let engagementStart = 0;
+      let lastHitTime = 0;
+      
+      sortedEntries.forEach((entry, index) => {
+        const timeSinceLastHit = entry.timestamp - lastHitTime;
+        
+        // End current engagement if: target changed OR gap > 60 seconds
+        if (lastTarget && (entry.target !== lastTarget || timeSinceLastHit > 60)) {
+          const prevEntry = sortedEntries[index - 1];
+          engagements.push({
+            target: lastTarget,
+            start: engagementStart,
+            end: prevEntry.timestamp
+          });
+          
+          // If same target but after a long gap, start a new engagement
+          engagementStart = entry.timestamp;
+        } else if (!lastTarget) {
+          // First hit ever
+          engagementStart = entry.timestamp;
+        }
+        
+        lastTarget = entry.target;
+        lastHitTime = entry.timestamp;
+      });
+      
+      // Don't forget the last engagement
+      if (lastTarget && engagementStart > 0) {
+        const lastEntry = sortedEntries[sortedEntries.length - 1];
+        engagements.push({
+          target: lastTarget,
+          start: engagementStart,
+          end: lastEntry.timestamp
+        });
+      }
+      
+      // Filter engagements to only those > 60 seconds (1 minute) and convert to target changes
+      engagements.forEach(engagement => {
+        const duration = engagement.end - engagement.start;
+        if (duration > 60) {
+          targetChanges.push({
+            time: engagement.start - startTime,
+            target: engagement.target
+          });
+        }
+      });
+      
+
+      
       const dataPoints: DPSDataPoint[] = [];
       
       // Create data points every second for smooth DPS curve
@@ -160,11 +215,17 @@ export class CombatLogParser {
         }
         
         const elapsedTime = Math.max(currentTime - startTime, 1);
+        const relativeTime = currentTime - startTime;
+        
+        // Check if there's a target change at this time
+        const targetChange = targetChanges.find(tc => Math.abs(tc.time - relativeTime) < 0.5);
+        
         dataPoints.push({
-          time: currentTime - startTime,
+          time: relativeTime,
           actualTime: currentTime,
           dps: damageInWindow / elapsedTime,
           instantDps: instantDamage,
+          target: targetChange?.target,
         });
         
         currentTime += 1;
@@ -175,6 +236,7 @@ export class CombatLogParser {
         dataPoints,
         totalDamage,
         duration,
+        targetChanges,
       });
     });
     

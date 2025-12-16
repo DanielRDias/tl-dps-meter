@@ -8,6 +8,9 @@ import {
   Tooltip,
   Legend,
   ResponsiveContainer,
+  ReferenceLine,
+  ReferenceArea,
+  Label,
 } from 'recharts';
 import type { PlayerDPSData } from '../types/combatLog';
 
@@ -76,11 +79,81 @@ const DPSChart: React.FC<DPSChartProps> = ({ data }) => {
     return `${hours}:${minutes}:${seconds}`;
   };
 
+  // Create target engagement periods from target changes
+  // Combine all players' target changes to show overall combat flow
+  const allTargetChanges: Array<{ time: number; target: string }> = [];
+  data.forEach(player => {
+    player.targetChanges.forEach(tc => {
+      // Only add if not already present at this time
+      if (!allTargetChanges.find(existing => 
+        Math.abs(existing.time - tc.time) < 0.5 && existing.target === tc.target
+      )) {
+        allTargetChanges.push(tc);
+      }
+    });
+  });
+  
+  // Sort by time
+  allTargetChanges.sort((a, b) => a.time - b.time);
+  
+  // Create engagement periods with start and end times
+  // Round to match the integer time values in mergedData
+  const rawPeriods = allTargetChanges.map((change, index) => {
+    const nextChange = allTargetChanges[index + 1];
+    return {
+      target: change.target,
+      start: Math.floor(change.time),
+      end: nextChange ? Math.floor(nextChange.time) : Math.floor(maxDuration),
+    };
+  });
+
+  // Merge consecutive periods with the same target only if they're within 60 seconds
+  const targetPeriods: Array<{ target: string; start: number; end: number }> = [];
+  rawPeriods.forEach(period => {
+    const lastPeriod = targetPeriods[targetPeriods.length - 1];
+    const timeSinceLastPeriod = lastPeriod ? period.start - lastPeriod.end : Infinity;
+    
+    if (lastPeriod && lastPeriod.target === period.target && timeSinceLastPeriod <= 60) {
+      // Extend the last period to include this one (same target, less than 60 seconds gap)
+      lastPeriod.end = period.end;
+    } else {
+      // Add new period (different target or gap > 60 seconds)
+      targetPeriods.push({ ...period });
+    }
+  });
+
+  // Assign colors to unique targets
+  const uniqueTargets = Array.from(new Set(targetPeriods.map(p => p.target)));
+  const targetColors = new Map<string, string>();
+  uniqueTargets.forEach((target) => {
+    targetColors.set(target, stringToColor(target));
+  });
+
   return (
     <div className="dps-chart-wrapper">
       <ResponsiveContainer width="100%" height={400}>
         <LineChart data={mergedData} margin={{ top: 5, right: 30, left: 0, bottom: 5 }}>
           <CartesianGrid strokeDasharray="3 3" />
+          
+          {/* Background shading for each target engagement period */}
+          {targetPeriods.map((period, index) => (
+            <ReferenceArea
+              key={`target-period-${index}`}
+              x1={period.start}
+              x2={period.end}
+              fill={targetColors.get(period.target)}
+              fillOpacity={0.3}
+              stroke={targetColors.get(period.target)}
+              strokeOpacity={0.5}
+              label={{
+                value: period.target,
+                position: 'insideTop',
+                fill: '#d0d0d0',
+                fontSize: 10,
+                offset: 5,
+              }}
+            />
+          ))}
           <XAxis
             dataKey="time"
             label={{ value: 'Time', position: 'insideBottomRight', offset: -5, fill: '#d0d0d0' }}
@@ -102,6 +175,29 @@ const DPSChart: React.FC<DPSChartProps> = ({ data }) => {
             }}
           />
           <Legend />
+          
+          {/* Target change markers - show vertical lines where targets change */}
+          {data.flatMap((player, playerIndex) => 
+            player.targetChanges.map((change, changeIndex) => (
+              <ReferenceLine
+                key={`${player.playerName}-target-${changeIndex}`}
+                x={change.time}
+                stroke={playerIndex < COLORS.length ? COLORS[playerIndex] : stringToColor(player.playerName)}
+                strokeWidth={1}
+                strokeDasharray="5 5"
+                opacity={0.4}
+              >
+                <Label
+                  value={change.target}
+                  position="top"
+                  fill="#d0d0d0"
+                  fontSize={11}
+                  offset={5}
+                />
+              </ReferenceLine>
+            ))
+          )}
+          
           {data.map((player, index) => {
             const baseColor = index < COLORS.length ? COLORS[index] : stringToColor(player.playerName);
             return (

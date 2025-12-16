@@ -25,6 +25,12 @@ export interface DPSDataPoint {
   actualTime: number; // Actual timestamp in seconds since epoch
   dps: number; // Cumulative average DPS
   instantDps: number; // DPS at this specific second
+  target?: string; // Current target at this time point (if changed and hit for >1s)
+}
+
+export interface TargetChange {
+  time: number; // Relative time when target changed
+  target: string; // New target name
 }
 
 export interface PlayerDPSData {
@@ -32,6 +38,7 @@ export interface PlayerDPSData {
   dataPoints: DPSDataPoint[];
   totalDamage: number;
   duration: number;
+  targetChanges: TargetChange[]; // Points where target changed (>1s duration)
 }
 
 export interface SkillDamage {
