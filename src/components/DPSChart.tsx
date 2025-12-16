@@ -8,14 +8,13 @@ import {
   Tooltip,
   Legend,
   ResponsiveContainer,
-  ReferenceLine,
   ReferenceArea,
-  Label,
 } from 'recharts';
 import type { PlayerDPSData } from '../types/combatLog';
 
 interface DPSChartProps {
   data: PlayerDPSData[];
+  onZoomChange?: (range: { left: number; right: number } | null) => void;
 }
 
 const COLORS = [
@@ -41,8 +40,11 @@ const stringToColor = (s: string) => {
   return `hsl(${hue} ${saturation}% ${lightness}%)`;
 };
 
-const DPSChart: React.FC<DPSChartProps> = ({ data }) => {
+const DPSChart: React.FC<DPSChartProps> = ({ data, onZoomChange }) => {
   const [showTargetSections, setShowTargetSections] = useState(false);
+  const [refAreaLeft, setRefAreaLeft] = useState<number | null>(null);
+  const [refAreaRight, setRefAreaRight] = useState<number | null>(null);
+  const [zoomDomain, setZoomDomain] = useState<{ left: number; right: number } | null>(null);
 
   if (data.length === 0) {
     return <div className="empty-state">No DPS data available</div>;
@@ -88,7 +90,7 @@ const DPSChart: React.FC<DPSChartProps> = ({ data }) => {
   if (showTargetSections) {
     // Create target engagement periods from target changes
     // Combine all players' target changes to show overall combat flow
-    const allTargetChanges: Array<{ time: number; target: string }> = [];
+    const allTargetChanges: Array<{ time: number; endTime: number; target: string }> = [];
     data.forEach(player => {
       player.targetChanges.forEach(tc => {
         // Only add if not already present at this time
@@ -126,9 +128,37 @@ const DPSChart: React.FC<DPSChartProps> = ({ data }) => {
     });
   }
 
+  const zoom = () => {
+    if (refAreaLeft === null || refAreaRight === null) return;
+    
+    const left = Math.min(refAreaLeft, refAreaRight);
+    const right = Math.max(refAreaLeft, refAreaRight);
+    
+    const newZoomDomain = { left, right };
+    setZoomDomain(newZoomDomain);
+    setRefAreaLeft(null);
+    setRefAreaRight(null);
+    
+    // Notify parent component of zoom change
+    if (onZoomChange) {
+      onZoomChange(newZoomDomain);
+    }
+  };
+
+  const resetZoom = () => {
+    setZoomDomain(null);
+    setRefAreaLeft(null);
+    setRefAreaRight(null);
+    
+    // Notify parent component of zoom reset
+    if (onZoomChange) {
+      onZoomChange(null);
+    }
+  };
+
   return (
     <div className="dps-chart-wrapper">
-      <div style={{ marginBottom: '10px' }}>
+      <div style={{ marginBottom: '10px', display: 'flex', gap: '20px', alignItems: 'center' }}>
         <label style={{ display: 'flex', alignItems: 'center', gap: '8px', cursor: 'pointer' }}>
           <input
             type="checkbox"
@@ -137,12 +167,39 @@ const DPSChart: React.FC<DPSChartProps> = ({ data }) => {
           />
           <span>Show Target Sections</span>
         </label>
+        {zoomDomain && (
+          <button
+            onClick={resetZoom}
+            style={{
+              padding: '4px 12px',
+              backgroundColor: '#4ECDC4',
+              color: '#1a1a1a',
+              border: 'none',
+              borderRadius: '4px',
+              cursor: 'pointer',
+              fontSize: '14px',
+            }}
+          >
+            Reset Zoom
+          </button>
+        )}
       </div>
 
       {/* Average DPS Chart */}
-      <h3 style={{ color: '#d0d0d0', marginTop: '20px', marginBottom: '10px' }}>Average DPS Over Time</h3>
+      <h3 style={{ color: '#d0d0d0', marginTop: '20px', marginBottom: '10px' }}>
+        Average DPS Over Time
+        <span style={{ fontSize: '12px', marginLeft: '10px', opacity: 0.7 }}>
+          (Click and drag to zoom)
+        </span>
+      </h3>
       <ResponsiveContainer width="100%" height={400}>
-        <LineChart data={mergedData} margin={{ top: 5, right: 30, left: 0, bottom: 5 }}>
+        <LineChart 
+          data={mergedData} 
+          margin={{ top: 5, right: 30, left: 0, bottom: 5 }}
+          onMouseDown={(e: any) => e && e.activeLabel !== undefined && setRefAreaLeft(e.activeLabel)}
+          onMouseMove={(e: any) => refAreaLeft !== null && e && e.activeLabel !== undefined && setRefAreaRight(e.activeLabel)}
+          onMouseUp={zoom}
+        >
           <CartesianGrid strokeDasharray="3 3" />
           
           {/* Background shading for each target engagement period */}
@@ -186,6 +243,16 @@ const DPSChart: React.FC<DPSChartProps> = ({ data }) => {
           />
           <Legend />
           
+          {refAreaLeft !== null && refAreaRight !== null && (
+            <ReferenceArea
+              x1={refAreaLeft}
+              x2={refAreaRight}
+              strokeOpacity={0.3}
+              fill="#8884d8"
+              fillOpacity={0.3}
+            />
+          )}
+          
           {data.map((player, index) => {
             const baseColor = index < COLORS.length ? COLORS[index] : stringToColor(player.playerName);
             return (
@@ -205,9 +272,20 @@ const DPSChart: React.FC<DPSChartProps> = ({ data }) => {
       </ResponsiveContainer>
 
       {/* Instantaneous DPS Chart */}
-      <h3 style={{ color: '#d0d0d0', marginTop: '40px', marginBottom: '10px' }}>Instantaneous DPS (Per Second)</h3>
+      <h3 style={{ color: '#d0d0d0', marginTop: '40px', marginBottom: '10px' }}>
+        Instantaneous DPS (Per Second)
+        <span style={{ fontSize: '12px', marginLeft: '10px', opacity: 0.7 }}>
+          (Click and drag to zoom)
+        </span>
+      </h3>
       <ResponsiveContainer width="100%" height={400}>
-        <LineChart data={mergedData} margin={{ top: 5, right: 30, left: 0, bottom: 5 }}>
+        <LineChart 
+          data={mergedData} 
+          margin={{ top: 5, right: 30, left: 0, bottom: 5 }}
+          onMouseDown={(e: any) => e && e.activeLabel !== undefined && setRefAreaLeft(e.activeLabel)}
+          onMouseMove={(e: any) => refAreaLeft !== null && e && e.activeLabel !== undefined && setRefAreaRight(e.activeLabel)}
+          onMouseUp={zoom}
+        >
           <CartesianGrid strokeDasharray="3 3" />
           
           {/* Background shading for each target engagement period */}
@@ -250,6 +328,16 @@ const DPSChart: React.FC<DPSChartProps> = ({ data }) => {
             }}
           />
           <Legend />
+          
+          {refAreaLeft !== null && refAreaRight !== null && (
+            <ReferenceArea
+              x1={refAreaLeft}
+              x2={refAreaRight}
+              strokeOpacity={0.3}
+              fill="#8884d8"
+              fillOpacity={0.3}
+            />
+          )}
           
           {data.map((player, index) => {
             const baseColor = index < COLORS.length ? COLORS[index] : stringToColor(player.playerName);

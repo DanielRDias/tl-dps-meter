@@ -138,7 +138,7 @@ export class CombatLogParser {
       }
       
       // Track target changes (only if target is hit for more than 1 second)
-      const targetChanges: { time: number; target: string }[] = [];
+      const targetChanges: { time: number; endTime: number; target: string }[] = [];
       
       // Build list of all target engagements, ending them if there's a 30+ second gap
       const engagements: Array<{ target: string; start: number; end: number }> = [];

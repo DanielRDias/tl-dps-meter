@@ -49,11 +49,20 @@ const DPSMeter: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isProcessing, setIsProcessing] = useState(false);
   const [processingProgress, setProcessingProgress] = useState({ current: 0, total: 0, stage: '' });
+  const [zoomTimeRange, setZoomTimeRange] = useState<{ left: number; right: number } | null>(null);
 
   // Recompute stats whenever uploadedFiles changes
-  const recalculateStats = async (files: UploadedFile[]) => {
+  const recalculateStats = async (files: UploadedFile[], timeRange: { left: number; right: number } | null = null) => {
     setIsProcessing(true);
-    const allEntries = files.flatMap(f => f.entries);
+    let allEntries = files.flatMap(f => f.entries);
+    
+    // Filter entries by time range if zoom is active
+    if (timeRange && allEntries.length > 0) {
+      const minTimestamp = Math.min(...allEntries.map(e => e.timestamp));
+      const leftTimestamp = minTimestamp + timeRange.left;
+      const rightTimestamp = minTimestamp + timeRange.right;
+      allEntries = allEntries.filter(e => e.timestamp >= leftTimestamp && e.timestamp <= rightTimestamp);
+    }
     
     // Helper to yield to browser
     const yieldToMain = () => new Promise(resolve => setTimeout(resolve, 0));
@@ -271,7 +280,7 @@ const DPSMeter: React.FC = () => {
         // Accumulate files instead of replacing
         const updatedFiles = [...uploadedFiles, ...newUploadedFiles];
         setUploadedFiles(updatedFiles);
-        await recalculateStats(updatedFiles);
+        await recalculateStats(updatedFiles, zoomTimeRange);
       } else {
         setIsProcessing(false);
         alert(`No combat entries found in the uploaded files.\n\nFiles: ${files.length} | Total lines: ${totalLines}.\nCheck browser console for details.`);
@@ -287,7 +296,7 @@ const DPSMeter: React.FC = () => {
   const handleRemoveFile = (fileId: string) => {
     const updated = uploadedFiles.filter(f => f.id !== fileId);
     setUploadedFiles(updated);
-    recalculateStats(updated);
+    recalculateStats(updated, zoomTimeRange);
   };
 
   // Clear all files
@@ -295,6 +304,7 @@ const DPSMeter: React.FC = () => {
     if (uploadedFiles.length === 0) return;
     if (window.confirm('Are you sure you want to clear all uploaded files?')) {
       setUploadedFiles([]);
+      setZoomTimeRange(null);
       recalculateStats([]);
     }
   };
@@ -375,7 +385,13 @@ const DPSMeter: React.FC = () => {
 
           <div className="charts-section">
             <h2>DPS Over Time</h2>
-            <DPSChart data={dpsData} />
+            <DPSChart 
+              data={dpsData} 
+              onZoomChange={async (range) => {
+                setZoomTimeRange(range);
+                await recalculateStats(uploadedFiles, range);
+              }}
+            />
           </div>
 
           <div className="charts-section">
