@@ -103,29 +103,20 @@ const DPSChart: React.FC<DPSChartProps> = ({ data }) => {
     // Sort by time
     allTargetChanges.sort((a, b) => a.time - b.time);
     
-    // Create engagement periods with start and end times
-    // Round to match the integer time values in mergedData
-    const rawPeriods = allTargetChanges.map((change, index) => {
-      const nextChange = allTargetChanges[index + 1];
+    // Create engagement periods with start and end times from actual engagement data
+    // This ensures gaps with no damage have no background color
+    const rawPeriods = allTargetChanges.map((change) => {
       return {
         target: change.target,
         start: Math.floor(change.time),
-        end: nextChange ? Math.floor(nextChange.time) : Math.floor(maxDuration),
+        end: Math.floor(change.endTime),
       };
     });
 
-    // Merge consecutive periods with the same target only if they're within 30 seconds
+    // Don't merge periods - keep each engagement separate so gaps show as no fill
+    // This ensures that 30+ second gaps have no background color
     rawPeriods.forEach(period => {
-      const lastPeriod = targetPeriods[targetPeriods.length - 1];
-      const timeSinceLastPeriod = lastPeriod ? period.start - lastPeriod.end : Infinity;
-      
-      if (lastPeriod && lastPeriod.target === period.target && timeSinceLastPeriod <= 30) {
-        // Extend the last period to include this one (same target, less than 30 seconds gap)
-        lastPeriod.end = period.end;
-      } else {
-        // Add new period (different target or gap > 30 seconds)
-        targetPeriods.push({ ...period });
-      }
+      targetPeriods.push({ ...period });
     });
 
     // Assign colors to unique targets

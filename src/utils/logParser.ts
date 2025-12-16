@@ -185,6 +185,7 @@ export class CombatLogParser {
         if (duration > 30) {
           targetChanges.push({
             time: engagement.start - startTime,
+            endTime: engagement.end - startTime,
             target: engagement.target
           });
         }

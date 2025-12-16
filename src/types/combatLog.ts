@@ -30,6 +30,7 @@ export interface DPSDataPoint {
 
 export interface TargetChange {
   time: number; // Relative time when target changed
+  endTime: number; // Relative time when engagement with this target ended
   target: string; // New target name
 }
 
