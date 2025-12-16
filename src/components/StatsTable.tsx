@@ -33,15 +33,15 @@ const StatsTable: React.FC<StatsTableProps> = ({ stats }) => {
               </td>
               <td className="player-name">{stat.name}</td>
               <td className="dps-value">
-                <strong>{stat.damagePerSecond.toFixed(2)}</strong>
+                <strong>{Math.round(stat.damagePerSecond).toLocaleString()}</strong>
               </td>
-              <td className="damage-value">{stat.totalDamage.toLocaleString()}</td>
-              <td className="hit-count">{stat.hitCount}</td>
-              <td className="avg-damage">{stat.averageDamage.toFixed(0)}</td>
+              <td className="damage-value">{Math.round(stat.totalDamage).toLocaleString()}</td>
+              <td className="hits-value">{stat.hitCount}</td>
+              <td className="avg-damage">{Math.round(stat.averageDamage).toLocaleString()}</td>
               <td className="max-damage">
                 <span className="max-badge">{stat.maxHit.toLocaleString()}</span>
               </td>
-              <td className="duration">{stat.endTime - stat.startTime}s</td>
+              <td className="duration">{Math.round(stat.endTime - stat.startTime)}s</td>
             </tr>
           ))}
         </tbody>

@@ -243,7 +243,7 @@ const DPSChart: React.FC<DPSChartProps> = ({ data, onZoomChange }) => {
             tick={{ fill: '#d0d0d0' }}
           />
           <Tooltip
-            formatter={(value: any) => (typeof value === 'number' ? value.toFixed(2) : value)}
+            formatter={(value: any) => (typeof value === 'number' ? Math.round(value).toLocaleString() : value)}
             labelFormatter={(label) => {
               const dataPoint = mergedData.find(d => d.time === label);
               return dataPoint?.actualTime ? formatTime(dataPoint.actualTime) : `${label}s`;
@@ -332,7 +332,7 @@ const DPSChart: React.FC<DPSChartProps> = ({ data, onZoomChange }) => {
             tick={{ fill: '#d0d0d0' }}
           />
           <Tooltip
-            formatter={(value: any) => (typeof value === 'number' ? value.toFixed(2) : value)}
+            formatter={(value: any) => (typeof value === 'number' ? Math.round(value).toLocaleString() : value)}
             labelFormatter={(label) => {
               const dataPoint = mergedData.find(d => d.time === label);
               return dataPoint?.actualTime ? formatTime(dataPoint.actualTime) : `${label}s`;

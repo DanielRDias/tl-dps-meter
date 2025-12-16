@@ -53,8 +53,8 @@ const DamageByTarget: React.FC<Props> = ({ data }) => {
                   <div className="caster-header">
                     <strong className="caster-name">{c.caster}</strong>
                     <span className="caster-damage">
-                      {c.totalDamage.toLocaleString()} dmg · {c.dps.toFixed(1)} dps
-                      <span style={{ opacity: 0.7 }}> ({c.duration}s)</span>
+                      {Math.round(c.totalDamage).toLocaleString()} dmg · {Math.round(c.dps).toLocaleString()} dps
+                      <span style={{ opacity: 0.7 }}> ({Math.round(c.duration)}s)</span>
                     </span>
                   </div>
                   <div className="caster-skills">
@@ -70,7 +70,7 @@ const DamageByTarget: React.FC<Props> = ({ data }) => {
                         {c.skills.map((s) => (
                           <tr key={`${c.caster}-${s.skill}`}>
                             <td className="skill-name">{s.skill}</td>
-                            <td style={{ textAlign: 'right' }}>{s.damage.toLocaleString()}</td>
+                            <td style={{ textAlign: 'right' }}>{Math.round(s.damage).toLocaleString()}</td>
                             <td style={{ textAlign: 'right' }}>{s.hits}</td>
                           </tr>
                         ))}
