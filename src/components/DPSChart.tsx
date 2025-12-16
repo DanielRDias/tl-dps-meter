@@ -51,11 +51,23 @@ const DPSChart: React.FC<DPSChartProps> = ({ data }) => {
     const point: any = { time: i };
     data.forEach(player => {
       const dataPoint = player.dataPoints.find(dp => dp.time === i);
+      if (dataPoint) {
+        point.actualTime = dataPoint.actualTime; // Store actual timestamp for formatting
+      }
       point[`${player.playerName}`] = dataPoint?.dps || 0; // Cumulative average DPS
       point[`${player.playerName} (Instant)`] = dataPoint?.instantDps || 0; // Instantaneous DPS
     });
     mergedData.push(point);
   }
+
+  // Helper to format timestamp as HH:MM:SS
+  const formatTime = (timestamp: number) => {
+    const date = new Date(timestamp * 1000);
+    const hours = date.getHours().toString().padStart(2, '0');
+    const minutes = date.getMinutes().toString().padStart(2, '0');
+    const seconds = date.getSeconds().toString().padStart(2, '0');
+    return `${hours}:${minutes}:${seconds}`;
+  };
 
   return (
     <div className="dps-chart-wrapper">
@@ -64,14 +76,21 @@ const DPSChart: React.FC<DPSChartProps> = ({ data }) => {
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis
             dataKey="time"
-            label={{ value: 'Time (seconds)', position: 'insideBottomRight', offset: -5 }}
+            label={{ value: 'Time', position: 'insideBottomRight', offset: -5 }}
+            tickFormatter={(value) => {
+              const dataPoint = mergedData.find(d => d.time === value);
+              return dataPoint?.actualTime ? formatTime(dataPoint.actualTime) : `${value}s`;
+            }}
           />
           <YAxis
             label={{ value: 'DPS', angle: -90, position: 'insideLeft' }}
           />
           <Tooltip
             formatter={(value: any) => (typeof value === 'number' ? value.toFixed(2) : value)}
-            labelFormatter={(label) => `${label}s`}
+            labelFormatter={(label) => {
+              const dataPoint = mergedData.find(d => d.time === label);
+              return dataPoint?.actualTime ? formatTime(dataPoint.actualTime) : `${label}s`;
+            }}
           />
           <Legend />
           {data.map((player, index) => {

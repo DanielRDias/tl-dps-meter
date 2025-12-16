@@ -21,7 +21,8 @@ export interface PlayerStats {
 }
 
 export interface DPSDataPoint {
-  time: number;
+  time: number; // Relative time in seconds from start
+  actualTime: number; // Actual timestamp in seconds since epoch
   dps: number; // Cumulative average DPS
   instantDps: number; // DPS at this specific second
 }

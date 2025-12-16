@@ -162,6 +162,7 @@ export class CombatLogParser {
         const elapsedTime = Math.max(currentTime - startTime, 1);
         dataPoints.push({
           time: currentTime - startTime,
+          actualTime: currentTime,
           dps: damageInWindow / elapsedTime,
           instantDps: instantDamage,
         });
