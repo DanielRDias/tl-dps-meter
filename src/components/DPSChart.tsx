@@ -114,16 +114,16 @@ const DPSChart: React.FC<DPSChartProps> = ({ data }) => {
       };
     });
 
-    // Merge consecutive periods with the same target only if they're within 60 seconds
+    // Merge consecutive periods with the same target only if they're within 30 seconds
     rawPeriods.forEach(period => {
       const lastPeriod = targetPeriods[targetPeriods.length - 1];
       const timeSinceLastPeriod = lastPeriod ? period.start - lastPeriod.end : Infinity;
       
-      if (lastPeriod && lastPeriod.target === period.target && timeSinceLastPeriod <= 60) {
-        // Extend the last period to include this one (same target, less than 60 seconds gap)
+      if (lastPeriod && lastPeriod.target === period.target && timeSinceLastPeriod <= 30) {
+        // Extend the last period to include this one (same target, less than 30 seconds gap)
         lastPeriod.end = period.end;
       } else {
-        // Add new period (different target or gap > 60 seconds)
+        // Add new period (different target or gap > 30 seconds)
         targetPeriods.push({ ...period });
       }
     });
@@ -147,6 +147,9 @@ const DPSChart: React.FC<DPSChartProps> = ({ data }) => {
           <span>Show Target Sections</span>
         </label>
       </div>
+
+      {/* Average DPS Chart */}
+      <h3 style={{ color: '#d0d0d0', marginTop: '20px', marginBottom: '10px' }}>Average DPS Over Time</h3>
       <ResponsiveContainer width="100%" height={400}>
         <LineChart data={mergedData} margin={{ top: 5, right: 30, left: 0, bottom: 5 }}>
           <CartesianGrid strokeDasharray="3 3" />
@@ -180,7 +183,7 @@ const DPSChart: React.FC<DPSChartProps> = ({ data }) => {
             }}
           />
           <YAxis
-            label={{ value: 'DPS', angle: -90, position: 'insideLeft', fill: '#d0d0d0' }}
+            label={{ value: 'Average DPS', angle: -90, position: 'insideLeft', fill: '#d0d0d0' }}
             tick={{ fill: '#d0d0d0' }}
           />
           <Tooltip
@@ -192,55 +195,84 @@ const DPSChart: React.FC<DPSChartProps> = ({ data }) => {
           />
           <Legend />
           
-          {/* Target change markers - show vertical lines where targets change */}
-          {data.flatMap((player, playerIndex) => 
-            player.targetChanges.map((change, changeIndex) => (
-              <ReferenceLine
-                key={`${player.playerName}-target-${changeIndex}`}
-                x={change.time}
-                stroke={playerIndex < COLORS.length ? COLORS[playerIndex] : stringToColor(player.playerName)}
-                strokeWidth={1}
-                strokeDasharray="5 5"
-                opacity={0.4}
-              >
-                <Label
-                  value={change.target}
-                  position="top"
-                  fill="#d0d0d0"
-                  fontSize={11}
-                  offset={5}
-                />
-              </ReferenceLine>
-            ))
-          )}
+          {data.map((player, index) => {
+            const baseColor = index < COLORS.length ? COLORS[index] : stringToColor(player.playerName);
+            return (
+              <Line
+                key={player.playerName}
+                type="monotone"
+                dataKey={player.playerName}
+                stroke={baseColor}
+                dot={false}
+                isAnimationActive={false}
+                strokeWidth={2}
+                name={player.playerName}
+              />
+            );
+          })}
+        </LineChart>
+      </ResponsiveContainer>
+
+      {/* Instantaneous DPS Chart */}
+      <h3 style={{ color: '#d0d0d0', marginTop: '40px', marginBottom: '10px' }}>Instantaneous DPS (Per Second)</h3>
+      <ResponsiveContainer width="100%" height={400}>
+        <LineChart data={mergedData} margin={{ top: 5, right: 30, left: 0, bottom: 5 }}>
+          <CartesianGrid strokeDasharray="3 3" />
+          
+          {/* Background shading for each target engagement period */}
+          {targetPeriods.map((period, index) => (
+            <ReferenceArea
+              key={`inst-target-period-${index}`}
+              x1={period.start}
+              x2={period.end}
+              fill={targetColors.get(period.target)}
+              fillOpacity={0.3}
+              stroke={targetColors.get(period.target)}
+              strokeOpacity={0.5}
+              label={{
+                value: period.target,
+                position: 'insideTop',
+                fill: '#d0d0d0',
+                fontSize: 10,
+                offset: 5,
+              }}
+            />
+          ))}
+          <XAxis
+            dataKey="time"
+            label={{ value: 'Time', position: 'insideBottomRight', offset: -5, fill: '#d0d0d0' }}
+            tick={{ fill: '#d0d0d0' }}
+            tickFormatter={(value) => {
+              const dataPoint = mergedData.find(d => d.time === value);
+              return dataPoint?.actualTime ? formatTime(dataPoint.actualTime) : `${value}s`;
+            }}
+          />
+          <YAxis
+            label={{ value: 'Instantaneous DPS', angle: -90, position: 'insideLeft', fill: '#d0d0d0' }}
+            tick={{ fill: '#d0d0d0' }}
+          />
+          <Tooltip
+            formatter={(value: any) => (typeof value === 'number' ? value.toFixed(2) : value)}
+            labelFormatter={(label) => {
+              const dataPoint = mergedData.find(d => d.time === label);
+              return dataPoint?.actualTime ? formatTime(dataPoint.actualTime) : `${label}s`;
+            }}
+          />
+          <Legend />
           
           {data.map((player, index) => {
             const baseColor = index < COLORS.length ? COLORS[index] : stringToColor(player.playerName);
             return (
-              <React.Fragment key={player.playerName}>
-                {/* Cumulative average DPS line */}
-                <Line
-                  type="monotone"
-                  dataKey={player.playerName}
-                  stroke={baseColor}
-                  dot={false}
-                  isAnimationActive={false}
-                  strokeWidth={2}
-                  name={`${player.playerName} (Average)`}
-                />
-                {/* Instantaneous DPS line */}
-                <Line
-                  type="monotone"
-                  dataKey={`${player.playerName} (Instant)`}
-                  stroke={baseColor}
-                  dot={false}
-                  isAnimationActive={false}
-                  strokeWidth={1}
-                  strokeDasharray="3 3"
-                  name={`${player.playerName} (Per Second)`}
-                  opacity={0.6}
-                />
-              </React.Fragment>
+              <Line
+                key={player.playerName}
+                type="monotone"
+                dataKey={`${player.playerName} (Instant)`}
+                stroke={baseColor}
+                dot={false}
+                isAnimationActive={false}
+                strokeWidth={2}
+                name={player.playerName}
+              />
             );
           })}
         </LineChart>

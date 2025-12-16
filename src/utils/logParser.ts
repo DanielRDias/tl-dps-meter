@@ -140,7 +140,7 @@ export class CombatLogParser {
       // Track target changes (only if target is hit for more than 1 second)
       const targetChanges: { time: number; target: string }[] = [];
       
-      // Build list of all target engagements, ending them if there's a 60+ second gap
+      // Build list of all target engagements, ending them if there's a 30+ second gap
       const engagements: Array<{ target: string; start: number; end: number }> = [];
       let lastTarget = '';
       let engagementStart = 0;
@@ -149,8 +149,8 @@ export class CombatLogParser {
       sortedEntries.forEach((entry, index) => {
         const timeSinceLastHit = entry.timestamp - lastHitTime;
         
-        // End current engagement if: target changed OR gap > 60 seconds
-        if (lastTarget && (entry.target !== lastTarget || timeSinceLastHit > 60)) {
+        // End current engagement if: target changed OR gap > 30 seconds
+        if (lastTarget && (entry.target !== lastTarget || timeSinceLastHit > 30)) {
           const prevEntry = sortedEntries[index - 1];
           engagements.push({
             target: lastTarget,
@@ -179,10 +179,10 @@ export class CombatLogParser {
         });
       }
       
-      // Filter engagements to only those > 60 seconds (1 minute) and convert to target changes
+      // Filter engagements to only those > 30 seconds and convert to target changes
       engagements.forEach(engagement => {
         const duration = engagement.end - engagement.start;
-        if (duration > 60) {
+        if (duration > 30) {
           targetChanges.push({
             time: engagement.start - startTime,
             target: engagement.target
