@@ -134,6 +134,13 @@ const DPSChart: React.FC<DPSChartProps> = ({ data, onZoomChange }) => {
     const left = Math.min(refAreaLeft, refAreaRight);
     const right = Math.max(refAreaLeft, refAreaRight);
     
+    // Require minimum drag distance to avoid accidental zooms
+    if (right - left < 2) {
+      setRefAreaLeft(null);
+      setRefAreaRight(null);
+      return;
+    }
+    
     const newZoomDomain = { left, right };
     setZoomDomain(newZoomDomain);
     setRefAreaLeft(null);
@@ -189,7 +196,7 @@ const DPSChart: React.FC<DPSChartProps> = ({ data, onZoomChange }) => {
       <h3 style={{ color: '#d0d0d0', marginTop: '20px', marginBottom: '10px' }}>
         Average DPS Over Time
         <span style={{ fontSize: '12px', marginLeft: '10px', opacity: 0.7 }}>
-          (Click and drag to zoom)
+          {refAreaLeft !== null ? '(Release to zoom in)' : '(Click and drag to zoom)'}
         </span>
       </h3>
       <ResponsiveContainer width="100%" height={400}>
@@ -199,6 +206,7 @@ const DPSChart: React.FC<DPSChartProps> = ({ data, onZoomChange }) => {
           onMouseDown={(e: any) => e && e.activeLabel !== undefined && setRefAreaLeft(e.activeLabel)}
           onMouseMove={(e: any) => refAreaLeft !== null && e && e.activeLabel !== undefined && setRefAreaRight(e.activeLabel)}
           onMouseUp={zoom}
+          style={{ cursor: refAreaLeft !== null ? 'col-resize' : 'crosshair' }}
         >
           <CartesianGrid strokeDasharray="3 3" />
           
@@ -247,9 +255,11 @@ const DPSChart: React.FC<DPSChartProps> = ({ data, onZoomChange }) => {
             <ReferenceArea
               x1={refAreaLeft}
               x2={refAreaRight}
-              strokeOpacity={0.3}
-              fill="#8884d8"
-              fillOpacity={0.3}
+              strokeOpacity={0.8}
+              stroke="#4ECDC4"
+              strokeWidth={2}
+              fill="#4ECDC4"
+              fillOpacity={0.2}
             />
           )}
           
@@ -275,7 +285,7 @@ const DPSChart: React.FC<DPSChartProps> = ({ data, onZoomChange }) => {
       <h3 style={{ color: '#d0d0d0', marginTop: '40px', marginBottom: '10px' }}>
         Instantaneous DPS (Per Second)
         <span style={{ fontSize: '12px', marginLeft: '10px', opacity: 0.7 }}>
-          (Click and drag to zoom)
+          {refAreaLeft !== null ? '(Release to zoom in)' : '(Click and drag to zoom)'}
         </span>
       </h3>
       <ResponsiveContainer width="100%" height={400}>
@@ -285,6 +295,7 @@ const DPSChart: React.FC<DPSChartProps> = ({ data, onZoomChange }) => {
           onMouseDown={(e: any) => e && e.activeLabel !== undefined && setRefAreaLeft(e.activeLabel)}
           onMouseMove={(e: any) => refAreaLeft !== null && e && e.activeLabel !== undefined && setRefAreaRight(e.activeLabel)}
           onMouseUp={zoom}
+          style={{ cursor: refAreaLeft !== null ? 'col-resize' : 'crosshair' }}
         >
           <CartesianGrid strokeDasharray="3 3" />
           
@@ -333,9 +344,11 @@ const DPSChart: React.FC<DPSChartProps> = ({ data, onZoomChange }) => {
             <ReferenceArea
               x1={refAreaLeft}
               x2={refAreaRight}
-              strokeOpacity={0.3}
-              fill="#8884d8"
-              fillOpacity={0.3}
+              strokeOpacity={0.8}
+              stroke="#4ECDC4"
+              strokeWidth={2}
+              fill="#4ECDC4"
+              fillOpacity={0.2}
             />
           )}
           

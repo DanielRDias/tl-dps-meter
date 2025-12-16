@@ -383,6 +383,12 @@ const DPSMeter: React.FC = () => {
             )}
           </div>
 
+
+          <div className="charts-section">
+            <h2>Player Statistics</h2>
+            <StatsTable stats={playerStats} />
+          </div>
+
           <div className="charts-section">
             <h2>DPS Over Time</h2>
             <DPSChart 
@@ -393,7 +399,6 @@ const DPSMeter: React.FC = () => {
               }}
             />
           </div>
-
           <div className="charts-section">
             <h2>Damage By Skill</h2>
             <SkillChart data={skillDamage} />
@@ -412,11 +417,6 @@ const DPSMeter: React.FC = () => {
           <div className="charts-section">
             <h2>Critical and Heavy Hit Rates by Skill</h2>
             <SkillHitRateChart data={skillHitRates} />
-          </div>
-
-          <div className="stats-section">
-            <h2>Player Statistics</h2>
-            <StatsTable stats={playerStats} />
           </div>
 
           <div className="charts-section">
