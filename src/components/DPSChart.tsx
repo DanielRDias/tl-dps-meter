@@ -43,17 +43,24 @@ const DPSChart: React.FC<DPSChartProps> = ({ data }) => {
     return <div className="empty-state">No DPS data available</div>;
   }
 
+  // Find the global earliest start time across all players
+  const globalStartTime = Math.min(
+    ...data.map(player => 
+      player.dataPoints.length > 0 ? player.dataPoints[0].actualTime - player.dataPoints[0].time : Infinity
+    )
+  );
+
   // Transform data for recharts - combine all player data points
   const maxDuration = Math.max(...data.map(d => d.duration));
   const mergedData: any[] = [];
 
   for (let i = 0; i <= maxDuration; i++) {
     const point: any = { time: i };
+    // Calculate the actual time for this relative time point based on global start
+    point.actualTime = globalStartTime + i;
+    
     data.forEach(player => {
       const dataPoint = player.dataPoints.find(dp => dp.time === i);
-      if (dataPoint) {
-        point.actualTime = dataPoint.actualTime; // Store actual timestamp for formatting
-      }
       point[`${player.playerName}`] = dataPoint?.dps || 0; // Cumulative average DPS
       point[`${player.playerName} (Instant)`] = dataPoint?.instantDps || 0; // Instantaneous DPS
     });
@@ -76,14 +83,16 @@ const DPSChart: React.FC<DPSChartProps> = ({ data }) => {
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis
             dataKey="time"
-            label={{ value: 'Time', position: 'insideBottomRight', offset: -5 }}
+            label={{ value: 'Time', position: 'insideBottomRight', offset: -5, fill: '#d0d0d0' }}
+            tick={{ fill: '#d0d0d0' }}
             tickFormatter={(value) => {
               const dataPoint = mergedData.find(d => d.time === value);
               return dataPoint?.actualTime ? formatTime(dataPoint.actualTime) : `${value}s`;
             }}
           />
           <YAxis
-            label={{ value: 'DPS', angle: -90, position: 'insideLeft' }}
+            label={{ value: 'DPS', angle: -90, position: 'insideLeft', fill: '#d0d0d0' }}
+            tick={{ fill: '#d0d0d0' }}
           />
           <Tooltip
             formatter={(value: any) => (typeof value === 'number' ? value.toFixed(2) : value)}

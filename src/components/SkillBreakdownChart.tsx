@@ -34,8 +34,8 @@ const SkillBreakdownChart: React.FC<SkillBreakdownChartProps> = ({ data }) => {
       <ResponsiveContainer>
         <BarChart layout="vertical" data={sorted} margin={{ top: 20, right: 20, left: 80, bottom: 20 }}>
           <CartesianGrid strokeDasharray="3 3" />
-          <XAxis type="number" />
-          <YAxis type="category" dataKey="skill" width={220} interval={0}/>
+          <XAxis type="number" tick={{ fill: '#d0d0d0' }} />
+          <YAxis type="category" dataKey="skill" width={220} interval={0} tick={{ fill: '#d0d0d0' }}/>
           <Tooltip 
             formatter={(value: any, name: string) => {
               const hitTypeMap: Record<string, string> = {

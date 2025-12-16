@@ -606,7 +606,8 @@ body {
 }
 
 .recharts-cartesian-axis-tick {
-  color: var(--text-secondary) !important;
+  fill: #d0d0d0 !important;
+  color: #d0d0d0 !important;
 }
 
 .recharts-cartesian-axis-line {
@@ -639,6 +640,15 @@ body {
 .recharts-tooltip-label-list,
 .recharts-tooltip-item {
   color: var(--text-primary) !important;
+}
+
+.recharts-label,
+.recharts-text {
+  fill: #d0d0d0 !important;
+}
+
+.recharts-legend-item-text {
+  color: #e0e0e0 !important;
 }
   
 /* Responsive Design */
