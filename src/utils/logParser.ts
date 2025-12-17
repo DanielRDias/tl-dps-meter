@@ -184,8 +184,8 @@ export class CombatLogParser {
         const duration = engagement.end - engagement.start;
         if (duration > 30) {
           targetChanges.push({
-            time: engagement.start - startTime,
-            endTime: engagement.end - startTime,
+            time: Math.floor(engagement.start) - startTime,
+            endTime: Math.floor(engagement.end) - startTime,
             target: engagement.target
           });
         }
@@ -195,42 +195,44 @@ export class CombatLogParser {
       
       const dataPoints: DPSDataPoint[] = [];
       
-      // Create data points every second for smooth DPS curve
-      let currentTime = startTime;
-      while (currentTime <= endTime) {
-        // Calculate cumulative average DPS (total damage up to this point / elapsed time)
-        let damageInWindow = 0;
-        for (const e of playerEntries) {
-          if (e.timestamp <= currentTime) {
-            damageInWindow += e.damage;
-          }
+      // Group entries by second to avoid creating data points for empty seconds
+      const entriesBySecond = new Map<number, CombatLogEntry[]>();
+      sortedEntries.forEach(entry => {
+        const second = Math.floor(entry.timestamp);
+        if (!entriesBySecond.has(second)) {
+          entriesBySecond.set(second, []);
         }
+        entriesBySecond.get(second)!.push(entry);
+      });
+      
+      // Create data points only for seconds that have combat data
+      const combatSeconds = Array.from(entriesBySecond.keys()).sort((a, b) => a - b);
+      
+      let cumulativeDamage = 0;
+      combatSeconds.forEach((currentSecond) => {
+        const relativeTime = currentSecond - startTime;
+        const entriesThisSecond = entriesBySecond.get(currentSecond)!;
         
         // Calculate instantaneous DPS (damage dealt in this specific second)
         let instantDamage = 0;
-        const nextTime = currentTime + 1;
-        for (const e of playerEntries) {
-          if (e.timestamp > currentTime && e.timestamp <= nextTime) {
-            instantDamage += e.damage;
-          }
-        }
+        entriesThisSecond.forEach(e => {
+          instantDamage += e.damage;
+          cumulativeDamage += e.damage;
+        });
         
-        const elapsedTime = Math.max(currentTime - startTime, 1);
-        const relativeTime = currentTime - startTime;
+        const elapsedTime = Math.max(relativeTime, 1);
         
         // Check if there's a target change at this time
         const targetChange = targetChanges.find(tc => Math.abs(tc.time - relativeTime) < 0.5);
         
         dataPoints.push({
           time: relativeTime,
-          actualTime: currentTime,
-          dps: damageInWindow / elapsedTime,
+          actualTime: currentSecond,
+          dps: cumulativeDamage / elapsedTime,
           instantDps: instantDamage,
           target: targetChange?.target,
         });
-        
-        currentTime += 1;
-      }
+      });
       
       dpsDataArray.push({
         playerName,

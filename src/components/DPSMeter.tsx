@@ -58,7 +58,13 @@ const DPSMeter: React.FC = () => {
     
     // Filter entries by time range if zoom is active
     if (timeRange && allEntries.length > 0) {
-      const minTimestamp = Math.min(...allEntries.map(e => e.timestamp));
+      // Find min timestamp efficiently in single pass
+      let minTimestamp = allEntries[0].timestamp;
+      for (let i = 1; i < allEntries.length; i++) {
+        if (allEntries[i].timestamp < minTimestamp) {
+          minTimestamp = allEntries[i].timestamp;
+        }
+      }
       const leftTimestamp = minTimestamp + timeRange.left;
       const rightTimestamp = minTimestamp + timeRange.right;
       allEntries = allEntries.filter(e => e.timestamp >= leftTimestamp && e.timestamp <= rightTimestamp);
@@ -84,116 +90,63 @@ const DPSMeter: React.FC = () => {
     setPlayerStats(CombatLogParser.getPlayerStats(allEntries));
     await yieldToMain();
     
-    setProcessingProgress({ current: 2, total: 6, stage: 'Calculating DPS...' });
+    setProcessingProgress({ current: 2, total: 3, stage: 'Calculating DPS...' });
     setDpsData(CombatLogParser.calculatePlayerDPS(allEntries));
     await yieldToMain();
 
-    // Aggregate damage by skill/ability
-    setProcessingProgress({ current: 3, total: 6, stage: 'Analyzing skill damage...' });
+    // Consolidate all entry processing into a single pass for better performance
+    setProcessingProgress({ current: 3, total: 3, stage: 'Processing combat data...' });
     const skillMap: Record<string, { damage: number; hits: number }> = {};
-    
-    for (let i = 0; i < allEntries.length; i += CHUNK_SIZE) {
-      const chunk = allEntries.slice(i, i + CHUNK_SIZE);
-      chunk.forEach((e) => {
-        const key = e.action || 'Unknown';
-        if (!skillMap[key]) skillMap[key] = { damage: 0, hits: 0 };
-        skillMap[key].damage += e.damage || 0;
-        skillMap[key].hits += 1;
-      });
-      
-      if (i % (CHUNK_SIZE * 4) === 0 && i > 0) {
-        await yieldToMain();
-      }
-    }
-
-    const skillArr: SkillDamage[] = Object.keys(skillMap).map((k) => ({
-      skill: k,
-      damage: skillMap[k].damage,
-      hits: skillMap[k].hits,
-    }));
-    setSkillDamage(skillArr);
-    await yieldToMain();
-
-    // Compute skill breakdown by hit type
-    setProcessingProgress({ current: 4, total: 6, stage: 'Processing skill breakdown...' });
     const breakdownMap: Record<string, { normalHits: number; criticalHits: number; heavyHits: number; heavyCriticalHits: number }> = {};
-    
-    for (let i = 0; i < allEntries.length; i += CHUNK_SIZE) {
-      const chunk = allEntries.slice(i, i + CHUNK_SIZE);
-      chunk.forEach((e) => {
-        const key = e.action || 'Unknown';
-        if (!breakdownMap[key]) {
-          breakdownMap[key] = { normalHits: 0, criticalHits: 0, heavyHits: 0, heavyCriticalHits: 0 };
-        }
-        if (e.isCritical && e.isHeavyHit) {
-          breakdownMap[key].heavyCriticalHits += 1;
-        } else if (e.isCritical) {
-          breakdownMap[key].criticalHits += 1;
-        } else if (e.isHeavyHit) {
-          breakdownMap[key].heavyHits += 1;
-        } else {
-          breakdownMap[key].normalHits += 1;
-        }
-      });
-      
-      if (i % (CHUNK_SIZE * 4) === 0 && i > 0) {
-        await yieldToMain();
-      }
-    }
-
-    const breakdownArr: SkillBreakdown[] = Object.keys(breakdownMap).map((k) => ({
-      skill: k,
-      ...breakdownMap[k],
-    }));
-    setSkillBreakdown(breakdownArr);
-    await yieldToMain();
-
-    // Compute hit rates per skill and caster
-    setProcessingProgress({ current: 5, total: 6, stage: 'Calculating hit rates...' });
     const hitRateMap: Record<string, { caster: string; skill: string; totalHits: number; normalHits: number; criticalHits: number; heavyHits: number; heavyCriticalHits: number }> = {};
-    
-    for (let i = 0; i < allEntries.length; i += CHUNK_SIZE) {
-      const chunk = allEntries.slice(i, i + CHUNK_SIZE);
-      chunk.forEach((e) => {
-        const caster = e.source || 'Unknown';
-        const skill = e.action || 'Unknown';
-        const key = `${caster}:${skill}`;
-        if (!hitRateMap[key]) {
-          hitRateMap[key] = { caster, skill, totalHits: 0, normalHits: 0, criticalHits: 0, heavyHits: 0, heavyCriticalHits: 0 };
-        }
-        hitRateMap[key].totalHits += 1;
-        if (e.isCritical && e.isHeavyHit) {
-          hitRateMap[key].heavyCriticalHits += 1;
-          hitRateMap[key].criticalHits += 1;
-          hitRateMap[key].heavyHits += 1;
-        } else if (e.isCritical) {
-          hitRateMap[key].criticalHits += 1;
-        } else if (e.isHeavyHit) {
-          hitRateMap[key].heavyHits += 1;
-        } else {
-          hitRateMap[key].normalHits += 1;
-        }
-      });
-      
-      if (i % (CHUNK_SIZE * 4) === 0 && i > 0) {
-        await yieldToMain();
-      }
-    }
-
-    const hitRateArr: SkillHitRate[] = Object.keys(hitRateMap).map((k) => hitRateMap[k]);
-    setSkillHitRates(hitRateArr);
-    await yieldToMain();
-    
-    // Build damage-by-target aggregation: target -> caster -> skills
-    setProcessingProgress({ current: 6, total: 6, stage: 'Analyzing damage by target...' });
     const targetMap: Record<string, Record<string, { totalDamage: number; skills: Record<string, { damage: number; hits: number }>; start: number; end: number }>> = {};
     
+    // Single loop through all entries to calculate all stats
     for (let i = 0; i < allEntries.length; i += CHUNK_SIZE) {
       const chunk = allEntries.slice(i, i + CHUNK_SIZE);
       chunk.forEach((e) => {
-        const target = e.target || 'Unknown';
-        const caster = e.source || 'Unknown';
         const skill = e.action || 'Unknown';
+        const caster = e.source || 'Unknown';
+        const target = e.target || 'Unknown';
+        
+        // Skill damage aggregation
+        if (!skillMap[skill]) skillMap[skill] = { damage: 0, hits: 0 };
+        skillMap[skill].damage += e.damage || 0;
+        skillMap[skill].hits += 1;
+        
+        // Skill breakdown by hit type
+        if (!breakdownMap[skill]) {
+          breakdownMap[skill] = { normalHits: 0, criticalHits: 0, heavyHits: 0, heavyCriticalHits: 0 };
+        }
+        if (e.isCritical && e.isHeavyHit) {
+          breakdownMap[skill].heavyCriticalHits += 1;
+        } else if (e.isCritical) {
+          breakdownMap[skill].criticalHits += 1;
+        } else if (e.isHeavyHit) {
+          breakdownMap[skill].heavyHits += 1;
+        } else {
+          breakdownMap[skill].normalHits += 1;
+        }
+        
+        // Hit rates per caster and skill
+        const hitRateKey = `${caster}:${skill}`;
+        if (!hitRateMap[hitRateKey]) {
+          hitRateMap[hitRateKey] = { caster, skill, totalHits: 0, normalHits: 0, criticalHits: 0, heavyHits: 0, heavyCriticalHits: 0 };
+        }
+        hitRateMap[hitRateKey].totalHits += 1;
+        if (e.isCritical && e.isHeavyHit) {
+          hitRateMap[hitRateKey].heavyCriticalHits += 1;
+          hitRateMap[hitRateKey].criticalHits += 1;
+          hitRateMap[hitRateKey].heavyHits += 1;
+        } else if (e.isCritical) {
+          hitRateMap[hitRateKey].criticalHits += 1;
+        } else if (e.isHeavyHit) {
+          hitRateMap[hitRateKey].heavyHits += 1;
+        } else {
+          hitRateMap[hitRateKey].normalHits += 1;
+        }
+        
+        // Damage by target
         if (!targetMap[target]) targetMap[target] = {};
         if (!targetMap[target][caster]) {
           targetMap[target][caster] = {
@@ -203,12 +156,10 @@ const DPSMeter: React.FC = () => {
             end: e.timestamp,
           };
         }
-
         const bucket = targetMap[target][caster];
         bucket.totalDamage += e.damage || 0;
         bucket.start = Math.min(bucket.start, e.timestamp);
         bucket.end = Math.max(bucket.end, e.timestamp);
-
         if (!bucket.skills[skill]) bucket.skills[skill] = { damage: 0, hits: 0 };
         bucket.skills[skill].damage += e.damage || 0;
         bucket.skills[skill].hits += 1;
@@ -218,6 +169,23 @@ const DPSMeter: React.FC = () => {
         await yieldToMain();
       }
     }
+    
+    // Convert maps to arrays
+    const skillArr: SkillDamage[] = Object.keys(skillMap).map((k) => ({
+      skill: k,
+      damage: skillMap[k].damage,
+      hits: skillMap[k].hits,
+    }));
+    setSkillDamage(skillArr);
+    
+    const breakdownArr: SkillBreakdown[] = Object.keys(breakdownMap).map((k) => ({
+      skill: k,
+      ...breakdownMap[k],
+    }));
+    setSkillBreakdown(breakdownArr);
+    
+    const hitRateArr: SkillHitRate[] = Object.keys(hitRateMap).map((k) => hitRateMap[k]);
+    setSkillHitRates(hitRateArr);
 
     const damageByTargetArr: DamageByTargetType[] = Object.keys(targetMap).map((t) => ({
       target: t,

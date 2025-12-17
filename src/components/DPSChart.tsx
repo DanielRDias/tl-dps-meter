@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import {
   LineChart,
   Line,
@@ -50,29 +50,62 @@ const DPSChart: React.FC<DPSChartProps> = ({ data, onZoomChange }) => {
     return <div className="empty-state">No DPS data available</div>;
   }
 
-  // Find the global earliest start time across all players
-  const globalStartTime = Math.min(
-    ...data.map(player => 
-      player.dataPoints.length > 0 ? player.dataPoints[0].actualTime - player.dataPoints[0].time : Infinity
-    )
-  );
-
-  // Transform data for recharts - combine all player data points
-  const maxDuration = Math.max(...data.map(d => d.duration));
-  const mergedData: any[] = [];
-
-  for (let i = 0; i <= maxDuration; i++) {
-    const point: any = { time: i };
-    // Calculate the actual time for this relative time point based on global start
-    point.actualTime = globalStartTime + i;
+  // Memoize merged data to avoid recalculation on every render
+  const mergedData = useMemo(() => {
+    if (data.length === 0) return [];
     
-    data.forEach(player => {
-      const dataPoint = player.dataPoints.find(dp => dp.time === i);
-      point[`${player.playerName}`] = dataPoint?.dps || 0; // Cumulative average DPS
-      point[`${player.playerName} (Instant)`] = dataPoint?.instantDps || 0; // Instantaneous DPS
+    // Find the global earliest start time across all players efficiently
+    let globalStartTime = Infinity;
+    for (const player of data) {
+      if (player.dataPoints.length > 0) {
+        const startTime = player.dataPoints[0].actualTime - player.dataPoints[0].time;
+        if (startTime < globalStartTime) {
+          globalStartTime = startTime;
+        }
+      }
+    }
+
+    // Find max duration efficiently
+    let maxDuration = 0;
+    for (const player of data) {
+      if (player.duration > maxDuration) {
+        maxDuration = player.duration;
+      }
+    }
+
+    // Pre-build data point maps for faster lookups
+    const playerDataMaps = data.map(player => {
+      const map = new Map();
+      player.dataPoints.forEach(dp => {
+        map.set(dp.time, dp);
+      });
+      return { playerName: player.playerName, dataMap: map };
     });
-    mergedData.push(point);
-  }
+
+    // Collect all unique time points where at least one player has data
+    const timePointsSet = new Set<number>();
+    data.forEach(player => {
+      player.dataPoints.forEach(dp => {
+        timePointsSet.add(dp.time);
+      });
+    });
+    const timePoints = Array.from(timePointsSet).sort((a, b) => a - b);
+
+    // Transform data for recharts - only create points for seconds with data
+    const result: any[] = [];
+    timePoints.forEach(time => {
+      const point: any = { time };
+      point.actualTime = globalStartTime + time;
+      
+      playerDataMaps.forEach(({ playerName, dataMap }) => {
+        const dataPoint = dataMap.get(time);
+        point[playerName] = dataPoint?.dps || 0;
+        point[`${playerName} (Instant)`] = dataPoint?.instantDps || 0;
+      });
+      result.push(point);
+    });
+    return result;
+  }, [data]);
 
   // Helper to format timestamp as HH:MM:SS
   const formatTime = (timestamp: number) => {
@@ -83,20 +116,24 @@ const DPSChart: React.FC<DPSChartProps> = ({ data, onZoomChange }) => {
     return `${hours}:${minutes}:${seconds}`;
   };
 
-  // Only calculate target periods if the feature is enabled
-  let targetPeriods: Array<{ target: string; start: number; end: number }> = [];
-  let targetColors = new Map<string, string>();
+  // Memoize target periods calculation
+  const { targetPeriods, targetColors } = useMemo(() => {
+    const periods: Array<{ target: string; start: number; end: number }> = [];
+    const colors = new Map<string, string>();
+    
+    if (!showTargetSections || data.length === 0) {
+      return { targetPeriods: periods, targetColors: colors };
+    }
 
-  if (showTargetSections) {
-    // Create target engagement periods from target changes
-    // Combine all players' target changes to show overall combat flow
+    // Use a Set for O(1) duplicate detection instead of array.find
+    const seenChanges = new Set<string>();
     const allTargetChanges: Array<{ time: number; endTime: number; target: string }> = [];
+    
     data.forEach(player => {
       player.targetChanges.forEach(tc => {
-        // Only add if not already present at this time
-        if (!allTargetChanges.find(existing => 
-          Math.abs(existing.time - tc.time) < 0.5 && existing.target === tc.target
-        )) {
+        const key = `${tc.time.toFixed(1)}-${tc.target}`;
+        if (!seenChanges.has(key)) {
+          seenChanges.add(key);
           allTargetChanges.push(tc);
         }
       });
@@ -105,28 +142,23 @@ const DPSChart: React.FC<DPSChartProps> = ({ data, onZoomChange }) => {
     // Sort by time
     allTargetChanges.sort((a, b) => a.time - b.time);
     
-    // Create engagement periods with start and end times from actual engagement data
-    // This ensures gaps with no damage have no background color
-    const rawPeriods = allTargetChanges.map((change) => {
-      return {
+    // Create engagement periods directly (use exact times to match sparse data points)
+    allTargetChanges.forEach(change => {
+      periods.push({
         target: change.target,
-        start: Math.floor(change.time),
-        end: Math.floor(change.endTime),
-      };
-    });
-
-    // Don't merge periods - keep each engagement separate so gaps show as no fill
-    // This ensures that 30+ second gaps have no background color
-    rawPeriods.forEach(period => {
-      targetPeriods.push({ ...period });
+        start: change.time,
+        end: change.endTime,
+      });
     });
 
     // Assign colors to unique targets
-    const uniqueTargets = Array.from(new Set(targetPeriods.map(p => p.target)));
+    const uniqueTargets = Array.from(new Set(periods.map(p => p.target)));
     uniqueTargets.forEach((target) => {
-      targetColors.set(target, stringToColor(target));
+      colors.set(target, stringToColor(target));
     });
-  }
+    
+    return { targetPeriods: periods, targetColors: colors };
+  }, [data, showTargetSections]);
 
   const zoom = () => {
     if (refAreaLeft === null || refAreaRight === null) return;
