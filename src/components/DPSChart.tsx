@@ -265,7 +265,7 @@ const DPSChart: React.FC<DPSChartProps> = ({ data, onZoomChange }) => {
             dataKey="time"
             label={{ value: 'Time (seconds)', position: 'insideBottomRight', offset: -5, fill: '#d0d0d0' }}
             tick={{ fill: '#d0d0d0' }}
-            tickFormatter={(value) => `${value}s`}
+            tickFormatter={(value) => `${Math.round(value)}s`}
             domain={zoomDomain ? [zoomDomain.left, zoomDomain.right] : ['dataMin', 'dataMax']}
             allowDataOverflow={true}
           />
@@ -353,7 +353,7 @@ const DPSChart: React.FC<DPSChartProps> = ({ data, onZoomChange }) => {
             dataKey="time"
             label={{ value: 'Time (seconds)', position: 'insideBottomRight', offset: -5, fill: '#d0d0d0' }}
             tick={{ fill: '#d0d0d0' }}
-            tickFormatter={(value) => `${value}s`}
+            tickFormatter={(value) => `${Math.round(value)}s`}
             domain={zoomDomain ? [zoomDomain.left, zoomDomain.right] : ['dataMin', 'dataMax']}
             allowDataOverflow={true}
           />
