@@ -266,6 +266,8 @@ const DPSChart: React.FC<DPSChartProps> = ({ data, onZoomChange }) => {
             label={{ value: 'Time (seconds)', position: 'insideBottomRight', offset: -5, fill: '#d0d0d0' }}
             tick={{ fill: '#d0d0d0' }}
             tickFormatter={(value) => `${value}s`}
+            domain={zoomDomain ? [zoomDomain.left, zoomDomain.right] : ['dataMin', 'dataMax']}
+            allowDataOverflow={true}
           />
           <YAxis
             label={{ value: 'Average DPS', angle: -90, position: 'insideLeft', fill: '#d0d0d0' }}
@@ -352,6 +354,8 @@ const DPSChart: React.FC<DPSChartProps> = ({ data, onZoomChange }) => {
             label={{ value: 'Time (seconds)', position: 'insideBottomRight', offset: -5, fill: '#d0d0d0' }}
             tick={{ fill: '#d0d0d0' }}
             tickFormatter={(value) => `${value}s`}
+            domain={zoomDomain ? [zoomDomain.left, zoomDomain.right] : ['dataMin', 'dataMax']}
+            allowDataOverflow={true}
           />
           <YAxis
             label={{ value: 'Instantaneous DPS', angle: -90, position: 'insideLeft', fill: '#d0d0d0' }}
