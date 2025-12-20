@@ -10,6 +10,7 @@ import {
   CartesianGrid,
   Legend,
 } from 'recharts';
+import { getSkillIconPath } from '../utils/skillIcons';
 
 interface SkillBreakdownChartProps {
   data: SkillBreakdown[];
@@ -29,13 +30,50 @@ const SkillBreakdownChart: React.FC<SkillBreakdownChartProps> = ({ data }) => {
   const minHeight = 240;
   const computedHeight = Math.max(minHeight, sorted.length * (BAR_THICKNESS + ROW_GAP) + VERTICAL_PADDING);
 
+  // Custom tick component to render skill icons
+  const CustomYAxisTick = (props: any) => {
+    const { x, y, payload } = props;
+    const iconPath = getSkillIconPath(payload.value);
+    
+    return (
+      <g transform={`translate(${x},${y})`}>
+        {iconPath && (
+          <image
+            href={iconPath}
+            x={-90}
+            y={-10}
+            width={20}
+            height={20}
+            style={{ borderRadius: '4px' }}
+          />
+        )}
+        <text
+          x={iconPath ? -65 : -10}
+          y={0}
+          dy={4}
+          textAnchor="start"
+          fill="#d0d0d0"
+          fontSize={12}
+        >
+          {payload.value.length > 25 ? payload.value.substring(0, 25) + '...' : payload.value}
+        </text>
+      </g>
+    );
+  };
+
   return (
     <div style={{ width: '100%', height: computedHeight }}>
       <ResponsiveContainer>
-        <BarChart layout="vertical" data={sorted} margin={{ top: 20, right: 20, left: 80, bottom: 20 }}>
+        <BarChart layout="vertical" data={sorted} margin={{ top: 20, right: 20, left: 100, bottom: 20 }}>
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis type="number" tick={{ fill: '#d0d0d0' }} />
-          <YAxis type="category" dataKey="skill" width={220} interval={0} tick={{ fill: '#d0d0d0' }}/>
+          <YAxis 
+            type="category" 
+            dataKey="skill" 
+            width={240} 
+            interval={0} 
+            tick={<CustomYAxisTick />}
+          />
           <Tooltip 
             formatter={(value: any, name: string) => {
               const hitTypeMap: Record<string, string> = {

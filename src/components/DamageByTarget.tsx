@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { getSkillIconPath } from '../utils/skillIcons';
 
 interface SkillRow {
   skill: string;
@@ -67,13 +68,30 @@ const DamageByTarget: React.FC<Props> = ({ data }) => {
                         </tr>
                       </thead>
                       <tbody>
-                        {c.skills.map((s) => (
-                          <tr key={`${c.caster}-${s.skill}`}>
-                            <td className="skill-name">{s.skill}</td>
-                            <td style={{ textAlign: 'right' }}>{Math.round(s.damage).toLocaleString()}</td>
-                            <td style={{ textAlign: 'right' }}>{s.hits}</td>
-                          </tr>
-                        ))}
+                        {c.skills.map((s) => {
+                          const iconPath = getSkillIconPath(s.skill);
+                          return (
+                            <tr key={`${c.caster}-${s.skill}`}>
+                              <td className="skill-name" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                                {iconPath && (
+                                  <img 
+                                    src={iconPath} 
+                                    alt={s.skill}
+                                    style={{ 
+                                      width: '24px', 
+                                      height: '24px', 
+                                      borderRadius: '4px',
+                                      objectFit: 'cover'
+                                    }} 
+                                  />
+                                )}
+                                <span>{s.skill}</span>
+                              </td>
+                              <td style={{ textAlign: 'right' }}>{Math.round(s.damage).toLocaleString()}</td>
+                              <td style={{ textAlign: 'right' }}>{s.hits}</td>
+                            </tr>
+                          );
+                        })}
                       </tbody>
                     </table>
                   </div>

@@ -364,8 +364,3 @@ MIT License - See LICENSE file in project root
 
 This tool was created by the community for players of Throne and Liberty to analyze their combat performance and optimize raid strategies.
 
----
-
-**Last Updated**: December 2, 2025
-**Version**: 1.0.0
-**Status**: Production Ready ✅

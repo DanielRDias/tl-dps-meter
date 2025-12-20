@@ -10,7 +10,7 @@
 
 ```bash
 # Navigate to workspace
-cd workspace
+cd tl-dps-meter
 
 # Install dependencies (already done)
 npm install

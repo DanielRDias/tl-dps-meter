@@ -10,6 +10,7 @@ import {
   CartesianGrid,
   Cell,
 } from 'recharts';
+import { getSkillIconPath } from '../utils/skillIcons';
 
 interface SkillChartProps {
   data: SkillDamage[];
@@ -26,14 +27,51 @@ const SkillChart: React.FC<SkillChartProps> = ({ data }) => {
   const minHeight = 240;
   const computedHeight = Math.max(minHeight, sorted.length * (BAR_THICKNESS + ROW_GAP) + VERTICAL_PADDING);
 
+  // Custom tick component to render skill icons
+  const CustomYAxisTick = (props: any) => {
+    const { x, y, payload } = props;
+    const iconPath = getSkillIconPath(payload.value);
+    
+    return (
+      <g transform={`translate(${x},${y})`}>
+        {iconPath && (
+          <image
+            href={iconPath}
+            x={-90}
+            y={-10}
+            width={20}
+            height={20}
+            style={{ borderRadius: '4px' }}
+          />
+        )}
+        <text
+          x={iconPath ? -65 : -10}
+          y={0}
+          dy={4}
+          textAnchor="start"
+          fill="#d0d0d0"
+          fontSize={12}
+        >
+          {payload.value.length > 25 ? payload.value.substring(0, 25) + '...' : payload.value}
+        </text>
+      </g>
+    );
+  };
+
   return (
     <div style={{ width: '100%', height: computedHeight }}>
       <ResponsiveContainer>
         {/* layout="vertical" makes Y the category axis (skills) and X the numeric axis (damage) */}
-        <BarChart layout="vertical" data={sorted} margin={{ top: 20, right: 20, left: 80, bottom: 20 }}>
+        <BarChart layout="vertical" data={sorted} margin={{ top: 20, right: 20, left: 100, bottom: 20 }}>
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis type="number" tick={{ fill: '#d0d0d0' }} />
-          <YAxis type="category" dataKey="skill" width={220} interval={0} tick={{ fill: '#d0d0d0' }}/>
+          <YAxis 
+            type="category" 
+            dataKey="skill" 
+            width={240} 
+            interval={0} 
+            tick={<CustomYAxisTick />}
+          />
           <Tooltip formatter={(value: any) => [value, 'Damage']} />
           {/* Assign a color per bar using Cell. Use a small palette, then fallback to deterministic HSL based on skill name. */}
           <Bar dataKey="damage" barSize={BAR_THICKNESS}>

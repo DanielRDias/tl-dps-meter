@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import type { SkillHitRate } from '../types/combatLog';
 import '../styles/DPSMeter.css';
+import { getSkillIconPath } from '../utils/skillIcons';
 
 interface SkillHitRateChartProps {
   data: SkillHitRate[];
@@ -109,26 +110,43 @@ const SkillHitRateChart: React.FC<SkillHitRateChartProps> = ({ data }) => {
                     </tr>
                   </thead>
                   <tbody>
-                    {sortedSkills.map((row, idx) => (
-                      <tr key={`${row.caster}:${row.skill}`} style={{ backgroundColor: idx % 2 === 0 ? '#1a1a1a' : '#252525', borderBottom: '1px solid #333' }}>
-                        <td style={{ padding: '12px', color: '#fff' }}>{row.skill}</td>
-                        <td style={{ padding: '12px', textAlign: 'right', color: '#fff' }}>
-                          {row.totalHits.toLocaleString()}
-                        </td>
-                        <td style={{ padding: '12px', textAlign: 'right', color: '#fff' }}>
-                          {formatHitInfo(row.normalHits, row.totalHits)}
-                        </td>
-                        <td style={{ padding: '12px', textAlign: 'right', color: '#ff7f50' }}>
-                          {formatHitInfo(row.criticalHits, row.totalHits)}
-                        </td>
-                        <td style={{ padding: '12px', textAlign: 'right', color: '#82ca9d' }}>
-                          {formatHitInfo(row.heavyHits, row.totalHits)}
-                        </td>
-                        <td style={{ padding: '12px', textAlign: 'right', color: '#ffc658' }}>
-                          {formatHitInfo(row.heavyCriticalHits, row.totalHits)}
-                        </td>
-                      </tr>
-                    ))}
+                    {sortedSkills.map((row, idx) => {
+                      const iconPath = getSkillIconPath(row.skill);
+                      return (
+                        <tr key={`${row.caster}:${row.skill}`} style={{ backgroundColor: idx % 2 === 0 ? '#1a1a1a' : '#252525', borderBottom: '1px solid #333' }}>
+                          <td style={{ padding: '12px', color: '#fff', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                            {iconPath && (
+                              <img 
+                                src={iconPath} 
+                                alt={row.skill}
+                                style={{ 
+                                  width: '24px', 
+                                  height: '24px', 
+                                  borderRadius: '4px',
+                                  objectFit: 'cover'
+                                }} 
+                              />
+                            )}
+                            <span>{row.skill}</span>
+                          </td>
+                          <td style={{ padding: '12px', textAlign: 'right', color: '#fff' }}>
+                            {row.totalHits.toLocaleString()}
+                          </td>
+                          <td style={{ padding: '12px', textAlign: 'right', color: '#fff' }}>
+                            {formatHitInfo(row.normalHits, row.totalHits)}
+                          </td>
+                          <td style={{ padding: '12px', textAlign: 'right', color: '#ff7f50' }}>
+                            {formatHitInfo(row.criticalHits, row.totalHits)}
+                          </td>
+                          <td style={{ padding: '12px', textAlign: 'right', color: '#82ca9d' }}>
+                            {formatHitInfo(row.heavyHits, row.totalHits)}
+                          </td>
+                          <td style={{ padding: '12px', textAlign: 'right', color: '#ffc658' }}>
+                            {formatHitInfo(row.heavyCriticalHits, row.totalHits)}
+                          </td>
+                        </tr>
+                      );
+                    })}
                   </tbody>
                 </table>
               </div>
