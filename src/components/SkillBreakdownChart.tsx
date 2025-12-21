@@ -10,7 +10,7 @@ import {
   CartesianGrid,
   Legend,
 } from 'recharts';
-import { getSkillIconPath } from '../utils/skillIcons';
+import { getSkillIconPath, getSkillMetadata } from '../utils/skillIcons';
 
 interface SkillBreakdownChartProps {
   data: SkillBreakdown[];
@@ -64,6 +64,73 @@ const SkillBreakdownChart: React.FC<SkillBreakdownChartProps> = ({ data }) => {
     );
   };
 
+  const CustomTooltip = ({ active, payload }: any) => {
+    if (!active || !payload || !payload.length) return null;
+
+    const data = payload[0].payload;
+    const skillName = data.skill;
+    const metadata = getSkillMetadata(skillName);
+
+    const totalHits = data.normalHits + data.criticalHits + data.heavyHits + data.heavyCriticalHits;
+
+    return (
+      <div style={{
+        backgroundColor: '#1a1a1a',
+        border: '2px solid #444',
+        borderRadius: '8px',
+        padding: '12px',
+        minWidth: '220px',
+        boxShadow: '0 4px 6px rgba(0, 0, 0, 0.5)'
+      }}>
+        <div style={{ 
+          fontWeight: 'bold', 
+          color: '#fff', 
+          marginBottom: '8px',
+          fontSize: '14px'
+        }}>
+          {skillName}
+        </div>
+        {metadata && (
+          <div style={{ fontSize: '12px', color: '#d0d0d0', marginBottom: '8px' }}>
+            {metadata.weapon && (
+              <div style={{ marginBottom: '4px' }}>
+                <span style={{ color: '#888' }}>Weapon:</span>{' '}
+                <span style={{ color: '#82ca9d' }}>{metadata.weapon}</span>
+              </div>
+            )}
+            {metadata.type && (
+              <div style={{ marginBottom: '4px' }}>
+                <span style={{ color: '#888' }}>Type:</span>{' '}
+                <span style={{ color: '#8884d8', textTransform: 'capitalize' }}>{metadata.type}</span>
+              </div>
+            )}
+          </div>
+        )}
+        <div style={{ 
+          borderTop: '1px solid #444', 
+          paddingTop: '8px',
+          fontSize: '12px'
+        }}>
+          <div style={{ color: '#888', marginBottom: '6px' }}>Hit Breakdown:</div>
+          {payload.map((entry: any, index: number) => (
+            <div key={index} style={{ marginBottom: '4px', display: 'flex', justifyContent: 'space-between' }}>
+              <span style={{ color: entry.color }}>{entry.name}:</span>
+              <span style={{ color: '#fff', fontWeight: 'bold' }}>
+                {entry.value.toLocaleString()} ({((entry.value / totalHits) * 100).toFixed(1)}%)
+              </span>
+            </div>
+          ))}
+          <div style={{ marginTop: '8px', paddingTop: '6px', borderTop: '1px solid #444' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+              <span style={{ color: '#888' }}>Total Hits:</span>
+              <span style={{ color: '#fff', fontWeight: 'bold' }}>{totalHits.toLocaleString()}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  };
+
   return (
     <div style={{ width: '100%', height: computedHeight }}>
       <ResponsiveContainer>
@@ -77,17 +144,7 @@ const SkillBreakdownChart: React.FC<SkillBreakdownChartProps> = ({ data }) => {
             interval={0} 
             tick={<CustomYAxisTick />}
           />
-          <Tooltip 
-            formatter={(value: any, name: string) => {
-              const hitTypeMap: Record<string, string> = {
-                normalHits: 'Normal',
-                criticalHits: 'Critical',
-                heavyHits: 'Heavy',
-                heavyCriticalHits: 'Heavy + Critical',
-              };
-              return [value, hitTypeMap[name] || name];
-            }} 
-          />
+          <Tooltip content={<CustomTooltip />} />
           <Legend />
           <Bar dataKey="normalHits" stackId="a" fill="#8884d8" name="Normal" barSize={BAR_THICKNESS} />
           <Bar dataKey="criticalHits" stackId="a" fill="#ff7f50" name="Critical" barSize={BAR_THICKNESS} />

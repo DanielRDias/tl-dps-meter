@@ -35,6 +35,8 @@ interface PlayerSkillMeta {
   icon: string;
   weapon: string;
   type: string;
+  level?: string;
+  questlogUrl?: string;
 }
 
 interface WeaponSpecializationMeta {
@@ -42,6 +44,7 @@ interface WeaponSpecializationMeta {
   icon: string;
   weapon: string;
   type: string;
+  questlogUrl?: string;
 }
 
 // Normalize a name so we can match "Detonation Mark" with
@@ -159,4 +162,43 @@ export const getSkillIconPath = (skillName: string): string | undefined => {
 
 export const hasSkillIcon = (skillName: string): boolean => {
   return getSkillIconPath(skillName) !== undefined;
+};
+
+export interface SkillMetadata {
+  name: string;
+  weapon?: string;
+  type?: string;
+  level?: string;
+  questlogUrl?: string;
+}
+
+export const getSkillMetadata = (skillName: string): SkillMetadata | undefined => {
+  // Try player skills first
+  const playerSkillsObj = playerSkillsData as Record<string, PlayerSkillMeta>;
+  for (const skill of Object.values(playerSkillsObj)) {
+    if (normalizeName(skill.name) === normalizeName(skillName)) {
+      return {
+        name: skill.name,
+        weapon: skill.weapon,
+        type: skill.type,
+        level: skill.level,
+        questlogUrl: skill.questlogUrl || undefined,
+      };
+    }
+  }
+
+  // Try weapon specializations
+  const weaponSpecsObj = weaponSpecializationsData as Record<string, WeaponSpecializationMeta>;
+  for (const spec of Object.values(weaponSpecsObj)) {
+    if (normalizeName(spec.name) === normalizeName(skillName)) {
+      return {
+        name: spec.name,
+        weapon: spec.weapon,
+        type: spec.type,
+        questlogUrl: spec.questlogUrl || undefined,
+      };
+    }
+  }
+
+  return undefined;
 };

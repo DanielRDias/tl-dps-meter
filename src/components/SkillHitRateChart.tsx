@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import type { SkillHitRate } from '../types/combatLog';
 import '../styles/DPSMeter.css';
-import { getSkillIconPath } from '../utils/skillIcons';
+import { getSkillIconPath, getSkillMetadata } from '../utils/skillIcons';
 
 interface SkillHitRateChartProps {
   data: SkillHitRate[];
@@ -112,8 +112,20 @@ const SkillHitRateChart: React.FC<SkillHitRateChartProps> = ({ data }) => {
                   <tbody>
                     {sortedSkills.map((row, idx) => {
                       const iconPath = getSkillIconPath(row.skill);
+                      const metadata = getSkillMetadata(row.skill);
+                      const tooltipContent = metadata ? `${metadata.weapon ? `Weapon: ${metadata.weapon}\n` : ''}${metadata.type ? `Type: ${metadata.type}\n` : ''}${metadata.level ? `Level: ${metadata.level}\n` : ''}${metadata.questlogUrl ? 'Click to view on Questlog.gg' : ''}` : '';
+                      
                       return (
-                        <tr key={`${row.caster}:${row.skill}`} style={{ backgroundColor: idx % 2 === 0 ? '#1a1a1a' : '#252525', borderBottom: '1px solid #333' }}>
+                        <tr 
+                          key={`${row.caster}:${row.skill}`} 
+                          style={{ 
+                            backgroundColor: idx % 2 === 0 ? '#1a1a1a' : '#252525', 
+                            borderBottom: '1px solid #333',
+                            cursor: metadata?.questlogUrl ? 'pointer' : 'default'
+                          }}
+                          onClick={() => metadata?.questlogUrl && window.open(metadata.questlogUrl, '_blank')}
+                          title={tooltipContent}
+                        >
                           <td style={{ padding: '12px', color: '#fff', display: 'flex', alignItems: 'center', gap: '8px' }}>
                             {iconPath && (
                               <img 
@@ -128,6 +140,11 @@ const SkillHitRateChart: React.FC<SkillHitRateChartProps> = ({ data }) => {
                               />
                             )}
                             <span>{row.skill}</span>
+                            {metadata && (
+                              <span style={{ fontSize: '11px', color: '#888', marginLeft: '8px' }}>
+                                {metadata.weapon && `[${metadata.weapon}]`}
+                              </span>
+                            )}
                           </td>
                           <td style={{ padding: '12px', textAlign: 'right', color: '#fff' }}>
                             {row.totalHits.toLocaleString()}

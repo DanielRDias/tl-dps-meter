@@ -10,7 +10,7 @@ import {
   CartesianGrid,
   Cell,
 } from 'recharts';
-import { getSkillIconPath } from '../utils/skillIcons';
+import { getSkillIconPath, getSkillMetadata } from '../utils/skillIcons';
 
 interface SkillChartProps {
   data: SkillDamage[];
@@ -61,6 +61,60 @@ const SkillChart: React.FC<SkillChartProps> = ({ data }) => {
     );
   };
 
+  const CustomTooltip = ({ active, payload }: any) => {
+    if (!active || !payload || !payload.length) return null;
+
+    const data = payload[0].payload;
+    const skillName = data.skill;
+    const metadata = getSkillMetadata(skillName);
+
+    return (
+      <div style={{
+        backgroundColor: '#1a1a1a',
+        border: '2px solid #444',
+        borderRadius: '8px',
+        padding: '12px',
+        minWidth: '200px',
+        boxShadow: '0 4px 6px rgba(0, 0, 0, 0.5)'
+      }}>
+        <div style={{ 
+          fontWeight: 'bold', 
+          color: '#fff', 
+          marginBottom: '8px',
+          fontSize: '14px'
+        }}>
+          {skillName}
+        </div>
+        {metadata && (
+          <div style={{ fontSize: '12px', color: '#d0d0d0', marginBottom: '8px' }}>
+            {metadata.weapon && (
+              <div style={{ marginBottom: '4px' }}>
+                <span style={{ color: '#888' }}>Weapon:</span>{' '}
+                <span style={{ color: '#82ca9d' }}>{metadata.weapon}</span>
+              </div>
+            )}
+            {metadata.type && (
+              <div style={{ marginBottom: '4px' }}>
+                <span style={{ color: '#888' }}>Type:</span>{' '}
+                <span style={{ color: '#8884d8', textTransform: 'capitalize' }}>{metadata.type}</span>
+              </div>
+            )}
+          </div>
+        )}
+        <div style={{ 
+          borderTop: '1px solid #444', 
+          paddingTop: '8px',
+          fontSize: '13px'
+        }}>
+          <div style={{ color: '#888' }}>Damage:</div>
+          <div style={{ color: '#fff', fontWeight: 'bold', fontSize: '16px' }}>
+            {data.damage.toLocaleString()}
+          </div>
+        </div>
+      </div>
+    );
+  };
+
   return (
     <div style={{ width: '100%', height: computedHeight }}>
       <ResponsiveContainer>
@@ -75,7 +129,7 @@ const SkillChart: React.FC<SkillChartProps> = ({ data }) => {
             interval={0} 
             tick={<CustomYAxisTick />}
           />
-          <Tooltip formatter={(value: any) => [value, 'Damage']} />
+          <Tooltip content={<CustomTooltip />} />
           {/* Assign a color per bar using Cell. Use a small palette, then fallback to deterministic HSL based on skill name. */}
           <Bar dataKey="damage" barSize={BAR_THICKNESS}>
             {sorted.map((entry, idx) => {
