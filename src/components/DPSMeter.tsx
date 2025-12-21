@@ -4,8 +4,7 @@ import type { CombatLogEntry, PlayerStats, PlayerDPSData, SkillDamage, SkillBrea
 import DPSChart from './DPSChart';
 import StatsTable from './StatsTable';
 import FileUpload from './FileUpload';
-import SkillChart from './SkillChart';
-import SkillBreakdownChart from './SkillBreakdownChart';
+import CombinedSkillChart from './CombinedSkillChart';
 import SkillHitRateChart from './SkillHitRateChart';
 import DamageByTarget from './DamageByTarget';
 import RawLogViewer from './RawLogViewer';
@@ -368,18 +367,13 @@ const DPSMeter: React.FC = () => {
             />
           </div>
           <div className="charts-section">
-            <h2>Damage By Skill</h2>
-            <SkillChart data={skillDamage} />
+            <h2>Damage By Skill with Hit Breakdown</h2>
+            <CombinedSkillChart damageData={skillDamage} breakdownData={skillBreakdown} />
           </div>
 
           <div className="charts-section">
             <h2>Damage To Targets</h2>
             <DamageByTarget data={damageByTarget} />
-          </div>
-
-          <div className="charts-section">
-            <h2>Skill Hits Breakdown by Hit Type</h2>
-            <SkillBreakdownChart data={skillBreakdown} />
           </div>
 
           <div className="charts-section">
