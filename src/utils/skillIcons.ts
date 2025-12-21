@@ -2,10 +2,12 @@
 import skillsData from '../assets/skills.json';
 import masterySkillsData from '../assets/weaponMasterySkills.json';
 import skillCoresData from '../assets/skillCores.json';
+import playerSkillsData from '../assets/playerSkills.json';
+import weaponSpecializationsData from '../assets/weaponSpecializations.json';
 
 // Import all icon assets using Vite's glob import
 const iconAssets = import.meta.glob<string>(
-  '../assets/icons/{crossbow,daggers,greatsword,longbow,mastery,orb,spear,staff,sword-shield,wand,skill-cores}/**/*',
+  '../assets/icons/{crossbow,daggers,greatsword,longbow,mastery,orb,spear,staff,sword-shield,wand,skill-cores,skills,weapon-specializations}/**/*',
   {
     eager: true,
     query: '?url',
@@ -26,6 +28,20 @@ interface MasterySkillMeta {
 interface SkillCoreMeta {
   name: string;
   image: string;
+}
+
+interface PlayerSkillMeta {
+  name: string;
+  icon: string;
+  weapon: string;
+  type: string;
+}
+
+interface WeaponSpecializationMeta {
+  name: string;
+  icon: string;
+  weapon: string;
+  type: string;
 }
 
 // Normalize a name so we can match "Detonation Mark" with
@@ -61,12 +77,56 @@ const resolveIconAssetUrl = (rawPath: string): string | undefined => {
 const skillIconMap = (() => {
   const map = new Map<string, string>();
 
+  // Combine all skill data sources
   const entries: Array<SkillMeta | MasterySkillMeta | SkillCoreMeta> = [
     ...(skillsData as SkillMeta[]),
     ...(masterySkillsData as MasterySkillMeta[]),
     ...(skillCoresData as SkillCoreMeta[]),
   ];
 
+  // Add player skills from questlog.gg
+  const playerSkillsObj = playerSkillsData as Record<string, PlayerSkillMeta>;
+  Object.values(playerSkillsObj).forEach((skill) => {
+    const iconPath = skill.icon;
+    if (!iconPath) return;
+
+    const assetUrl = resolveIconAssetUrl(iconPath);
+    if (!assetUrl) return;
+
+    const fullNorm = normalizeName(skill.name);
+    if (!map.has(fullNorm)) {
+      map.set(fullNorm, assetUrl);
+    }
+
+    const baseName = getBaseSkillName(skill.name);
+    const baseNorm = normalizeName(baseName);
+    if (baseNorm && !map.has(baseNorm)) {
+      map.set(baseNorm, assetUrl);
+    }
+  });
+
+  // Add weapon specializations from questlog.gg
+  const weaponSpecsObj = weaponSpecializationsData as Record<string, WeaponSpecializationMeta>;
+  Object.values(weaponSpecsObj).forEach((spec) => {
+    const iconPath = spec.icon;
+    if (!iconPath) return;
+
+    const assetUrl = resolveIconAssetUrl(iconPath);
+    if (!assetUrl) return;
+
+    const fullNorm = normalizeName(spec.name);
+    if (!map.has(fullNorm)) {
+      map.set(fullNorm, assetUrl);
+    }
+
+    const baseName = getBaseSkillName(spec.name);
+    const baseNorm = normalizeName(baseName);
+    if (baseNorm && !map.has(baseNorm)) {
+      map.set(baseNorm, assetUrl);
+    }
+  });
+
+  // Process original entries
   entries.forEach((s) => {
     const iconPath = 'iconPath' in s ? s.iconPath : s.image;
     if (!iconPath) return;

@@ -37,26 +37,29 @@ const SkillBreakdownChart: React.FC<SkillBreakdownChartProps> = ({ data }) => {
     
     return (
       <g transform={`translate(${x},${y})`}>
-        {iconPath && (
-          <image
-            href={iconPath}
-            x={-90}
-            y={-10}
-            width={20}
-            height={20}
-            style={{ borderRadius: '4px' }}
-          />
-        )}
         <text
-          x={iconPath ? -65 : -10}
+          x={-30}
           y={0}
           dy={4}
-          textAnchor="start"
+          textAnchor="end"
           fill="#d0d0d0"
           fontSize={12}
         >
-          {payload.value.length > 25 ? payload.value.substring(0, 25) + '...' : payload.value}
+          {payload.value}
         </text>
+        {iconPath && (
+          <image
+            href={iconPath}
+            x={-25}
+            y={-10}
+            width={20}
+            height={20}
+            style={{ 
+              borderRadius: '4px',
+              pointerEvents: 'none'
+            }}
+          />
+        )}
       </g>
     );
   };
@@ -64,13 +67,13 @@ const SkillBreakdownChart: React.FC<SkillBreakdownChartProps> = ({ data }) => {
   return (
     <div style={{ width: '100%', height: computedHeight }}>
       <ResponsiveContainer>
-        <BarChart layout="vertical" data={sorted} margin={{ top: 20, right: 20, left: 100, bottom: 20 }}>
+        <BarChart layout="vertical" data={sorted} margin={{ top: 20, right: 20, left: 180, bottom: 20 }}>
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis type="number" tick={{ fill: '#d0d0d0' }} />
           <YAxis 
             type="category" 
             dataKey="skill" 
-            width={240} 
+            width={160} 
             interval={0} 
             tick={<CustomYAxisTick />}
           />
