@@ -1,0 +1,2962 @@
+{
+  "Lethal Stacks": {
+    "name": "Lethal Stacks",
+    "icon": "icons/weapon-specializations/Lethal-Stacks.webp",
+    "weapon": "Longbow",
+    "type": "attack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Bow_Hero_Attack_01",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_BO_HERO_ATK.webp"
+  },
+  "Punishing Grip": {
+    "name": "Punishing Grip",
+    "icon": "icons/weapon-specializations/Punishing-Grip.webp",
+    "weapon": "Longbow",
+    "type": "defense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Bow_Hero_Defense_03",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_BO_HERO_DEF.webp"
+  },
+  "Range Reducer": {
+    "name": "Range Reducer",
+    "icon": "icons/weapon-specializations/Range-Reducer.webp",
+    "weapon": "Longbow",
+    "type": "tactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Bow_Hero_Tactic_04",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_BO_HERO_TAC.webp"
+  },
+  "Rhythmical Shooting": {
+    "name": "Rhythmical Shooting",
+    "icon": "icons/weapon-specializations/Rhythmical-Shooting.webp",
+    "weapon": "Longbow",
+    "type": "util",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Bow_Hero_Util_02",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_BO_HERO_SUB.webp"
+  },
+  "Ranged Critical Hit Augment": {
+    "name": "Ranged Critical Hit Augment",
+    "icon": "icons/weapon-specializations/Ranged-Critical-Hit-Augment.webp",
+    "weapon": "Longbow",
+    "type": "attack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Bow_High_Attack_01",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_2.webp"
+  },
+  "Critical Damage Intensity": {
+    "name": "Critical Damage Intensity",
+    "icon": "icons/weapon-specializations/Critical-Damage-Intensity.webp",
+    "weapon": "Longbow",
+    "type": "attack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Bow_High_Attack_02",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_2.webp"
+  },
+  "Roxie's Arrow Storm": {
+    "name": "Roxie's Arrow Storm",
+    "icon": "icons/weapon-specializations/Roxie's-Arrow-Storm.webp",
+    "weapon": "Longbow",
+    "type": "attack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Bow_High_Attack_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_BO_HIGH_ATK.webp"
+  },
+  "Ranged Heavy Attack Expertise": {
+    "name": "Ranged Heavy Attack Expertise",
+    "icon": "icons/weapon-specializations/Ranged-Heavy-Attack-Expertise.webp",
+    "weapon": "Longbow",
+    "type": "attackutil",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Bow_High_AttackUtil_03",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_HIGH_1.webp"
+  },
+  "Critical Damage Resistance Augment": {
+    "name": "Critical Damage Resistance Augment",
+    "icon": "icons/weapon-specializations/Critical-Damage-Resistance-Augment.webp",
+    "weapon": "Longbow",
+    "type": "defense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Bow_High_Defense_07",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_15.webp"
+  },
+  "Magic Evasion Intensity": {
+    "name": "Magic Evasion Intensity",
+    "icon": "icons/weapon-specializations/Magic-Evasion-Intensity.webp",
+    "weapon": "Longbow",
+    "type": "defense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Bow_High_Defense_08",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_10.webp"
+  },
+  "Heavy Attack Evasion Expertise": {
+    "name": "Heavy Attack Evasion Expertise",
+    "icon": "icons/weapon-specializations/Heavy-Attack-Evasion-Expertise.webp",
+    "weapon": "Longbow",
+    "type": "defensetactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Bow_High_DefenseTactic_09",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_HIGH_3.webp"
+  },
+  "Sniper's Trap": {
+    "name": "Sniper's Trap",
+    "icon": "icons/weapon-specializations/Sniper's-Trap.webp",
+    "weapon": "Longbow",
+    "type": "defense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Bow_High_Def_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_BO_HIGH_DEF.webp"
+  },
+  "Battle Tempo": {
+    "name": "Battle Tempo",
+    "icon": "icons/weapon-specializations/Battle-Tempo.webp",
+    "weapon": "Longbow",
+    "type": "tactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Bow_High_Tac_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_BO_HIGH_TAC.webp"
+  },
+  "CC Resistance Augment": {
+    "name": "CC Resistance Augment",
+    "icon": "icons/weapon-specializations/CC-Resistance-Augment.webp",
+    "weapon": "Longbow",
+    "type": "tactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Bow_High_Tactic_10",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_33.webp"
+  },
+  "Collision Intensity": {
+    "name": "Collision Intensity",
+    "icon": "icons/weapon-specializations/Collision-Intensity.webp",
+    "weapon": "Longbow",
+    "type": "tactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Bow_High_Tactic_11",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_32.webp"
+  },
+  "Max Damage Expertise": {
+    "name": "Max Damage Expertise",
+    "icon": "icons/weapon-specializations/Max-Damage-Expertise.webp",
+    "weapon": "Longbow",
+    "type": "tacticattack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Bow_High_TacticAttack_12",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_HIGH_4.webp"
+  },
+  "Mana Cost Efficiency Augment": {
+    "name": "Mana Cost Efficiency Augment",
+    "icon": "icons/weapon-specializations/Mana-Cost-Efficiency-Augment.webp",
+    "weapon": "Longbow",
+    "type": "util",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Bow_High_Util_04",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_21.webp"
+  },
+  "Max Stamina Intensity": {
+    "name": "Max Stamina Intensity",
+    "icon": "icons/weapon-specializations/Max-Stamina-Intensity.webp",
+    "weapon": "Longbow",
+    "type": "util",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Bow_High_Util_05",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_20.webp"
+  },
+  "Damage Resistance Expertise": {
+    "name": "Damage Resistance Expertise",
+    "icon": "icons/weapon-specializations/Damage-Resistance-Expertise.webp",
+    "weapon": "Longbow",
+    "type": "utildefense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Bow_High_UtilDefense_06",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_HIGH_2.webp"
+  },
+  "Survival Mend": {
+    "name": "Survival Mend",
+    "icon": "icons/weapon-specializations/Survival-Mend.webp",
+    "weapon": "Longbow",
+    "type": "util",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Bow_High_Util_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_BO_HIGH_SUB.webp"
+  },
+  "Lesser Attack Range Augment": {
+    "name": "Lesser Attack Range Augment",
+    "icon": "icons/weapon-specializations/Lesser-Attack-Range-Augment.webp",
+    "weapon": "Longbow",
+    "type": "attack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Bow_Normal_Attack_01",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_8.webp"
+  },
+  "Ranged Critical Hit Intensity": {
+    "name": "Ranged Critical Hit Intensity",
+    "icon": "icons/weapon-specializations/Ranged-Critical-Hit-Intensity.webp",
+    "weapon": "Longbow",
+    "type": "attack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Bow_Normal_Attack_02",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_2.webp"
+  },
+  "Far Sight": {
+    "name": "Far Sight",
+    "icon": "icons/weapon-specializations/Far-Sight.webp",
+    "weapon": "Longbow",
+    "type": "attack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Bow_Normal_Attack_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_BO_NORMAL_ATK.webp"
+  },
+  "Base Damage Expertise": {
+    "name": "Base Damage Expertise",
+    "icon": "icons/weapon-specializations/Base-Damage-Expertise.webp",
+    "weapon": "Longbow",
+    "type": "attackutil",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Bow_Normal_AttackUtil_03",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_NORMAL_1.webp"
+  },
+  "Lesser Debuff Duration Augment": {
+    "name": "Lesser Debuff Duration Augment",
+    "icon": "icons/weapon-specializations/Lesser-Debuff-Duration-Augment.webp",
+    "weapon": "Longbow",
+    "type": "defense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Bow_Normal_Defense_07",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_16.webp"
+  },
+  "Max Health Intensity": {
+    "name": "Max Health Intensity",
+    "icon": "icons/weapon-specializations/Max-Health-Intensity.webp",
+    "weapon": "Longbow",
+    "type": "defense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Bow_Normal_Defense_08",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_18.webp"
+  },
+  "Skill Damage Resistance Expertise": {
+    "name": "Skill Damage Resistance Expertise",
+    "icon": "icons/weapon-specializations/Skill-Damage-Resistance-Expertise.webp",
+    "weapon": "Longbow",
+    "type": "defensetactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Bow_Normal_DefenseTactic_09",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_NORMAL_3.webp"
+  },
+  "Life Ward": {
+    "name": "Life Ward",
+    "icon": "icons/weapon-specializations/Life-Ward.webp",
+    "weapon": "Longbow",
+    "type": "defense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Bow_Normal_Def_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_BO_NORMAL_DEF.webp"
+  },
+  "Combat Sanctuary": {
+    "name": "Combat Sanctuary",
+    "icon": "icons/weapon-specializations/Combat-Sanctuary.webp",
+    "weapon": "Longbow",
+    "type": "tactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Bow_Normal_Tac_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_BO_NORMAL_TAC.webp"
+  },
+  "Lesser Cooldown Speed Augment": {
+    "name": "Lesser Cooldown Speed Augment",
+    "icon": "icons/weapon-specializations/Lesser-Cooldown-Speed-Augment.webp",
+    "weapon": "Longbow",
+    "type": "tactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Bow_Normal_Tactic_10",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_29.webp"
+  },
+  "Movement Speed Intensity": {
+    "name": "Movement Speed Intensity",
+    "icon": "icons/weapon-specializations/Movement-Speed-Intensity.webp",
+    "weapon": "Longbow",
+    "type": "tactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Bow_Normal_Tactic_11",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_22.webp"
+  },
+  "Ranged Hit Expertise": {
+    "name": "Ranged Hit Expertise",
+    "icon": "icons/weapon-specializations/Ranged-Hit-Expertise.webp",
+    "weapon": "Longbow",
+    "type": "tacticattack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Bow_Normal_TacticAttack_12",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_NORMAL_4.webp"
+  },
+  "Lesser Mana Regen Augment": {
+    "name": "Lesser Mana Regen Augment",
+    "icon": "icons/weapon-specializations/Lesser-Mana-Regen-Augment.webp",
+    "weapon": "Longbow",
+    "type": "util",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Bow_Normal_Util_04",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_27.webp"
+  },
+  "Focus on Skill Healing over Time": {
+    "name": "Focus on Skill Healing over Time",
+    "icon": "icons/weapon-specializations/Focus-on-Skill-Healing-over-Time.webp",
+    "weapon": "Longbow",
+    "type": "util",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Bow_Normal_Util_05",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_23.webp"
+  },
+  "Magic Defense Expertise": {
+    "name": "Magic Defense Expertise",
+    "icon": "icons/weapon-specializations/Magic-Defense-Expertise.webp",
+    "weapon": "Longbow",
+    "type": "utildefense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Bow_Normal_UtilDefense_06",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_NORMAL_2.webp"
+  },
+  "Wind Rush": {
+    "name": "Wind Rush",
+    "icon": "icons/weapon-specializations/Wind-Rush.webp",
+    "weapon": "Longbow",
+    "type": "util",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Bow_Normal_Util_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_BO_NORMAL_SUB.webp"
+  },
+  "Greater Attack Speed Augment": {
+    "name": "Greater Attack Speed Augment",
+    "icon": "icons/weapon-specializations/Greater-Attack-Speed-Augment.webp",
+    "weapon": "Longbow",
+    "type": "attack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Bow_Rare_Attack_01",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_7.webp"
+  },
+  "Skill Damage Boost Intensity": {
+    "name": "Skill Damage Boost Intensity",
+    "icon": "icons/weapon-specializations/Skill-Damage-Boost-Intensity.webp",
+    "weapon": "Longbow",
+    "type": "attack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Bow_Rare_Attack_02",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_4.webp"
+  },
+  "Bullseye Hunter": {
+    "name": "Bullseye Hunter",
+    "icon": "icons/weapon-specializations/Bullseye-Hunter.webp",
+    "weapon": "Longbow",
+    "type": "attack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Bow_Rare_Attack_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_BO_RARE_ATK.webp"
+  },
+  "Greater Evasion Augment": {
+    "name": "Greater Evasion Augment",
+    "icon": "icons/weapon-specializations/Greater-Evasion-Augment.webp",
+    "weapon": "Longbow",
+    "type": "defense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Bow_Rare_Defense_07",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_10.webp"
+  },
+  "Skill Damage Resistance Intensity": {
+    "name": "Skill Damage Resistance Intensity",
+    "icon": "icons/weapon-specializations/Skill-Damage-Resistance-Intensity.webp",
+    "weapon": "Longbow",
+    "type": "defense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Bow_Rare_Defense_08",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_13.webp"
+  },
+  "Magic Endurance Expertise": {
+    "name": "Magic Endurance Expertise",
+    "icon": "icons/weapon-specializations/Magic-Endurance-Expertise.webp",
+    "weapon": "Longbow",
+    "type": "defensetactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Bow_Rare_DefenseTactic_09",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_RARE_3.webp"
+  },
+  "Keen Reflexes": {
+    "name": "Keen Reflexes",
+    "icon": "icons/weapon-specializations/Keen-Reflexes.webp",
+    "weapon": "Longbow",
+    "type": "defense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Bow_Rare_Def_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_BO_RARE_DEF.webp"
+  },
+  "Archer's Surge": {
+    "name": "Archer's Surge",
+    "icon": "icons/weapon-specializations/Archer's-Surge.webp",
+    "weapon": "Longbow",
+    "type": "tactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Bow_Rare_Tac_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_BO_RARE_TAC.webp"
+  },
+  "Greater Bind Duration Augment": {
+    "name": "Greater Bind Duration Augment",
+    "icon": "icons/weapon-specializations/Greater-Bind-Duration-Augment.webp",
+    "weapon": "Longbow",
+    "type": "tactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Bow_Rare_Tactic_10",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_32.webp"
+  },
+  "CC Resistance Intensity": {
+    "name": "CC Resistance Intensity",
+    "icon": "icons/weapon-specializations/CC-Resistance-Intensity.webp",
+    "weapon": "Longbow",
+    "type": "tactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Bow_Rare_Tactic_11",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_33.webp"
+  },
+  "Ranged Critical Expertise": {
+    "name": "Ranged Critical Expertise",
+    "icon": "icons/weapon-specializations/Ranged-Critical-Expertise.webp",
+    "weapon": "Longbow",
+    "type": "tacticattack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Bow_Rare_TacticAttack_12",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_RARE_4.webp"
+  },
+  "Greater Cooldown Speed Augment": {
+    "name": "Greater Cooldown Speed Augment",
+    "icon": "icons/weapon-specializations/Greater-Cooldown-Speed-Augment.webp",
+    "weapon": "Longbow",
+    "type": "util",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Bow_Rare_Util_04",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_29.webp"
+  },
+  "Buff Duration Intensity": {
+    "name": "Buff Duration Intensity",
+    "icon": "icons/weapon-specializations/Buff-Duration-Intensity.webp",
+    "weapon": "Longbow",
+    "type": "util",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Bow_Rare_Util_05",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_5.webp"
+  },
+  "Max Health Expertise": {
+    "name": "Max Health Expertise",
+    "icon": "icons/weapon-specializations/Max-Health-Expertise.webp",
+    "weapon": "Longbow",
+    "type": "utildefense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Bow_Rare_UtilDefense_06",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_RARE_2.webp"
+  },
+  "Blessing of Wisdom": {
+    "name": "Blessing of Wisdom",
+    "icon": "icons/weapon-specializations/Blessing-of-Wisdom.webp",
+    "weapon": "Longbow",
+    "type": "util",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Bow_Rare_Util_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_BO_RARE_SUB.webp"
+  },
+  "Annihilator": {
+    "name": "Annihilator",
+    "icon": "icons/weapon-specializations/Annihilator.webp",
+    "weapon": "Crossbow",
+    "type": "attack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Crossbow_Hero_Attack_01",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_CR_HERO_ATK.webp"
+  },
+  "Mirage Dancer": {
+    "name": "Mirage Dancer",
+    "icon": "icons/weapon-specializations/Mirage-Dancer.webp",
+    "weapon": "Crossbow",
+    "type": "defense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Crossbow_Hero_Defense_03",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_CR_HERO_DEF.webp"
+  },
+  "Archenemy": {
+    "name": "Archenemy",
+    "icon": "icons/weapon-specializations/Archenemy.webp",
+    "weapon": "Crossbow",
+    "type": "tactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Crossbow_Hero_Tactic_04",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_CR_HERO_TAC.webp"
+  },
+  "Endless Volley": {
+    "name": "Endless Volley",
+    "icon": "icons/weapon-specializations/Endless-Volley.webp",
+    "weapon": "Crossbow",
+    "type": "util",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Crossbow_Hero_Util_02",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_CR_HERO_SUB.webp"
+  },
+  "Ranged Damage Intensity": {
+    "name": "Ranged Damage Intensity",
+    "icon": "icons/weapon-specializations/Ranged-Damage-Intensity.webp",
+    "weapon": "Crossbow",
+    "type": "attack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Crossbow_High_Attack_02",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_9.webp"
+  },
+  "Calculated Power": {
+    "name": "Calculated Power",
+    "icon": "icons/weapon-specializations/Calculated-Power.webp",
+    "weapon": "Crossbow",
+    "type": "attack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Crossbow_High_Attack_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_CR_HIGH_ATK.webp"
+  },
+  "Magic Defense Intensity": {
+    "name": "Magic Defense Intensity",
+    "icon": "icons/weapon-specializations/Magic-Defense-Intensity.webp",
+    "weapon": "Crossbow",
+    "type": "defense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Crossbow_High_Defense_08",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_17.webp"
+  },
+  "Off-hand Double Attack Expertise": {
+    "name": "Off-hand Double Attack Expertise",
+    "icon": "icons/weapon-specializations/Off-hand-Double-Attack-Expertise.webp",
+    "weapon": "Crossbow",
+    "type": "defensetactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Crossbow_High_DefenseTactic_09",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_HIGH_3.webp"
+  },
+  "Nature's Gamble": {
+    "name": "Nature's Gamble",
+    "icon": "icons/weapon-specializations/Nature's-Gamble.webp",
+    "weapon": "Crossbow",
+    "type": "defense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Crossbow_High_Def_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_CR_HIGH_DEF.webp"
+  },
+  "Mana Break Point": {
+    "name": "Mana Break Point",
+    "icon": "icons/weapon-specializations/Mana-Break-Point.webp",
+    "weapon": "Crossbow",
+    "type": "tactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Crossbow_High_Tac_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_CR_HIGH_TAC.webp"
+  },
+  "Weaken Intensity": {
+    "name": "Weaken Intensity",
+    "icon": "icons/weapon-specializations/Weaken-Intensity.webp",
+    "weapon": "Crossbow",
+    "type": "tactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Crossbow_High_Tactic_11",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_32.webp"
+  },
+  "Healing Received Augment": {
+    "name": "Healing Received Augment",
+    "icon": "icons/weapon-specializations/Healing-Received-Augment.webp",
+    "weapon": "Crossbow",
+    "type": "util",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Crossbow_High_Util_04",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_30.webp"
+  },
+  "Stamina Regen Intensity": {
+    "name": "Stamina Regen Intensity",
+    "icon": "icons/weapon-specializations/Stamina-Regen-Intensity.webp",
+    "weapon": "Crossbow",
+    "type": "util",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Crossbow_High_Util_05",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_28.webp"
+  },
+  "Mayhem Burst": {
+    "name": "Mayhem Burst",
+    "icon": "icons/weapon-specializations/Mayhem-Burst.webp",
+    "weapon": "Crossbow",
+    "type": "util",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Crossbow_High_Util_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_CR_HIGH_SUB.webp"
+  },
+  "Lesser Attack Speed Augment": {
+    "name": "Lesser Attack Speed Augment",
+    "icon": "icons/weapon-specializations/Lesser-Attack-Speed-Augment.webp",
+    "weapon": "Crossbow",
+    "type": "attack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Crossbow_Normal_Attack_01",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_7.webp"
+  },
+  "Bloodlust Acceleration": {
+    "name": "Bloodlust Acceleration",
+    "icon": "icons/weapon-specializations/Bloodlust-Acceleration.webp",
+    "weapon": "Crossbow",
+    "type": "attack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Crossbow_Normal_Attack_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_CR_NORMAL_ATK.webp"
+  },
+  "Recovery Bolts": {
+    "name": "Recovery Bolts",
+    "icon": "icons/weapon-specializations/Recovery-Bolts.webp",
+    "weapon": "Crossbow",
+    "type": "defense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Crossbow_Normal_Def_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_CR_NORMAL_DEF.webp"
+  },
+  "Tactical Deflection": {
+    "name": "Tactical Deflection",
+    "icon": "icons/weapon-specializations/Tactical-Deflection.webp",
+    "weapon": "Crossbow",
+    "type": "tactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Crossbow_Normal_Tac_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_CR_NORMAL_TAC.webp"
+  },
+  "Lesser Weaken Augment": {
+    "name": "Lesser Weaken Augment",
+    "icon": "icons/weapon-specializations/Lesser-Weaken-Augment.webp",
+    "weapon": "Crossbow",
+    "type": "tactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Crossbow_Normal_Tactic_10",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_32.webp"
+  },
+  "Attack Speed Expertise": {
+    "name": "Attack Speed Expertise",
+    "icon": "icons/weapon-specializations/Attack-Speed-Expertise.webp",
+    "weapon": "Crossbow",
+    "type": "tacticattack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Crossbow_Normal_TacticAttack_12",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_NORMAL_4.webp"
+  },
+  "Lesser Stamina Augment": {
+    "name": "Lesser Stamina Augment",
+    "icon": "icons/weapon-specializations/Lesser-Stamina-Augment.webp",
+    "weapon": "Crossbow",
+    "type": "util",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Crossbow_Normal_Util_04",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_28.webp"
+  },
+  "Mana Regen Intensity": {
+    "name": "Mana Regen Intensity",
+    "icon": "icons/weapon-specializations/Mana-Regen-Intensity.webp",
+    "weapon": "Crossbow",
+    "type": "util",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Crossbow_Normal_Util_05",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_27.webp"
+  },
+  "Predator's Focus": {
+    "name": "Predator's Focus",
+    "icon": "icons/weapon-specializations/Predator's-Focus.webp",
+    "weapon": "Crossbow",
+    "type": "util",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Crossbow_Normal_Util_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_CR_NORMAL_SUB.webp"
+  },
+  "Greater Ranged Hit Augment": {
+    "name": "Greater Ranged Hit Augment",
+    "icon": "icons/weapon-specializations/Greater-Ranged-Hit-Augment.webp",
+    "weapon": "Crossbow",
+    "type": "attack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Crossbow_Rare_Attack_01",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_1.webp"
+  },
+  "Reaper's Call": {
+    "name": "Reaper's Call",
+    "icon": "icons/weapon-specializations/Reaper's-Call.webp",
+    "weapon": "Crossbow",
+    "type": "attack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Crossbow_Rare_Attack_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_CR_RARE_ATK.webp"
+  },
+  "Perception Survival Adept": {
+    "name": "Perception Survival Adept",
+    "icon": "icons/weapon-specializations/Perception-Survival-Adept.webp",
+    "weapon": "Crossbow",
+    "type": "defense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Crossbow_Rare_Defense_08",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_18.webp"
+  },
+  "Collision Resistance Expertise": {
+    "name": "Collision Resistance Expertise",
+    "icon": "icons/weapon-specializations/Collision-Resistance-Expertise.webp",
+    "weapon": "Crossbow",
+    "type": "defensetactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Crossbow_Rare_DefenseTactic_09",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_RARE_3.webp"
+  },
+  "Final Heartbeat": {
+    "name": "Final Heartbeat",
+    "icon": "icons/weapon-specializations/Final-Heartbeat.webp",
+    "weapon": "Crossbow",
+    "type": "defense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Crossbow_Rare_Def_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_CR_RARE_DEF.webp"
+  },
+  "Agile Strike": {
+    "name": "Agile Strike",
+    "icon": "icons/weapon-specializations/Agile-Strike.webp",
+    "weapon": "Crossbow",
+    "type": "tactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Crossbow_Rare_Tac_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_CR_RARE_TAC.webp"
+  },
+  "Greater Movement Speed Augment": {
+    "name": "Greater Movement Speed Augment",
+    "icon": "icons/weapon-specializations/Greater-Movement-Speed-Augment.webp",
+    "weapon": "Crossbow",
+    "type": "tactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Crossbow_Rare_Tactic_10",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_22.webp"
+  },
+  "Mana Efficiency Intensity": {
+    "name": "Mana Efficiency Intensity",
+    "icon": "icons/weapon-specializations/Mana-Efficiency-Intensity.webp",
+    "weapon": "Crossbow",
+    "type": "tactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Crossbow_Rare_Tactic_11",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_21.webp"
+  },
+  "Attack Range Expertise": {
+    "name": "Attack Range Expertise",
+    "icon": "icons/weapon-specializations/Attack-Range-Expertise.webp",
+    "weapon": "Crossbow",
+    "type": "tacticattack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Crossbow_Rare_TacticAttack_12",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_RARE_4.webp"
+  },
+  "Greater Mana Regen Augment": {
+    "name": "Greater Mana Regen Augment",
+    "icon": "icons/weapon-specializations/Greater-Mana-Regen-Augment.webp",
+    "weapon": "Crossbow",
+    "type": "util",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Crossbow_Rare_Util_04",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_27.webp"
+  },
+  "Cooldown Speed Intensity": {
+    "name": "Cooldown Speed Intensity",
+    "icon": "icons/weapon-specializations/Cooldown-Speed-Intensity.webp",
+    "weapon": "Crossbow",
+    "type": "util",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Crossbow_Rare_Util_05",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_29.webp"
+  },
+  "Deathstrike Pact": {
+    "name": "Deathstrike Pact",
+    "icon": "icons/weapon-specializations/Deathstrike-Pact.webp",
+    "weapon": "Crossbow",
+    "type": "util",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Crossbow_Rare_Util_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_CR_RARE_SUB.webp"
+  },
+  "Merciless Form": {
+    "name": "Merciless Form",
+    "icon": "icons/weapon-specializations/Merciless-Form.webp",
+    "weapon": "Daggers",
+    "type": "attack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Dagger_Hero_Attack_01",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_DA_HERO_ATK.webp"
+  },
+  "Ethereal Evasion": {
+    "name": "Ethereal Evasion",
+    "icon": "icons/weapon-specializations/Ethereal-Evasion.webp",
+    "weapon": "Daggers",
+    "type": "defense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Dagger_Hero_Defense_03",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_DA_HERO_DEF.webp"
+  },
+  "Dexterous Power": {
+    "name": "Dexterous Power",
+    "icon": "icons/weapon-specializations/Dexterous-Power.webp",
+    "weapon": "Daggers",
+    "type": "tactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Dagger_Hero_Tactic_04",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_DA_HERO_TAC.webp"
+  },
+  "Off-hand Frenzy": {
+    "name": "Off-hand Frenzy",
+    "icon": "icons/weapon-specializations/Off-hand-Frenzy.webp",
+    "weapon": "Daggers",
+    "type": "util",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Dagger_Hero_Util_02",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_DA_HERO_SUB.webp"
+  },
+  "Critical Hit Augment": {
+    "name": "Critical Hit Augment",
+    "icon": "icons/weapon-specializations/Critical-Hit-Augment.webp",
+    "weapon": "Daggers",
+    "type": "attack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Dagger_High_Attack_01",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_2.webp"
+  },
+  "Melee Critical Hit Intensity": {
+    "name": "Melee Critical Hit Intensity",
+    "icon": "icons/weapon-specializations/Melee-Critical-Hit-Intensity.webp",
+    "weapon": "Daggers",
+    "type": "attack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Dagger_High_Attack_02",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_2.webp"
+  },
+  "Venomous Edge": {
+    "name": "Venomous Edge",
+    "icon": "icons/weapon-specializations/Venomous-Edge.webp",
+    "weapon": "Daggers",
+    "type": "attack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Dagger_High_Attack_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_DA_HIGH_ATK.webp"
+  },
+  "Evasion Augment": {
+    "name": "Evasion Augment",
+    "icon": "icons/weapon-specializations/Evasion-Augment.webp",
+    "weapon": "Daggers",
+    "type": "defense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Dagger_High_Defense_07",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_10.webp"
+  },
+  "Ranged Evasion Expertise": {
+    "name": "Ranged Evasion Expertise",
+    "icon": "icons/weapon-specializations/Ranged-Evasion-Expertise.webp",
+    "weapon": "Daggers",
+    "type": "defensetactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Dagger_High_DefenseTactic_09",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_HIGH_3.webp"
+  },
+  "Phantom Timer": {
+    "name": "Phantom Timer",
+    "icon": "icons/weapon-specializations/Phantom-Timer.webp",
+    "weapon": "Daggers",
+    "type": "defense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Dagger_High_Def_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_DA_HIGH_DEF.webp"
+  },
+  "Combat Velocity": {
+    "name": "Combat Velocity",
+    "icon": "icons/weapon-specializations/Combat-Velocity.webp",
+    "weapon": "Daggers",
+    "type": "tactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Dagger_High_Tac_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_DA_HIGH_TAC.webp"
+  },
+  "Attack Range Augment": {
+    "name": "Attack Range Augment",
+    "icon": "icons/weapon-specializations/Attack-Range-Augment.webp",
+    "weapon": "Daggers",
+    "type": "tactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Dagger_High_Tactic_10",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_8.webp"
+  },
+  "Crowd Control Intensity": {
+    "name": "Crowd Control Intensity",
+    "icon": "icons/weapon-specializations/Crowd-Control-Intensity.webp",
+    "weapon": "Daggers",
+    "type": "tactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Dagger_High_Tactic_11",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_32.webp"
+  },
+  "Bonus Damage Expertise": {
+    "name": "Bonus Damage Expertise",
+    "icon": "icons/weapon-specializations/Bonus-Damage-Expertise.webp",
+    "weapon": "Daggers",
+    "type": "tacticattack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Dagger_High_TacticAttack_12",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_HIGH_4.webp"
+  },
+  "Off-hand Weapon Augment": {
+    "name": "Off-hand Weapon Augment",
+    "icon": "icons/weapon-specializations/Off-hand-Weapon-Augment.webp",
+    "weapon": "Daggers",
+    "type": "util",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Dagger_High_Util_04",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_1.webp"
+  },
+  "Off-hand Weapon Damage Intensity": {
+    "name": "Off-hand Weapon Damage Intensity",
+    "icon": "icons/weapon-specializations/Off-hand-Weapon-Damage-Intensity.webp",
+    "weapon": "Daggers",
+    "type": "util",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Dagger_High_Util_05",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_9.webp"
+  },
+  "Cooldown Speed Expertise": {
+    "name": "Cooldown Speed Expertise",
+    "icon": "icons/weapon-specializations/Cooldown-Speed-Expertise.webp",
+    "weapon": "Daggers",
+    "type": "utildefense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Dagger_High_UtilDefense_06",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_HIGH_2.webp"
+  },
+  "Fatal Fatigue": {
+    "name": "Fatal Fatigue",
+    "icon": "icons/weapon-specializations/Fatal-Fatigue.webp",
+    "weapon": "Daggers",
+    "type": "util",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Dagger_High_Util_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_DA_HIGH_SUB.webp"
+  },
+  "Attack Speed Intensity": {
+    "name": "Attack Speed Intensity",
+    "icon": "icons/weapon-specializations/Attack-Speed-Intensity.webp",
+    "weapon": "Daggers",
+    "type": "attack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Dagger_Normal_Attack_02",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_7.webp"
+  },
+  "Piercing Bite": {
+    "name": "Piercing Bite",
+    "icon": "icons/weapon-specializations/Piercing-Bite.webp",
+    "weapon": "Daggers",
+    "type": "attack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Dagger_Normal_Attack_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_DA_NORMAL_ATK.webp"
+  },
+  "Movement Speed Expertise": {
+    "name": "Movement Speed Expertise",
+    "icon": "icons/weapon-specializations/Movement-Speed-Expertise.webp",
+    "weapon": "Daggers",
+    "type": "attackutil",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Dagger_Normal_AttackUtil_03",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_NORMAL_1.webp"
+  },
+  "Lesser Magic Heavy Attack Evasion Augment": {
+    "name": "Lesser Magic Heavy Attack Evasion Augment",
+    "icon": "icons/weapon-specializations/Lesser-Magic-Heavy-Attack-Evasion-Augment.webp",
+    "weapon": "Daggers",
+    "type": "defense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Dagger_Normal_Defense_07",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_12.webp"
+  },
+  "Damage Reduction Intensity": {
+    "name": "Damage Reduction Intensity",
+    "icon": "icons/weapon-specializations/Damage-Reduction-Intensity.webp",
+    "weapon": "Daggers",
+    "type": "defense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Dagger_Normal_Defense_08",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_14.webp"
+  },
+  "Umbral Toughness": {
+    "name": "Umbral Toughness",
+    "icon": "icons/weapon-specializations/Umbral-Toughness.webp",
+    "weapon": "Daggers",
+    "type": "defense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Dagger_Normal_Def_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_DA_NORMAL_DEF.webp"
+  },
+  "Potent Toxicity": {
+    "name": "Potent Toxicity",
+    "icon": "icons/weapon-specializations/Potent-Toxicity.webp",
+    "weapon": "Daggers",
+    "type": "tactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Dagger_Normal_Tac_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_DA_NORMAL_TAC.webp"
+  },
+  "Lesser Silence Augment": {
+    "name": "Lesser Silence Augment",
+    "icon": "icons/weapon-specializations/Lesser-Silence-Augment.webp",
+    "weapon": "Daggers",
+    "type": "tactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Dagger_Normal_Tactic_10",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_32.webp"
+  },
+  "Weaken Chance Offensive": {
+    "name": "Weaken Chance Offensive",
+    "icon": "icons/weapon-specializations/Weaken-Chance-Offensive.webp",
+    "weapon": "Daggers",
+    "type": "tacticattack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Dagger_Normal_TacticAttack_12",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_NORMAL_4.webp"
+  },
+  "Lesser Buff Duration Augment": {
+    "name": "Lesser Buff Duration Augment",
+    "icon": "icons/weapon-specializations/Lesser-Buff-Duration-Augment.webp",
+    "weapon": "Daggers",
+    "type": "util",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Dagger_Normal_Util_04",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_5.webp"
+  },
+  "Ranged Defense Expertise": {
+    "name": "Ranged Defense Expertise",
+    "icon": "icons/weapon-specializations/Ranged-Defense-Expertise.webp",
+    "weapon": "Daggers",
+    "type": "utildefense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Dagger_Normal_UtilDefense_06",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_NORMAL_2.webp"
+  },
+  "Blood Seeker": {
+    "name": "Blood Seeker",
+    "icon": "icons/weapon-specializations/Blood-Seeker.webp",
+    "weapon": "Daggers",
+    "type": "util",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Dagger_Normal_Util_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_DA_NORMAL_SUB.webp"
+  },
+  "Greater Hit Augment": {
+    "name": "Greater Hit Augment",
+    "icon": "icons/weapon-specializations/Greater-Hit-Augment.webp",
+    "weapon": "Daggers",
+    "type": "attack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Dagger_Rare_Attack_01",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_1.webp"
+  },
+  "Primal Strike": {
+    "name": "Primal Strike",
+    "icon": "icons/weapon-specializations/Primal-Strike.webp",
+    "weapon": "Daggers",
+    "type": "attack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Dagger_Rare_Attack_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_DA_RARE_ATK.webp"
+  },
+  "Critical Damage Expertise": {
+    "name": "Critical Damage Expertise",
+    "icon": "icons/weapon-specializations/Critical-Damage-Expertise.webp",
+    "weapon": "Daggers",
+    "type": "attackutil",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Dagger_Rare_AttackUtil_03",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_RARE_1.webp"
+  },
+  "Greater Ranged Defense Augment": {
+    "name": "Greater Ranged Defense Augment",
+    "icon": "icons/weapon-specializations/Greater-Ranged-Defense-Augment.webp",
+    "weapon": "Daggers",
+    "type": "defense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Dagger_Rare_Defense_07",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_17.webp"
+  },
+  "Evasion Intensity": {
+    "name": "Evasion Intensity",
+    "icon": "icons/weapon-specializations/Evasion-Intensity.webp",
+    "weapon": "Daggers",
+    "type": "defense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Dagger_Rare_Defense_08",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_10.webp"
+  },
+  "Fluid Block": {
+    "name": "Fluid Block",
+    "icon": "icons/weapon-specializations/Fluid-Block.webp",
+    "weapon": "Daggers",
+    "type": "defense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Dagger_Rare_Def_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_DA_RARE_DEF.webp"
+  },
+  "Strategic Exchange": {
+    "name": "Strategic Exchange",
+    "icon": "icons/weapon-specializations/Strategic-Exchange.webp",
+    "weapon": "Daggers",
+    "type": "tactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Dagger_Rare_Tac_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_DA_RARE_TAC.webp"
+  },
+  "Greater CC Resistance Augment": {
+    "name": "Greater CC Resistance Augment",
+    "icon": "icons/weapon-specializations/Greater-CC-Resistance-Augment.webp",
+    "weapon": "Daggers",
+    "type": "tactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Dagger_Rare_Tactic_10",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_33.webp"
+  },
+  "Skill Damage Boost Expertise": {
+    "name": "Skill Damage Boost Expertise",
+    "icon": "icons/weapon-specializations/Skill-Damage-Boost-Expertise.webp",
+    "weapon": "Daggers",
+    "type": "tacticattack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Dagger_Rare_TacticAttack_12",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_RARE_4.webp"
+  },
+  "Greater Potion Healing Augment": {
+    "name": "Greater Potion Healing Augment",
+    "icon": "icons/weapon-specializations/Greater-Potion-Healing-Augment.webp",
+    "weapon": "Daggers",
+    "type": "util",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Dagger_Rare_Util_04",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_25.webp"
+  },
+  "Fleeting Shadow": {
+    "name": "Fleeting Shadow",
+    "icon": "icons/weapon-specializations/Fleeting-Shadow.webp",
+    "weapon": "Daggers",
+    "type": "util",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Dagger_Rare_Util_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_DA_RARE_SUB.webp"
+  },
+  "Explosive Force": {
+    "name": "Explosive Force",
+    "icon": "icons/weapon-specializations/Explosive-Force.webp",
+    "weapon": "Spear",
+    "type": "attack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Spear_Hero_Attack_01",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_SP_HERO_ATK.webp"
+  },
+  "Victory Shield": {
+    "name": "Victory Shield",
+    "icon": "icons/weapon-specializations/Victory-Shield.webp",
+    "weapon": "Spear",
+    "type": "defense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Spear_Hero_Defense_03",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_SP_HERO_DEF.webp"
+  },
+  "Ruthlessness": {
+    "name": "Ruthlessness",
+    "icon": "icons/weapon-specializations/Ruthlessness.webp",
+    "weapon": "Spear",
+    "type": "tactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Spear_Hero_Tactic_04",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_SP_HERO_TAC.webp"
+  },
+  "Tenacious Spirit": {
+    "name": "Tenacious Spirit",
+    "icon": "icons/weapon-specializations/Tenacious-Spirit.webp",
+    "weapon": "Spear",
+    "type": "util",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Spear_Hero_Util_02",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_SP_HERO_SUB.webp"
+  },
+  "Ignite Damage Augment": {
+    "name": "Ignite Damage Augment",
+    "icon": "icons/weapon-specializations/Ignite-Damage-Augment.webp",
+    "weapon": "Spear",
+    "type": "attack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Spear_High_Attack_01",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_34.webp"
+  },
+  "Ultimate Impact": {
+    "name": "Ultimate Impact",
+    "icon": "icons/weapon-specializations/Ultimate-Impact.webp",
+    "weapon": "Spear",
+    "type": "attack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Spear_High_Attack_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_SP_HIGH_ATK.webp"
+  },
+  "Melee Critical Hit Expertise": {
+    "name": "Melee Critical Hit Expertise",
+    "icon": "icons/weapon-specializations/Melee-Critical-Hit-Expertise.webp",
+    "weapon": "Spear",
+    "type": "attackutil",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Spear_High_AttackUtil_03",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_HIGH_1.webp"
+  },
+  "Healing Received Intensity": {
+    "name": "Healing Received Intensity",
+    "icon": "icons/weapon-specializations/Healing-Received-Intensity.webp",
+    "weapon": "Spear",
+    "type": "defense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Spear_High_Defense_08",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_30.webp"
+  },
+  "Magic Evasion Expertise": {
+    "name": "Magic Evasion Expertise",
+    "icon": "icons/weapon-specializations/Magic-Evasion-Expertise.webp",
+    "weapon": "Spear",
+    "type": "defensetactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Spear_High_DefenseTactic_09",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_HIGH_3.webp"
+  },
+  "Sustaining Guard": {
+    "name": "Sustaining Guard",
+    "icon": "icons/weapon-specializations/Sustaining-Guard.webp",
+    "weapon": "Spear",
+    "type": "defense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Spear_High_Def_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_SP_HIGH_DEF.webp"
+  },
+  "Malice Master": {
+    "name": "Malice Master",
+    "icon": "icons/weapon-specializations/Malice-Master.webp",
+    "weapon": "Spear",
+    "type": "tactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Spear_High_Tac_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_SP_HIGH_TAC.webp"
+  },
+  "Sleep Resistance Augment": {
+    "name": "Sleep Resistance Augment",
+    "icon": "icons/weapon-specializations/Sleep-Resistance-Augment.webp",
+    "weapon": "Spear",
+    "type": "tactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Spear_High_Tactic_10",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_33.webp"
+  },
+  "Shield Block Penetration Intensity": {
+    "name": "Shield Block Penetration Intensity",
+    "icon": "icons/weapon-specializations/Shield-Block-Penetration-Intensity.webp",
+    "weapon": "Spear",
+    "type": "tactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Spear_High_Tactic_11",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_6.webp"
+  },
+  "Cooldown Speed Augment": {
+    "name": "Cooldown Speed Augment",
+    "icon": "icons/weapon-specializations/Cooldown-Speed-Augment.webp",
+    "weapon": "Spear",
+    "type": "util",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Spear_High_Util_04",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_30.webp"
+  },
+  "Attack Range Intensity": {
+    "name": "Attack Range Intensity",
+    "icon": "icons/weapon-specializations/Attack-Range-Intensity.webp",
+    "weapon": "Spear",
+    "type": "util",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Spear_High_Util_05",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_8.webp"
+  },
+  "Endurance Expertise": {
+    "name": "Endurance Expertise",
+    "icon": "icons/weapon-specializations/Endurance-Expertise.webp",
+    "weapon": "Spear",
+    "type": "utildefense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Spear_High_UtilDefense_06",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_HIGH_2.webp"
+  },
+  "Unlimited Arsenal": {
+    "name": "Unlimited Arsenal",
+    "icon": "icons/weapon-specializations/Unlimited-Arsenal.webp",
+    "weapon": "Spear",
+    "type": "util",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Spear_High_Util_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_SP_HIGH_SUB.webp"
+  },
+  "Lesser Melee Hit Augment": {
+    "name": "Lesser Melee Hit Augment",
+    "icon": "icons/weapon-specializations/Lesser-Melee-Hit-Augment.webp",
+    "weapon": "Spear",
+    "type": "attack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Spear_Normal_Attack_01",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_1.webp"
+  },
+  "Perfect Tempo": {
+    "name": "Perfect Tempo",
+    "icon": "icons/weapon-specializations/Perfect-Tempo.webp",
+    "weapon": "Spear",
+    "type": "attack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Spear_Normal_Attack_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_SP_NORMAL_ATK.webp"
+  },
+  "Lesser Skill Damage Augment": {
+    "name": "Lesser Skill Damage Augment",
+    "icon": "icons/weapon-specializations/Lesser-Skill-Damage-Augment.webp",
+    "weapon": "Spear",
+    "type": "defense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Spear_Normal_Defense_07",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_13.webp"
+  },
+  "Debuff Duration Intensity": {
+    "name": "Debuff Duration Intensity",
+    "icon": "icons/weapon-specializations/Debuff-Duration-Intensity.webp",
+    "weapon": "Spear",
+    "type": "defense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Spear_Normal_Defense_08",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_16.webp"
+  },
+  "Universal Protection": {
+    "name": "Universal Protection",
+    "icon": "icons/weapon-specializations/Universal-Protection.webp",
+    "weapon": "Spear",
+    "type": "defense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Spear_Normal_Def_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_SP_NORMAL_DEF.webp"
+  },
+  "Swift Reaper": {
+    "name": "Swift Reaper",
+    "icon": "icons/weapon-specializations/Swift-Reaper.webp",
+    "weapon": "Spear",
+    "type": "tactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Spear_Normal_Tac_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_SP_NORMAL_TAC.webp"
+  },
+  "Lesser Fear Augment": {
+    "name": "Lesser Fear Augment",
+    "icon": "icons/weapon-specializations/Lesser-Fear-Augment.webp",
+    "weapon": "Spear",
+    "type": "tactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Spear_Normal_Tactic_10",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_32.webp"
+  },
+  "Precise Brutality": {
+    "name": "Precise Brutality",
+    "icon": "icons/weapon-specializations/Precise-Brutality.webp",
+    "weapon": "Spear",
+    "type": "util",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Spear_Normal_Util_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_SP_NORMAL_SUB.webp"
+  },
+  "Greater Bonus Damage Augment": {
+    "name": "Greater Bonus Damage Augment",
+    "icon": "icons/weapon-specializations/Greater-Bonus-Damage-Augment.webp",
+    "weapon": "Spear",
+    "type": "attack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Spear_Rare_Attack_01",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_34.webp"
+  },
+  "Melee Heavy Attack Intensity": {
+    "name": "Melee Heavy Attack Intensity",
+    "icon": "icons/weapon-specializations/Melee-Heavy-Attack-Intensity.webp",
+    "weapon": "Spear",
+    "type": "attack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Spear_Rare_Attack_02",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_3.webp"
+  },
+  "Supreme Burst": {
+    "name": "Supreme Burst",
+    "icon": "icons/weapon-specializations/Supreme-Burst.webp",
+    "weapon": "Spear",
+    "type": "attack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Spear_Rare_Attack_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_SP_RARE_ATK.webp"
+  },
+  "Greater Damage Reduction Augment": {
+    "name": "Greater Damage Reduction Augment",
+    "icon": "icons/weapon-specializations/Greater-Damage-Reduction-Augment.webp",
+    "weapon": "Spear",
+    "type": "defense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Spear_Rare_Defense_07",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_10.webp"
+  },
+  "Magic Heavy Attack Response": {
+    "name": "Magic Heavy Attack Response",
+    "icon": "icons/weapon-specializations/Magic-Heavy-Attack-Response.webp",
+    "weapon": "Spear",
+    "type": "defensetactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Spear_Rare_DefenseTactic_09",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_RARE_3.webp"
+  },
+  "Enduring Dash": {
+    "name": "Enduring Dash",
+    "icon": "icons/weapon-specializations/Enduring-Dash.webp",
+    "weapon": "Spear",
+    "type": "defense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Spear_Rare_Def_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_SP_RARE_DEF.webp"
+  },
+  "Precise Control": {
+    "name": "Precise Control",
+    "icon": "icons/weapon-specializations/Precise-Control.webp",
+    "weapon": "Spear",
+    "type": "tactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Spear_Rare_Tac_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_SP_RARE_TAC.webp"
+  },
+  "Greater Collision Augment": {
+    "name": "Greater Collision Augment",
+    "icon": "icons/weapon-specializations/Greater-Collision-Augment.webp",
+    "weapon": "Spear",
+    "type": "tactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Spear_Rare_Tactic_10",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_32.webp"
+  },
+  "Greater Attack Range Augment": {
+    "name": "Greater Attack Range Augment",
+    "icon": "icons/weapon-specializations/Greater-Attack-Range-Augment.webp",
+    "weapon": "Spear",
+    "type": "util",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Spear_Rare_Util_04",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_8.webp"
+  },
+  "Ranged Endurance Expertise": {
+    "name": "Ranged Endurance Expertise",
+    "icon": "icons/weapon-specializations/Ranged-Endurance-Expertise.webp",
+    "weapon": "Spear",
+    "type": "utildefense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Spear_Rare_UtilDefense_06",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_RARE_2.webp"
+  },
+  "Repulsive Force": {
+    "name": "Repulsive Force",
+    "icon": "icons/weapon-specializations/Repulsive-Force.webp",
+    "weapon": "Spear",
+    "type": "util",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Spear_Rare_Util_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_SP_RARE_SUB.webp"
+  },
+  "Power Surge": {
+    "name": "Power Surge",
+    "icon": "icons/weapon-specializations/Power-Surge.webp",
+    "weapon": "Staff",
+    "type": "attack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Staff_Hero_Attack_01",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_ST_HERO_ATK.webp"
+  },
+  "Mana Shield": {
+    "name": "Mana Shield",
+    "icon": "icons/weapon-specializations/Mana-Shield.webp",
+    "weapon": "Staff",
+    "type": "defense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Staff_Hero_Defense_03",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_ST_HERO_DEF.webp"
+  },
+  "Mana Spring": {
+    "name": "Mana Spring",
+    "icon": "icons/weapon-specializations/Mana-Spring.webp",
+    "weapon": "Staff",
+    "type": "tactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Staff_Hero_Tactic_04",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_ST_HERO_TAC.webp"
+  },
+  "Burning Ripple": {
+    "name": "Burning Ripple",
+    "icon": "icons/weapon-specializations/Burning-Ripple.webp",
+    "weapon": "Staff",
+    "type": "util",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Staff_Hero_Util_02",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_ST_HERO_SUB.webp"
+  },
+  "Burning Damage Augment": {
+    "name": "Burning Damage Augment",
+    "icon": "icons/weapon-specializations/Burning-Damage-Augment.webp",
+    "weapon": "Staff",
+    "type": "attack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Staff_High_Attack_01",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_41.webp"
+  },
+  "Magic Damage Intensity": {
+    "name": "Magic Damage Intensity",
+    "icon": "icons/weapon-specializations/Magic-Damage-Intensity.webp",
+    "weapon": "Staff",
+    "type": "attack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Staff_High_Attack_02",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_9.webp"
+  },
+  "Arctic Thunder": {
+    "name": "Arctic Thunder",
+    "icon": "icons/weapon-specializations/Arctic-Thunder.webp",
+    "weapon": "Staff",
+    "type": "attack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Staff_High_Attack_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_ST_HIGH_ATK.webp"
+  },
+  "Magic Critical Hit Expertise": {
+    "name": "Magic Critical Hit Expertise",
+    "icon": "icons/weapon-specializations/Magic-Critical-Hit-Expertise.webp",
+    "weapon": "Staff",
+    "type": "attackutil",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Staff_High_AttackUtil_03",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_HIGH_1.webp"
+  },
+  "Melee Defense Augment": {
+    "name": "Melee Defense Augment",
+    "icon": "icons/weapon-specializations/Melee-Defense-Augment.webp",
+    "weapon": "Staff",
+    "type": "defense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Staff_High_Defense_07",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_17.webp"
+  },
+  "Melee Evasion Intensity": {
+    "name": "Melee Evasion Intensity",
+    "icon": "icons/weapon-specializations/Melee-Evasion-Intensity.webp",
+    "weapon": "Staff",
+    "type": "defense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Staff_High_Defense_08",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_10.webp"
+  },
+  "Spirit of Perseverance": {
+    "name": "Spirit of Perseverance",
+    "icon": "icons/weapon-specializations/Spirit-of-Perseverance.webp",
+    "weapon": "Staff",
+    "type": "defense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Staff_High_Def_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_ST_HIGH_DEF.webp"
+  },
+  "Infernal Aftermath": {
+    "name": "Infernal Aftermath",
+    "icon": "icons/weapon-specializations/Infernal-Aftermath.webp",
+    "weapon": "Staff",
+    "type": "tactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Staff_High_Tac_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_ST_HIGH_TAC.webp"
+  },
+  "Burning Augment": {
+    "name": "Burning Augment",
+    "icon": "icons/weapon-specializations/Burning-Augment.webp",
+    "weapon": "Staff",
+    "type": "tactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Staff_High_Tactic_10",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_41.webp"
+  },
+  "Species Damage Reduction Intensity": {
+    "name": "Species Damage Reduction Intensity",
+    "icon": "icons/weapon-specializations/Species-Damage-Reduction-Intensity.webp",
+    "weapon": "Staff",
+    "type": "tactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Staff_High_Tactic_11",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_39.webp"
+  },
+  "Silence Resistance Augment": {
+    "name": "Silence Resistance Augment",
+    "icon": "icons/weapon-specializations/Silence-Resistance-Augment.webp",
+    "weapon": "Staff",
+    "type": "util",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Staff_High_Util_04",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_33.webp"
+  },
+  "Resonant Barrier": {
+    "name": "Resonant Barrier",
+    "icon": "icons/weapon-specializations/Resonant-Barrier.webp",
+    "weapon": "Staff",
+    "type": "util",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Staff_High_Util_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_ST_HIGH_SUB.webp"
+  },
+  "Lesser Max Damage Augment": {
+    "name": "Lesser Max Damage Augment",
+    "icon": "icons/weapon-specializations/Lesser-Max-Damage-Augment.webp",
+    "weapon": "Staff",
+    "type": "attack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Staff_Normal_Attack_01",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_9.webp"
+  },
+  "Magic Critical Hit Intensity": {
+    "name": "Magic Critical Hit Intensity",
+    "icon": "icons/weapon-specializations/Magic-Critical-Hit-Intensity.webp",
+    "weapon": "Staff",
+    "type": "attack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Staff_Normal_Attack_02",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_2.webp"
+  },
+  "Mana Shockwave": {
+    "name": "Mana Shockwave",
+    "icon": "icons/weapon-specializations/Mana-Shockwave.webp",
+    "weapon": "Staff",
+    "type": "attack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Staff_Normal_Attack_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_ST_NORMAL_ATK.webp"
+  },
+  "Heavy Attack Expertise": {
+    "name": "Heavy Attack Expertise",
+    "icon": "icons/weapon-specializations/Heavy-Attack-Expertise.webp",
+    "weapon": "Staff",
+    "type": "attackutil",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Staff_Normal_AttackUtil_03",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_NORMAL_1.webp"
+  },
+  "Lesser Evasion Augment": {
+    "name": "Lesser Evasion Augment",
+    "icon": "icons/weapon-specializations/Lesser-Evasion-Augment.webp",
+    "weapon": "Staff",
+    "type": "defense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Staff_Normal_Defense_07",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_10.webp"
+  },
+  "Defense Intensity": {
+    "name": "Defense Intensity",
+    "icon": "icons/weapon-specializations/Defense-Intensity.webp",
+    "weapon": "Staff",
+    "type": "defense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Staff_Normal_Defense_08",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_17.webp"
+  },
+  "Magic Heavy Attack Evasion Expertise": {
+    "name": "Magic Heavy Attack Evasion Expertise",
+    "icon": "icons/weapon-specializations/Magic-Heavy-Attack-Evasion-Expertise.webp",
+    "weapon": "Staff",
+    "type": "defensetactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Staff_Normal_DefenseTactic_09",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_NORMAL_3.webp"
+  },
+  "Vitality Conversion": {
+    "name": "Vitality Conversion",
+    "icon": "icons/weapon-specializations/Vitality-Conversion.webp",
+    "weapon": "Staff",
+    "type": "defense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Staff_Normal_Def_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_ST_NORMAL_DEF.webp"
+  },
+  "Strategic Compromise": {
+    "name": "Strategic Compromise",
+    "icon": "icons/weapon-specializations/Strategic-Compromise.webp",
+    "weapon": "Staff",
+    "type": "tactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Staff_Normal_Tac_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_ST_NORMAL_TAC.webp"
+  },
+  "Lesser Species Damage Augment": {
+    "name": "Lesser Species Damage Augment",
+    "icon": "icons/weapon-specializations/Lesser-Species-Damage-Augment.webp",
+    "weapon": "Staff",
+    "type": "tactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Staff_Normal_Tactic_10",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_36.webp"
+  },
+  "Max Mana Intensity": {
+    "name": "Max Mana Intensity",
+    "icon": "icons/weapon-specializations/Max-Mana-Intensity.webp",
+    "weapon": "Staff",
+    "type": "tactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Staff_Normal_Tactic_11",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_19.webp"
+  },
+  "Magic Hit Expertise": {
+    "name": "Magic Hit Expertise",
+    "icon": "icons/weapon-specializations/Magic-Hit-Expertise.webp",
+    "weapon": "Staff",
+    "type": "tacticattack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Staff_Normal_TacticAttack_12",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_NORMAL_4.webp"
+  },
+  "Melee Evasion Expertise": {
+    "name": "Melee Evasion Expertise",
+    "icon": "icons/weapon-specializations/Melee-Evasion-Expertise.webp",
+    "weapon": "Staff",
+    "type": "utildefense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Staff_Normal_UtilDefense_06",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_NORMAL_2.webp"
+  },
+  "Flame Discipline": {
+    "name": "Flame Discipline",
+    "icon": "icons/weapon-specializations/Flame-Discipline.webp",
+    "weapon": "Staff",
+    "type": "util",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Staff_Normal_Util_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_ST_NORMAL_SUB.webp"
+  },
+  "Fire Wave Amplifier": {
+    "name": "Fire Wave Amplifier",
+    "icon": "icons/weapon-specializations/Fire-Wave-Amplifier.webp",
+    "weapon": "Staff",
+    "type": "attack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Staff_Rare_Attack_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_ST_RARE_ATK.webp"
+  },
+  "Greater Max Health Augment": {
+    "name": "Greater Max Health Augment",
+    "icon": "icons/weapon-specializations/Greater-Max-Health-Augment.webp",
+    "weapon": "Staff",
+    "type": "defense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Staff_Rare_Defense_07",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_18.webp"
+  },
+  "Mana Overflow": {
+    "name": "Mana Overflow",
+    "icon": "icons/weapon-specializations/Mana-Overflow.webp",
+    "weapon": "Staff",
+    "type": "defense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Staff_Rare_Def_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_ST_RARE_DEF.webp"
+  },
+  "Heat Fusion": {
+    "name": "Heat Fusion",
+    "icon": "icons/weapon-specializations/Heat-Fusion.webp",
+    "weapon": "Staff",
+    "type": "tactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Staff_Rare_Tac_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_ST_RARE_TAC.webp"
+  },
+  "Greater Damage Over Time Augment": {
+    "name": "Greater Damage Over Time Augment",
+    "icon": "icons/weapon-specializations/Greater-Damage-Over-Time-Augment.webp",
+    "weapon": "Staff",
+    "type": "tactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Staff_Rare_Tactic_10",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_40.webp"
+  },
+  "Critical Hit Expertise": {
+    "name": "Critical Hit Expertise",
+    "icon": "icons/weapon-specializations/Critical-Hit-Expertise.webp",
+    "weapon": "Staff",
+    "type": "tacticattack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Staff_Rare_TacticAttack_12",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_RARE_4.webp"
+  },
+  "Damage Reduction Expertise": {
+    "name": "Damage Reduction Expertise",
+    "icon": "icons/weapon-specializations/Damage-Reduction-Expertise.webp",
+    "weapon": "Staff",
+    "type": "utildefense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Staff_Rare_UtilDefense_06",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_RARE_2.webp"
+  },
+  "Manaball Salvo": {
+    "name": "Manaball Salvo",
+    "icon": "icons/weapon-specializations/Manaball-Salvo.webp",
+    "weapon": "Staff",
+    "type": "util",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Staff_Rare_Util_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_ST_RARE_SUB.webp"
+  },
+  "Critical Equilibrium": {
+    "name": "Critical Equilibrium",
+    "icon": "icons/weapon-specializations/Critical-Equilibrium.webp",
+    "weapon": "Greatsword",
+    "type": "attack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Sword2h_Hero_Attack_01",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_SW2_HERO_ATK.webp"
+  },
+  "Blade Harvest": {
+    "name": "Blade Harvest",
+    "icon": "icons/weapon-specializations/Blade-Harvest.webp",
+    "weapon": "Greatsword",
+    "type": "defense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Sword2h_Hero_Defense_03",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_SW2_HERO_DEF.webp"
+  },
+  "Perception Balance": {
+    "name": "Perception Balance",
+    "icon": "icons/weapon-specializations/Perception-Balance.webp",
+    "weapon": "Greatsword",
+    "type": "tactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Sword2h_Hero_Tactic_04",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_SW2_HERO_TAC.webp"
+  },
+  "Unstoppable Rush": {
+    "name": "Unstoppable Rush",
+    "icon": "icons/weapon-specializations/Unstoppable-Rush.webp",
+    "weapon": "Greatsword",
+    "type": "util",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Sword2h_Hero_Util_02",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_SW2_HERO_SUB.webp"
+  },
+  "Melee Critical Hit Augment": {
+    "name": "Melee Critical Hit Augment",
+    "icon": "icons/weapon-specializations/Melee-Critical-Hit-Augment.webp",
+    "weapon": "Greatsword",
+    "type": "attack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Sword2h_High_Attack_01",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_2.webp"
+  },
+  "Melee Damage Intensity": {
+    "name": "Melee Damage Intensity",
+    "icon": "icons/weapon-specializations/Melee-Damage-Intensity.webp",
+    "weapon": "Greatsword",
+    "type": "attack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Sword2h_High_Attack_02",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_9.webp"
+  },
+  "Reckless Assault": {
+    "name": "Reckless Assault",
+    "icon": "icons/weapon-specializations/Reckless-Assault.webp",
+    "weapon": "Greatsword",
+    "type": "attack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Sword2h_High_Attack_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_SW2_HIGH_ATK.webp"
+  },
+  "Melee Heavy Attack Expertise": {
+    "name": "Melee Heavy Attack Expertise",
+    "icon": "icons/weapon-specializations/Melee-Heavy-Attack-Expertise.webp",
+    "weapon": "Greatsword",
+    "type": "attackutil",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Sword2h_High_AttackUtil_03",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_HIGH_1.webp"
+  },
+  "Vital Conversion": {
+    "name": "Vital Conversion",
+    "icon": "icons/weapon-specializations/Vital-Conversion.webp",
+    "weapon": "Greatsword",
+    "type": "defense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Sword2h_High_Def_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_SW2_HIGH_DEF.webp"
+  },
+  "Binding Warrior": {
+    "name": "Binding Warrior",
+    "icon": "icons/weapon-specializations/Binding-Warrior.webp",
+    "weapon": "Greatsword",
+    "type": "tactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Sword2h_High_Tac_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_SW2_HIGH_TAC.webp"
+  },
+  "Stun Duration Augment": {
+    "name": "Stun Duration Augment",
+    "icon": "icons/weapon-specializations/Stun-Duration-Augment.webp",
+    "weapon": "Greatsword",
+    "type": "tactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Sword2h_High_Tactic_10",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_1.webp"
+  },
+  "Collision Resistance Intensity": {
+    "name": "Collision Resistance Intensity",
+    "icon": "icons/weapon-specializations/Collision-Resistance-Intensity.webp",
+    "weapon": "Greatsword",
+    "type": "tactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Sword2h_High_Tactic_11",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_33.webp"
+  },
+  "Bind Expertise": {
+    "name": "Bind Expertise",
+    "icon": "icons/weapon-specializations/Bind-Expertise.webp",
+    "weapon": "Greatsword",
+    "type": "tacticattack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Sword2h_High_TacticAttack_12",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_HIGH_4.webp"
+  },
+  "Health Regen Augment": {
+    "name": "Health Regen Augment",
+    "icon": "icons/weapon-specializations/Health-Regen-Augment.webp",
+    "weapon": "Greatsword",
+    "type": "util",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Sword2h_High_Util_04",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_26.webp"
+  },
+  "CC Resistance Expertise": {
+    "name": "CC Resistance Expertise",
+    "icon": "icons/weapon-specializations/CC-Resistance-Expertise.webp",
+    "weapon": "Greatsword",
+    "type": "utildefense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Sword2h_High_UtilDefense_06",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_HIGH_2.webp"
+  },
+  "Dauntless Recovery": {
+    "name": "Dauntless Recovery",
+    "icon": "icons/weapon-specializations/Dauntless-Recovery.webp",
+    "weapon": "Greatsword",
+    "type": "util",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Sword2h_High_Util_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_SW2_HIGH_SUB.webp"
+  },
+  "Lesser Greatsword Max Damage Augment": {
+    "name": "Lesser Greatsword Max Damage Augment",
+    "icon": "icons/weapon-specializations/Lesser-Greatsword-Max-Damage-Augment.webp",
+    "weapon": "Greatsword",
+    "type": "attack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Sword2h_Normal_Attack_01",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_9.webp"
+  },
+  "Power Grip": {
+    "name": "Power Grip",
+    "icon": "icons/weapon-specializations/Power-Grip.webp",
+    "weapon": "Greatsword",
+    "type": "attack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Sword2h_Normal_Attack_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_SW2_NORMAL_ATK.webp"
+  },
+  "Melee Hit Expertise": {
+    "name": "Melee Hit Expertise",
+    "icon": "icons/weapon-specializations/Melee-Hit-Expertise.webp",
+    "weapon": "Greatsword",
+    "type": "attackutil",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Sword2h_Normal_AttackUtil_03",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_NORMAL_1.webp"
+  },
+  "Lesser Melee Defense Augment": {
+    "name": "Lesser Melee Defense Augment",
+    "icon": "icons/weapon-specializations/Lesser-Melee-Defense-Augment.webp",
+    "weapon": "Greatsword",
+    "type": "defense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Sword2h_Normal_Defense_07",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_17.webp"
+  },
+  "Damage Resistance Intensity": {
+    "name": "Damage Resistance Intensity",
+    "icon": "icons/weapon-specializations/Damage-Resistance-Intensity.webp",
+    "weapon": "Greatsword",
+    "type": "defense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Sword2h_Normal_Defense_08",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_13.webp"
+  },
+  "Steel Sacrifice": {
+    "name": "Steel Sacrifice",
+    "icon": "icons/weapon-specializations/Steel-Sacrifice.webp",
+    "weapon": "Greatsword",
+    "type": "defense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Sword2h_Normal_Def_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_SW2_NORMAL_DEF.webp"
+  },
+  "Steadfast Rush": {
+    "name": "Steadfast Rush",
+    "icon": "icons/weapon-specializations/Steadfast-Rush.webp",
+    "weapon": "Greatsword",
+    "type": "tactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Sword2h_Normal_Tac_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_SW2_NORMAL_TAC.webp"
+  },
+  "Lesser Stun Augment": {
+    "name": "Lesser Stun Augment",
+    "icon": "icons/weapon-specializations/Lesser-Stun-Augment.webp",
+    "weapon": "Greatsword",
+    "type": "tactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Sword2h_Normal_Tactic_10",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_32.webp"
+  },
+  "Collision Chance Offensive": {
+    "name": "Collision Chance Offensive",
+    "icon": "icons/weapon-specializations/Collision-Chance-Offensive.webp",
+    "weapon": "Greatsword",
+    "type": "tacticattack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Sword2h_Normal_TacticAttack_12",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_NORMAL_4.webp"
+  },
+  "Melee Endurance Expertise": {
+    "name": "Melee Endurance Expertise",
+    "icon": "icons/weapon-specializations/Melee-Endurance-Expertise.webp",
+    "weapon": "Greatsword",
+    "type": "utildefense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Sword2h_Normal_UtilDefense_06",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_NORMAL_2.webp"
+  },
+  "Force Capacity": {
+    "name": "Force Capacity",
+    "icon": "icons/weapon-specializations/Force-Capacity.webp",
+    "weapon": "Greatsword",
+    "type": "util",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Sword2h_Normal_Util_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_SW2_NORMAL_SUB.webp"
+  },
+  "Greater Melee Hit Augment": {
+    "name": "Greater Melee Hit Augment",
+    "icon": "icons/weapon-specializations/Greater-Melee-Hit-Augment.webp",
+    "weapon": "Greatsword",
+    "type": "attack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Sword2h_Rare_Attack_01",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_1.webp"
+  },
+  "Far Strike": {
+    "name": "Far Strike",
+    "icon": "icons/weapon-specializations/Far-Strike.webp",
+    "weapon": "Greatsword",
+    "type": "attack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Sword2h_Rare_Attack_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_SW2_RARE_ATK.webp"
+  },
+  "Bind Resistance Expertise": {
+    "name": "Bind Resistance Expertise",
+    "icon": "icons/weapon-specializations/Bind-Resistance-Expertise.webp",
+    "weapon": "Greatsword",
+    "type": "defensetactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Sword2h_Rare_DefenseTactic_09",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_RARE_3.webp"
+  },
+  "Fortified Unity": {
+    "name": "Fortified Unity",
+    "icon": "icons/weapon-specializations/Fortified-Unity.webp",
+    "weapon": "Greatsword",
+    "type": "defense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Sword2h_Rare_Def_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_SW2_RARE_DEF.webp"
+  },
+  "Swift Execution": {
+    "name": "Swift Execution",
+    "icon": "icons/weapon-specializations/Swift-Execution.webp",
+    "weapon": "Greatsword",
+    "type": "tactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Sword2h_Rare_Tac_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_SW2_RARE_TAC.webp"
+  },
+  "Greater Stun Augment": {
+    "name": "Greater Stun Augment",
+    "icon": "icons/weapon-specializations/Greater-Stun-Augment.webp",
+    "weapon": "Greatsword",
+    "type": "tactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Sword2h_Rare_Tactic_10",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_32.webp"
+  },
+  "Damage Increase Expertise": {
+    "name": "Damage Increase Expertise",
+    "icon": "icons/weapon-specializations/Damage-Increase-Expertise.webp",
+    "weapon": "Greatsword",
+    "type": "tacticattack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Sword2h_Rare_TacticAttack_12",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_RARE_4.webp"
+  },
+  "Greater Species Damage Augment": {
+    "name": "Greater Species Damage Augment",
+    "icon": "icons/weapon-specializations/Greater-Species-Damage-Augment.webp",
+    "weapon": "Greatsword",
+    "type": "util",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Sword2h_Rare_Util_04",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_36.webp"
+  },
+  "Extended Reach": {
+    "name": "Extended Reach",
+    "icon": "icons/weapon-specializations/Extended-Reach.webp",
+    "weapon": "Greatsword",
+    "type": "util",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Sword2h_Rare_Util_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_SW2_RARE_SUB.webp"
+  },
+  "Blade Momentum": {
+    "name": "Blade Momentum",
+    "icon": "icons/weapon-specializations/Blade-Momentum.webp",
+    "weapon": "Sword",
+    "type": "attack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Sword_Hero_Attack_01",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_SW_HERO_ATK.webp"
+  },
+  "Life's Bargain": {
+    "name": "Life's Bargain",
+    "icon": "icons/weapon-specializations/Life's-Bargain.webp",
+    "weapon": "Sword",
+    "type": "defense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Sword_Hero_Defense_03",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_SW_HERO_DEF.webp"
+  },
+  "Wisdom's Path": {
+    "name": "Wisdom's Path",
+    "icon": "icons/weapon-specializations/Wisdom's-Path.webp",
+    "weapon": "Sword",
+    "type": "tactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Sword_Hero_Tactic_04",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_SW_HERO_TAC.webp"
+  },
+  "Resistance Scale": {
+    "name": "Resistance Scale",
+    "icon": "icons/weapon-specializations/Resistance-Scale.webp",
+    "weapon": "Sword",
+    "type": "util",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Sword_Hero_Util_02",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_SW_HERO_SUB.webp"
+  },
+  "Melee Hit Intensity": {
+    "name": "Melee Hit Intensity",
+    "icon": "icons/weapon-specializations/Melee-Hit-Intensity.webp",
+    "weapon": "Sword",
+    "type": "attack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Sword_High_Attack_02",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_1.webp"
+  },
+  "Power Breach": {
+    "name": "Power Breach",
+    "icon": "icons/weapon-specializations/Power-Breach.webp",
+    "weapon": "Sword",
+    "type": "attack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Sword_High_Attack_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_SW_HIGH_ATK.webp"
+  },
+  "Shield Block Intensity": {
+    "name": "Shield Block Intensity",
+    "icon": "icons/weapon-specializations/Shield-Block-Intensity.webp",
+    "weapon": "Sword",
+    "type": "defense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Sword_High_Defense_08",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_17.webp"
+  },
+  "Unyielding Aegis": {
+    "name": "Unyielding Aegis",
+    "icon": "icons/weapon-specializations/Unyielding-Aegis.webp",
+    "weapon": "Sword",
+    "type": "defense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Sword_High_Def_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_SW_HIGH_DEF.webp"
+  },
+  "Bulwark Stance": {
+    "name": "Bulwark Stance",
+    "icon": "icons/weapon-specializations/Bulwark-Stance.webp",
+    "weapon": "Sword",
+    "type": "tactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Sword_High_Tac_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_SW_HIGH_TAC.webp"
+  },
+  "Collision Resistance Augment": {
+    "name": "Collision Resistance Augment",
+    "icon": "icons/weapon-specializations/Collision-Resistance-Augment.webp",
+    "weapon": "Sword",
+    "type": "tactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Sword_High_Tactic_10",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_33.webp"
+  },
+  "Boss Defense Intensity": {
+    "name": "Boss Defense Intensity",
+    "icon": "icons/weapon-specializations/Boss-Defense-Intensity.webp",
+    "weapon": "Sword",
+    "type": "tactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Sword_High_Tactic_11",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_39.webp"
+  },
+  "Weaken and Damage Expertise": {
+    "name": "Weaken and Damage Expertise",
+    "icon": "icons/weapon-specializations/Weaken-and-Damage-Expertise.webp",
+    "weapon": "Sword",
+    "type": "tacticattack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Sword_High_TacticAttack_12",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_HIGH_4.webp"
+  },
+  "Mana Regen Augment": {
+    "name": "Mana Regen Augment",
+    "icon": "icons/weapon-specializations/Mana-Regen-Augment.webp",
+    "weapon": "Sword",
+    "type": "util",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Sword_High_Util_04",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_27.webp"
+  },
+  "Mana Cost Efficiency Expertise": {
+    "name": "Mana Cost Efficiency Expertise",
+    "icon": "icons/weapon-specializations/Mana-Cost-Efficiency-Expertise.webp",
+    "weapon": "Sword",
+    "type": "utildefense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Sword_High_UtilDefense_06",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_HIGH_2.webp"
+  },
+  "Stamina Renewal": {
+    "name": "Stamina Renewal",
+    "icon": "icons/weapon-specializations/Stamina-Renewal.webp",
+    "weapon": "Sword",
+    "type": "util",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Sword_High_Util_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_SW_HIGH_SUB.webp"
+  },
+  "Roar Amplifier": {
+    "name": "Roar Amplifier",
+    "icon": "icons/weapon-specializations/Roar-Amplifier.webp",
+    "weapon": "Sword",
+    "type": "attack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Sword_Normal_Attack_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_SW_NORMAL_ATK.webp"
+  },
+  "Strategic Retreat": {
+    "name": "Strategic Retreat",
+    "icon": "icons/weapon-specializations/Strategic-Retreat.webp",
+    "weapon": "Sword",
+    "type": "defense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Sword_Normal_Def_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_SW_NORMAL_DEF.webp"
+  },
+  "Gerad's Precision": {
+    "name": "Gerad's Precision",
+    "icon": "icons/weapon-specializations/Gerad's-Precision.webp",
+    "weapon": "Sword",
+    "type": "tactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Sword_Normal_Tac_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_SW_NORMAL_TAC.webp"
+  },
+  "Lesser Collision Augment": {
+    "name": "Lesser Collision Augment",
+    "icon": "icons/weapon-specializations/Lesser-Collision-Augment.webp",
+    "weapon": "Sword",
+    "type": "tactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Sword_Normal_Tactic_10",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_32.webp"
+  },
+  "Weaken and Range Expertise": {
+    "name": "Weaken and Range Expertise",
+    "icon": "icons/weapon-specializations/Weaken-and-Range-Expertise.webp",
+    "weapon": "Sword",
+    "type": "tacticattack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Sword_Normal_TacticAttack_12",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_NORMAL_4.webp"
+  },
+  "Lesser Health Regen Augment": {
+    "name": "Lesser Health Regen Augment",
+    "icon": "icons/weapon-specializations/Lesser-Health-Regen-Augment.webp",
+    "weapon": "Sword",
+    "type": "util",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Sword_Normal_Util_04",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_26.webp"
+  },
+  "Gerad's Resilience": {
+    "name": "Gerad's Resilience",
+    "icon": "icons/weapon-specializations/Gerad's-Resilience.webp",
+    "weapon": "Sword",
+    "type": "util",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Sword_Normal_Util_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_SW_NORMAL_SUB.webp"
+  },
+  "Greater Heavy Attack Augment": {
+    "name": "Greater Heavy Attack Augment",
+    "icon": "icons/weapon-specializations/Greater-Heavy-Attack-Augment.webp",
+    "weapon": "Sword",
+    "type": "attack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Sword_Rare_Attack_01",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_3.webp"
+  },
+  "Shredding Strike": {
+    "name": "Shredding Strike",
+    "icon": "icons/weapon-specializations/Shredding-Strike.webp",
+    "weapon": "Sword",
+    "type": "attack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Sword_Rare_Attack_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_SW_RARE_ATK.webp"
+  },
+  "Greater Shield Block Augment": {
+    "name": "Greater Shield Block Augment",
+    "icon": "icons/weapon-specializations/Greater-Shield-Block-Augment.webp",
+    "weapon": "Sword",
+    "type": "defense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Sword_Rare_Defense_07",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_17.webp"
+  },
+  "Unshakeable Will": {
+    "name": "Unshakeable Will",
+    "icon": "icons/weapon-specializations/Unshakeable-Will.webp",
+    "weapon": "Sword",
+    "type": "defense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Sword_Rare_Def_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_SW_RARE_DEF.webp"
+  },
+  "Tactical Breaker": {
+    "name": "Tactical Breaker",
+    "icon": "icons/weapon-specializations/Tactical-Breaker.webp",
+    "weapon": "Sword",
+    "type": "tactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Sword_Rare_Tac_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_SW_RARE_TAC.webp"
+  },
+  "Greater Boss Bonus Damage Augment": {
+    "name": "Greater Boss Bonus Damage Augment",
+    "icon": "icons/weapon-specializations/Greater-Boss-Bonus-Damage-Augment.webp",
+    "weapon": "Sword",
+    "type": "tactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Sword_Rare_Tactic_10",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_37.webp"
+  },
+  "Stun Resistance and Damage Expertise": {
+    "name": "Stun Resistance and Damage Expertise",
+    "icon": "icons/weapon-specializations/Stun-Resistance-and-Damage-Expertise.webp",
+    "weapon": "Sword",
+    "type": "tacticattack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Sword_Rare_TacticAttack_12",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_RARE_4.webp"
+  },
+  "Greater Buff Duration Augment": {
+    "name": "Greater Buff Duration Augment",
+    "icon": "icons/weapon-specializations/Greater-Buff-Duration-Augment.webp",
+    "weapon": "Sword",
+    "type": "util",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Sword_Rare_Util_04",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_5.webp"
+  },
+  "Melee Defense Expertise": {
+    "name": "Melee Defense Expertise",
+    "icon": "icons/weapon-specializations/Melee-Defense-Expertise.webp",
+    "weapon": "Sword",
+    "type": "utildefense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Sword_Rare_UtilDefense_06",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_RARE_2.webp"
+  },
+  "Replenishment": {
+    "name": "Replenishment",
+    "icon": "icons/weapon-specializations/Replenishment.webp",
+    "weapon": "Sword",
+    "type": "util",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Sword_Rare_Util_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_SW_RARE_SUB.webp"
+  },
+  "Abyssal Burst": {
+    "name": "Abyssal Burst",
+    "icon": "icons/weapon-specializations/Abyssal-Burst.webp",
+    "weapon": "Wand",
+    "type": "attack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Wand_Hero_Attack_01",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_WA_HERO_ATK.webp"
+  },
+  "Blessed Haste": {
+    "name": "Blessed Haste",
+    "icon": "icons/weapon-specializations/Blessed-Haste.webp",
+    "weapon": "Wand",
+    "type": "defense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Wand_Hero_Defense_03",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_WA_HERO_DEF.webp"
+  },
+  "Nightmare": {
+    "name": "Nightmare",
+    "icon": "icons/weapon-specializations/Nightmare.webp",
+    "weapon": "Wand",
+    "type": "tactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Wand_Hero_Tactic_04",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_WA_HERO_SUB.webp"
+  },
+  "Divine Choice": {
+    "name": "Divine Choice",
+    "icon": "icons/weapon-specializations/Divine-Choice.webp",
+    "weapon": "Wand",
+    "type": "util",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Wand_Hero_Util_02",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_WA_HERO_TAC.webp"
+  },
+  "Curse Duration Augment": {
+    "name": "Curse Duration Augment",
+    "icon": "icons/weapon-specializations/Curse-Duration-Augment.webp",
+    "weapon": "Wand",
+    "type": "attack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Wand_High_Attack_01",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_42.webp"
+  },
+  "Warrior's Gambit": {
+    "name": "Warrior's Gambit",
+    "icon": "icons/weapon-specializations/Warrior's-Gambit.webp",
+    "weapon": "Wand",
+    "type": "attack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Wand_High_Attack_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_WA_HIGH_ATK.webp"
+  },
+  "Magic Heavy Attack Evasion Intensity": {
+    "name": "Magic Heavy Attack Evasion Intensity",
+    "icon": "icons/weapon-specializations/Magic-Heavy-Attack-Evasion-Intensity.webp",
+    "weapon": "Wand",
+    "type": "defense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Wand_High_Defense_08",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_12.webp"
+  },
+  "Celestial Boost": {
+    "name": "Celestial Boost",
+    "icon": "icons/weapon-specializations/Celestial-Boost.webp",
+    "weapon": "Wand",
+    "type": "defense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Wand_High_Def_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_WA_HIGH_DEF.webp"
+  },
+  "Shadow Oath": {
+    "name": "Shadow Oath",
+    "icon": "icons/weapon-specializations/Shadow-Oath.webp",
+    "weapon": "Wand",
+    "type": "tactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Wand_High_Tac_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_WA_HIGH_TAC.webp"
+  },
+  "Species Damage Augment": {
+    "name": "Species Damage Augment",
+    "icon": "icons/weapon-specializations/Species-Damage-Augment.webp",
+    "weapon": "Wand",
+    "type": "tactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Wand_High_Tactic_10",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_36.webp"
+  },
+  "Healing Augment": {
+    "name": "Healing Augment",
+    "icon": "icons/weapon-specializations/Healing-Augment.webp",
+    "weapon": "Wand",
+    "type": "util",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Wand_High_Util_04",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_23.webp"
+  },
+  "Eye of Emptiness": {
+    "name": "Eye of Emptiness",
+    "icon": "icons/weapon-specializations/Eye-of-Emptiness.webp",
+    "weapon": "Wand",
+    "type": "util",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Wand_High_Util_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_WA_HIGH_SUB.webp"
+  },
+  "Hit Intensity": {
+    "name": "Hit Intensity",
+    "icon": "icons/weapon-specializations/Hit-Intensity.webp",
+    "weapon": "Wand",
+    "type": "attack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Wand_Normal_Attack_02",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_1.webp"
+  },
+  "Vampiric Onslaught": {
+    "name": "Vampiric Onslaught",
+    "icon": "icons/weapon-specializations/Vampiric-Onslaught.webp",
+    "weapon": "Wand",
+    "type": "attack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Wand_Normal_Attack_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_WA_NORMAL_ATK.webp"
+  },
+  "Lesser Melee Heavy Attack Evasion Augment": {
+    "name": "Lesser Melee Heavy Attack Evasion Augment",
+    "icon": "icons/weapon-specializations/Lesser-Melee-Heavy-Attack-Evasion-Augment.webp",
+    "weapon": "Wand",
+    "type": "defense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Wand_Normal_Defense_07",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_12.webp"
+  },
+  "Evasion Expertise": {
+    "name": "Evasion Expertise",
+    "icon": "icons/weapon-specializations/Evasion-Expertise.webp",
+    "weapon": "Wand",
+    "type": "defensetactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Wand_Normal_DefenseTactic_09",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_NORMAL_3.webp"
+  },
+  "Light of Devotion": {
+    "name": "Light of Devotion",
+    "icon": "icons/weapon-specializations/Light-of-Devotion.webp",
+    "weapon": "Wand",
+    "type": "defense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Wand_Normal_Def_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_WA_NORMAL_DEF.webp"
+  },
+  "Malicious Focus": {
+    "name": "Malicious Focus",
+    "icon": "icons/weapon-specializations/Malicious-Focus.webp",
+    "weapon": "Wand",
+    "type": "tactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Wand_Normal_Tac_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_WA_NORMAL_TAC.webp"
+  },
+  "Lesser Species Resistance Augment": {
+    "name": "Lesser Species Resistance Augment",
+    "icon": "icons/weapon-specializations/Lesser-Species-Resistance-Augment.webp",
+    "weapon": "Wand",
+    "type": "tactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Wand_Normal_Tactic_10",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_38.webp"
+  },
+  "Lesser Mana Efficiency Augment": {
+    "name": "Lesser Mana Efficiency Augment",
+    "icon": "icons/weapon-specializations/Lesser-Mana-Efficiency-Augment.webp",
+    "weapon": "Wand",
+    "type": "util",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Wand_Normal_Util_04",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_21.webp"
+  },
+  "Healing Intensity I": {
+    "name": "Healing Intensity I",
+    "icon": "icons/weapon-specializations/Healing-Intensity-I.webp",
+    "weapon": "Wand",
+    "type": "util",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Wand_Normal_Util_05",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_23.webp"
+  },
+  "Battle Spirit": {
+    "name": "Battle Spirit",
+    "icon": "icons/weapon-specializations/Battle-Spirit.webp",
+    "weapon": "Wand",
+    "type": "util",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Wand_Normal_Util_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_WA_NORMAL_SUB.webp"
+  },
+  "Magic Heavy Attack Intensity": {
+    "name": "Magic Heavy Attack Intensity",
+    "icon": "icons/weapon-specializations/Magic-Heavy-Attack-Intensity.webp",
+    "weapon": "Wand",
+    "type": "attack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Wand_Rare_Attack_02",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_3.webp"
+  },
+  "Malicious Intent": {
+    "name": "Malicious Intent",
+    "icon": "icons/weapon-specializations/Malicious-Intent.webp",
+    "weapon": "Wand",
+    "type": "attack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Wand_Rare_Attack_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_WA_RARE_ATK.webp"
+  },
+  "Silence Chance Response": {
+    "name": "Silence Chance Response",
+    "icon": "icons/weapon-specializations/Silence-Chance-Response.webp",
+    "weapon": "Wand",
+    "type": "attackutil",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Wand_Rare_AttackUtil_03",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_RARE_1.webp"
+  },
+  "Greater Melee Evasion Augment": {
+    "name": "Greater Melee Evasion Augment",
+    "icon": "icons/weapon-specializations/Greater-Melee-Evasion-Augment.webp",
+    "weapon": "Wand",
+    "type": "defense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Wand_Rare_Defense_07",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_10.webp"
+  },
+  "Endurance Intensity": {
+    "name": "Endurance Intensity",
+    "icon": "icons/weapon-specializations/Endurance-Intensity.webp",
+    "weapon": "Wand",
+    "type": "defense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Wand_Rare_Defense_08",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_11.webp"
+  },
+  "Spectral Defense": {
+    "name": "Spectral Defense",
+    "icon": "icons/weapon-specializations/Spectral-Defense.webp",
+    "weapon": "Wand",
+    "type": "defense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Wand_Rare_Def_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_WA_RARE_DEF.webp"
+  },
+  "Dark Apostasy": {
+    "name": "Dark Apostasy",
+    "icon": "icons/weapon-specializations/Dark-Apostasy.webp",
+    "weapon": "Wand",
+    "type": "tactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Wand_Rare_Tac_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_WA_RARE_TAC.webp"
+  },
+  "Greater Crowd Control Augment": {
+    "name": "Greater Crowd Control Augment",
+    "icon": "icons/weapon-specializations/Greater-Crowd-Control-Augment.webp",
+    "weapon": "Wand",
+    "type": "tactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Wand_Rare_Tactic_10",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_32.webp"
+  },
+  "Skill Damage Expertise": {
+    "name": "Skill Damage Expertise",
+    "icon": "icons/weapon-specializations/Skill-Damage-Expertise.webp",
+    "weapon": "Wand",
+    "type": "tacticattack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Wand_Rare_TacticAttack_12",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_RARE_4.webp"
+  },
+  "Healing Intensity II": {
+    "name": "Healing Intensity II",
+    "icon": "icons/weapon-specializations/Healing-Intensity-II.webp",
+    "weapon": "Wand",
+    "type": "util",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Wand_Rare_Util_05",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_23.webp"
+  },
+  "Debuff Duration Defense": {
+    "name": "Debuff Duration Defense",
+    "icon": "icons/weapon-specializations/Debuff-Duration-Defense.webp",
+    "weapon": "Wand",
+    "type": "utildefense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Wand_Rare_UtilDefense_06",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_RARE_2.webp"
+  },
+  "Corrupting Hit": {
+    "name": "Corrupting Hit",
+    "icon": "icons/weapon-specializations/Corrupting-Hit.webp",
+    "weapon": "Wand",
+    "type": "util",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Wand_Rare_Util_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_WP_WA_RARE_SUB.webp"
+  },
+  "Overcome Crisis": {
+    "name": "Overcome Crisis",
+    "icon": "icons/weapon-specializations/Overcome-Crisis.webp",
+    "weapon": "Passive",
+    "type": "",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/WM_Common_SKILL_001",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_ALL_SKILL_7.webp"
+  },
+  "Destruction Spear": {
+    "name": "Destruction Spear",
+    "icon": "icons/weapon-specializations/Destruction-Spear.webp",
+    "weapon": "Passive",
+    "type": "",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/WM_Common_SKILL_002",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_ALL_SKILL_12.webp"
+  },
+  "Spirit of Defiance": {
+    "name": "Spirit of Defiance",
+    "icon": "icons/weapon-specializations/Spirit-of-Defiance.webp",
+    "weapon": "Passive",
+    "type": "",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/WM_Common_SKILL_003",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_ALL_SKILL_6.webp"
+  },
+  "Deadly Survival Instinct": {
+    "name": "Deadly Survival Instinct",
+    "icon": "icons/weapon-specializations/Deadly-Survival-Instinct.webp",
+    "weapon": "Passive",
+    "type": "",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/WM_Common_SKILL_004",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_ALL_SKILL_9.webp"
+  },
+  "Fountain of Revitalization": {
+    "name": "Fountain of Revitalization",
+    "icon": "icons/weapon-specializations/Fountain-of-Revitalization.webp",
+    "weapon": "Passive",
+    "type": "",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/WM_Common_SKILL_005",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_ALL_SKILL_11.webp"
+  },
+  "Deadly Viper": {
+    "name": "Deadly Viper",
+    "icon": "icons/weapon-specializations/Deadly-Viper.webp",
+    "weapon": "Passive",
+    "type": "",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/WM_Common_SKILL_006",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_ALL_SKILL_1.webp"
+  },
+  "Potential": {
+    "name": "Potential",
+    "icon": "icons/weapon-specializations/Potential.webp",
+    "weapon": "Passive",
+    "type": "",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/WM_Common_SKILL_007",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_ALL_SKILL_10.webp"
+  },
+  "Dragon Ascent": {
+    "name": "Dragon Ascent",
+    "icon": "icons/weapon-specializations/Dragon-Ascent.webp",
+    "weapon": "Passive",
+    "type": "",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/WM_Common_SKILL_008",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_ALL_SKILL_8.webp"
+  },
+  "Falling Flower": {
+    "name": "Falling Flower",
+    "icon": "icons/weapon-specializations/Falling-Flower.webp",
+    "weapon": "Passive",
+    "type": "",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/WM_Common_SKILL_009",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_ALL_SKILL_4.webp"
+  },
+  "Indomitable Stance": {
+    "name": "Indomitable Stance",
+    "icon": "icons/weapon-specializations/Indomitable-Stance.webp",
+    "weapon": "Passive",
+    "type": "",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/WM_Common_SKILL_010",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_ALL_SKILL_2.webp"
+  },
+  "Lightning Speed": {
+    "name": "Lightning Speed",
+    "icon": "icons/weapon-specializations/Lightning-Speed.webp",
+    "weapon": "Passive",
+    "type": "",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/WM_Common_SKILL_011",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_ALL_SKILL_3.webp"
+  },
+  "Time Bomb": {
+    "name": "Time Bomb",
+    "icon": "icons/weapon-specializations/Time-Bomb.webp",
+    "weapon": "Passive",
+    "type": "",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/WM_Common_SKILL_012",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_ALL_SKILL_5.webp"
+  },
+  "Light of Annihilation": {
+    "name": "Light of Annihilation",
+    "icon": "icons/weapon-specializations/Light-of-Annihilation.webp",
+    "weapon": "Orb",
+    "type": "attack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Orb_Hero_Attack_01",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/M_WP_ORB_HERO_ATK.webp"
+  },
+  "Breath of Infinity": {
+    "name": "Breath of Infinity",
+    "icon": "icons/weapon-specializations/Breath-of-Infinity.webp",
+    "weapon": "Orb",
+    "type": "defense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Orb_Hero_Defense_03",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/M_WP_ORB_HERO_DEF.webp"
+  },
+  "Dark Erosion": {
+    "name": "Dark Erosion",
+    "icon": "icons/weapon-specializations/Dark-Erosion.webp",
+    "weapon": "Orb",
+    "type": "tactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Orb_Hero_Tactic_04",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/M_WP_ORB_HERO_TAC.webp"
+  },
+  "Seer": {
+    "name": "Seer",
+    "icon": "icons/weapon-specializations/Seer.webp",
+    "weapon": "Orb",
+    "type": "util",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Orb_Hero_Util_02",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/M_WP_ORB_HERO_SUB.webp"
+  },
+  "Increase Attack Range": {
+    "name": "Increase Attack Range",
+    "icon": "icons/weapon-specializations/Increase-Attack-Range.webp",
+    "weapon": "Orb",
+    "type": "attack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Orb_High_Attack_01",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_8.webp"
+  },
+  "Magic Heavy Attack Concentration": {
+    "name": "Magic Heavy Attack Concentration",
+    "icon": "icons/weapon-specializations/Magic-Heavy-Attack-Concentration.webp",
+    "weapon": "Orb",
+    "type": "attack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Orb_High_Attack_02",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_3.webp"
+  },
+  "Stacking Echo": {
+    "name": "Stacking Echo",
+    "icon": "icons/weapon-specializations/Stacking-Echo.webp",
+    "weapon": "Orb",
+    "type": "attack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Orb_High_Attack_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/M_WP_ORB_HIGH_ATK.webp"
+  },
+  "Max Mana Mastery": {
+    "name": "Max Mana Mastery",
+    "icon": "icons/weapon-specializations/Max-Mana-Mastery.webp",
+    "weapon": "Orb",
+    "type": "attackutil",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Orb_High_AttackUtil_03",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_HIGH_1.webp"
+  },
+  "Increase Melee Evasion": {
+    "name": "Increase Melee Evasion",
+    "icon": "icons/weapon-specializations/Increase-Melee-Evasion.webp",
+    "weapon": "Orb",
+    "type": "defense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Orb_High_Defense_07",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_10.webp"
+  },
+  "Shield Damage Reduction Concentration": {
+    "name": "Shield Damage Reduction Concentration",
+    "icon": "icons/weapon-specializations/Shield-Damage-Reduction-Concentration.webp",
+    "weapon": "Orb",
+    "type": "defense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Orb_High_Defense_08",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_17.webp"
+  },
+  "Celestial Guard": {
+    "name": "Celestial Guard",
+    "icon": "icons/weapon-specializations/Celestial-Guard.webp",
+    "weapon": "Orb",
+    "type": "defense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Orb_High_Def_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/M_WP_ORB_HIGH_DEF.webp"
+  },
+  "Eternal Body": {
+    "name": "Eternal Body",
+    "icon": "icons/weapon-specializations/Eternal-Body.webp",
+    "weapon": "Orb",
+    "type": "tactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Orb_High_Tac_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/M_WP_ORB_HIGH_TAC.webp"
+  },
+  "All Species Defense": {
+    "name": "All Species Defense",
+    "icon": "icons/weapon-specializations/All-Species-Defense.webp",
+    "weapon": "Orb",
+    "type": "tactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Orb_High_Tactic_10",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_39.webp"
+  },
+  "Attack Range Concentration": {
+    "name": "Attack Range Concentration",
+    "icon": "icons/weapon-specializations/Attack-Range-Concentration.webp",
+    "weapon": "Orb",
+    "type": "tactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Orb_High_Tactic_11",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_8.webp"
+  },
+  "Relentless Stamina Regen": {
+    "name": "Relentless Stamina Regen",
+    "icon": "icons/weapon-specializations/Relentless-Stamina-Regen.webp",
+    "weapon": "Orb",
+    "type": "tacticattack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Orb_High_TacticAttack_12",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_HIGH_4.webp"
+  },
+  "Increase Shield Health": {
+    "name": "Increase Shield Health",
+    "icon": "icons/weapon-specializations/Increase-Shield-Health.webp",
+    "weapon": "Orb",
+    "type": "util",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Orb_High_Util_04",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_17.webp"
+  },
+  "Mana Efficiency Concentration": {
+    "name": "Mana Efficiency Concentration",
+    "icon": "icons/weapon-specializations/Mana-Efficiency-Concentration.webp",
+    "weapon": "Orb",
+    "type": "util",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Orb_High_Util_05",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_21.webp"
+  },
+  "Debuff Duration Expertise": {
+    "name": "Debuff Duration Expertise",
+    "icon": "icons/weapon-specializations/Debuff-Duration-Expertise.webp",
+    "weapon": "Orb",
+    "type": "utildefense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Orb_High_UtilDefense_06",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_HIGH_2.webp"
+  },
+  "Cosmic Cycle": {
+    "name": "Cosmic Cycle",
+    "icon": "icons/weapon-specializations/Cosmic-Cycle.webp",
+    "weapon": "Orb",
+    "type": "util",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Orb_High_Util_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/M_WP_ORB_HIGH_SUB.webp"
+  },
+  "Orb Max Damage Increase": {
+    "name": "Orb Max Damage Increase",
+    "icon": "icons/weapon-specializations/Orb-Max-Damage-Increase.webp",
+    "weapon": "Orb",
+    "type": "attack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Orb_Normal_Attack_01",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_9.webp"
+  },
+  "Attack Speed Concentration": {
+    "name": "Attack Speed Concentration",
+    "icon": "icons/weapon-specializations/Attack-Speed-Concentration.webp",
+    "weapon": "Orb",
+    "type": "attack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Orb_Normal_Attack_02",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_34.webp"
+  },
+  "Resonant Heavy Attack": {
+    "name": "Resonant Heavy Attack",
+    "icon": "icons/weapon-specializations/Resonant-Heavy-Attack.webp",
+    "weapon": "Orb",
+    "type": "attack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Orb_Normal_Attack_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/M_WP_ORB_Normal_ATK.webp"
+  },
+  "Relentless Mana Cost Efficiency": {
+    "name": "Relentless Mana Cost Efficiency",
+    "icon": "icons/weapon-specializations/Relentless-Mana-Cost-Efficiency.webp",
+    "weapon": "Orb",
+    "type": "attackutil",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Orb_Normal_AttackUtil_03",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_NORMAL_1.webp"
+  },
+  "Shield Health Concentration": {
+    "name": "Shield Health Concentration",
+    "icon": "icons/weapon-specializations/Shield-Health-Concentration.webp",
+    "weapon": "Orb",
+    "type": "defense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Orb_Normal_Defense_08",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_17.webp"
+  },
+  "Stellar Flare": {
+    "name": "Stellar Flare",
+    "icon": "icons/weapon-specializations/Stellar-Flare.webp",
+    "weapon": "Orb",
+    "type": "defense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Orb_Normal_Def_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/M_WP_ORB_Normal_DEF.webp"
+  },
+  "Galactic Acceleration": {
+    "name": "Galactic Acceleration",
+    "icon": "icons/weapon-specializations/Galactic-Acceleration.webp",
+    "weapon": "Orb",
+    "type": "tactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Orb_Normal_Tac_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/M_WP_ORB_Normal_TAC.webp"
+  },
+  "Increase Movement Speed": {
+    "name": "Increase Movement Speed",
+    "icon": "icons/weapon-specializations/Increase-Movement-Speed.webp",
+    "weapon": "Orb",
+    "type": "tactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Orb_Normal_Tactic_10",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_22.webp"
+  },
+  "Cooldown Speed Concentration": {
+    "name": "Cooldown Speed Concentration",
+    "icon": "icons/weapon-specializations/Cooldown-Speed-Concentration.webp",
+    "weapon": "Orb",
+    "type": "tactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Orb_Normal_Tactic_11",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_29.webp"
+  },
+  "Enhance Skill Damage": {
+    "name": "Enhance Skill Damage",
+    "icon": "icons/weapon-specializations/Enhance-Skill-Damage.webp",
+    "weapon": "Orb",
+    "type": "tacticattack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Orb_Normal_TacticAttack_12",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_NORMAL_4.webp"
+  },
+  "Enhance Silence Resistance": {
+    "name": "Enhance Silence Resistance",
+    "icon": "icons/weapon-specializations/Enhance-Silence-Resistance.webp",
+    "weapon": "Orb",
+    "type": "utildefense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Orb_Normal_UtilDefense_06",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_NORMAL_2.webp"
+  },
+  "Coordinated Fracture": {
+    "name": "Coordinated Fracture",
+    "icon": "icons/weapon-specializations/Coordinated-Fracture.webp",
+    "weapon": "Orb",
+    "type": "util",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Orb_Normal_Util_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/M_WP_ORB_Normal_SUB.webp"
+  },
+  "Shielded Target Damage Augment": {
+    "name": "Shielded Target Damage Augment",
+    "icon": "icons/weapon-specializations/Shielded-Target-Damage-Augment.webp",
+    "weapon": "Orb",
+    "type": "attack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Orb_Rare_Attack_01",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_35.webp"
+  },
+  "Magic Critical Hit Chance Concentration": {
+    "name": "Magic Critical Hit Chance Concentration",
+    "icon": "icons/weapon-specializations/Magic-Critical-Hit-Chance-Concentration.webp",
+    "weapon": "Orb",
+    "type": "attack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Orb_Rare_Attack_02",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_2.webp"
+  },
+  "Flow Shift": {
+    "name": "Flow Shift",
+    "icon": "icons/weapon-specializations/Flow-Shift.webp",
+    "weapon": "Orb",
+    "type": "attack",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Orb_Rare_Attack_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/M_WP_ORB_RARE_ATK.webp"
+  },
+  "Relentless Mana Regen": {
+    "name": "Relentless Mana Regen",
+    "icon": "icons/weapon-specializations/Relentless-Mana-Regen.webp",
+    "weapon": "Orb",
+    "type": "attackutil",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Orb_Rare_AttackUtil_03",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_RARE_1.webp"
+  },
+  "Max Health Augment": {
+    "name": "Max Health Augment",
+    "icon": "icons/weapon-specializations/Max-Health-Augment.webp",
+    "weapon": "Orb",
+    "type": "defense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Orb_Rare_Defense_07",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_18.webp"
+  },
+  "Heavy Attack Resistance Concentration": {
+    "name": "Heavy Attack Resistance Concentration",
+    "icon": "icons/weapon-specializations/Heavy-Attack-Resistance-Concentration.webp",
+    "weapon": "Orb",
+    "type": "defense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Orb_Rare_Defense_08",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_12.webp"
+  },
+  "Dimensional Seal": {
+    "name": "Dimensional Seal",
+    "icon": "icons/weapon-specializations/Dimensional-Seal.webp",
+    "weapon": "Orb",
+    "type": "defense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Orb_Rare_Def_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/M_WP_ORB_RARE_DEF.webp"
+  },
+  "Spatial Rush": {
+    "name": "Spatial Rush",
+    "icon": "icons/weapon-specializations/Spatial-Rush.webp",
+    "weapon": "Orb",
+    "type": "tactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Orb_Rare_Tac_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/M_WP_ORB_RARE_TAC.webp"
+  },
+  "Relentless All Species Damage": {
+    "name": "Relentless All Species Damage",
+    "icon": "icons/weapon-specializations/Relentless-All-Species-Damage.webp",
+    "weapon": "Orb",
+    "type": "tactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Orb_Rare_Tactic_10",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_36.webp"
+  },
+  "Dexterity Enchantment Sage": {
+    "name": "Dexterity Enchantment Sage",
+    "icon": "icons/weapon-specializations/Dexterity-Enchantment-Sage.webp",
+    "weapon": "Orb",
+    "type": "tactic",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Orb_Rare_Tactic_11",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_5.webp"
+  },
+  "Distortion Veil Time Increase": {
+    "name": "Distortion Veil Time Increase",
+    "icon": "icons/weapon-specializations/Distortion-Veil-Time-Increase.webp",
+    "weapon": "Orb",
+    "type": "util",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Orb_Rare_Util_04",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_5.webp"
+  },
+  "True Sage's Shield of Wisdom": {
+    "name": "True Sage's Shield of Wisdom",
+    "icon": "icons/weapon-specializations/True-Sage's-Shield-of-Wisdom.webp",
+    "weapon": "Orb",
+    "type": "util",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Orb_Rare_Util_05",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_17.webp"
+  },
+  "Regen Augment": {
+    "name": "Regen Augment",
+    "icon": "icons/weapon-specializations/Regen-Augment.webp",
+    "weapon": "Orb",
+    "type": "utildefense",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Orb_Rare_UtilDefense_06",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/WeaponSpecialization/M_COMMON_RARE_2.webp"
+  },
+  "Tranquil Will": {
+    "name": "Tranquil Will",
+    "icon": "icons/weapon-specializations/Tranquil-Will.webp",
+    "weapon": "Orb",
+    "type": "util",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/Orb_Rare_Util_Skill",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/M_WP_ORB_RARE_SUB.webp"
+  },
+  "Battle Prep": {
+    "name": "Battle Prep",
+    "icon": "icons/weapon-specializations/Battle-Prep.webp",
+    "weapon": "Passive",
+    "type": "",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/WM_Common_SKILL_013",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_ALL_SKILL_13.webp"
+  },
+  "Guardian's Awakening": {
+    "name": "Guardian's Awakening",
+    "icon": "icons/weapon-specializations/Guardian's-Awakening.webp",
+    "weapon": "Passive",
+    "type": "",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/WM_Common_SKILL_014",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_ALL_SKILL_14.webp"
+  },
+  "Windy Veil": {
+    "name": "Windy Veil",
+    "icon": "icons/weapon-specializations/Windy-Veil.webp",
+    "weapon": "Passive",
+    "type": "",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/WM_Common_SKILL_015",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_ALL_SKILL_15.webp"
+  },
+  "Survival Enhancement": {
+    "name": "Survival Enhancement",
+    "icon": "icons/weapon-specializations/Survival-Enhancement.webp",
+    "weapon": "Passive",
+    "type": "",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/WM_Common_SKILL_016",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_ALL_SKILL_16.webp"
+  },
+  "Fighting Instincts": {
+    "name": "Fighting Instincts",
+    "icon": "icons/weapon-specializations/Fighting-Instincts.webp",
+    "weapon": "Passive",
+    "type": "",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/WM_Common_SKILL_017",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_ALL_SKILL_17.webp"
+  },
+  "Overcoming Pain": {
+    "name": "Overcoming Pain",
+    "icon": "icons/weapon-specializations/Overcoming-Pain.webp",
+    "weapon": "Passive",
+    "type": "",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/WM_Common_SKILL_018",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_ALL_SKILL_18.webp"
+  },
+  "Duelist": {
+    "name": "Duelist",
+    "icon": "icons/weapon-specializations/Duelist.webp",
+    "weapon": "Passive",
+    "type": "",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/WM_Common_SKILL_019",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_ALL_SKILL_19.webp"
+  },
+  "Shielded by Unity": {
+    "name": "Shielded by Unity",
+    "icon": "icons/weapon-specializations/Shielded-by-Unity.webp",
+    "weapon": "Passive",
+    "type": "",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/WM_Common_SKILL_020",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_ALL_SKILL_20.webp"
+  },
+  "Defense Null": {
+    "name": "Defense Null",
+    "icon": "icons/weapon-specializations/Defense-Null.webp",
+    "weapon": "Passive",
+    "type": "",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/WM_Common_SKILL_021",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_ALL_SKILL_21.webp"
+  },
+  "Guardian's Blessing": {
+    "name": "Guardian's Blessing",
+    "icon": "icons/weapon-specializations/Guardian's-Blessing.webp",
+    "weapon": "Passive",
+    "type": "",
+    "questlogUrl": "https://questlog.gg/throne-and-liberty/en/db/weapon-specialization/WM_Common_SKILL_022",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WeaponSpecialization/M_ALL_SKILL_22.webp"
+  }
+}
