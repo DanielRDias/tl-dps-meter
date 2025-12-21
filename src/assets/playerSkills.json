@@ -1,0 +1,2513 @@
+{
+  "Longbow_Purifying Touch": {
+    "name": "Purifying Touch",
+    "icon": "icons/skills/Purifying-Touch.webp",
+    "weapon": "Longbow",
+    "type": "active",
+    "level": "36",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_BO_AbnormalDispel.webp"
+  },
+  "Longbow_Devoted Shield": {
+    "name": "Devoted Shield",
+    "icon": "icons/skills/Devoted-Shield.webp",
+    "weapon": "Longbow",
+    "type": "passive",
+    "level": "39",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_BO_AbnormalShield.webp"
+  },
+  "Longbow_Deadly Marker": {
+    "name": "Deadly Marker",
+    "icon": "icons/skills/Deadly-Marker.webp",
+    "weapon": "Longbow",
+    "type": "active",
+    "level": "30",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_BO_AttackMark.webp"
+  },
+  "Longbow_Distorted Sanctuary": {
+    "name": "Distorted Sanctuary",
+    "icon": "icons/skills/Distorted-Sanctuary.webp",
+    "weapon": "Longbow",
+    "type": "passive",
+    "level": "27",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_BO_AuraDefenceUp_AA.webp"
+  },
+  "Longbow_Basic Shot": {
+    "name": "Basic Shot",
+    "icon": "icons/skills/Basic-Shot.webp",
+    "weapon": "Longbow",
+    "type": "active",
+    "level": "1",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_BO_BasicShot.webp"
+  },
+  "Longbow_Steady Aim": {
+    "name": "Steady Aim",
+    "icon": "icons/skills/Steady-Aim.webp",
+    "weapon": "Longbow",
+    "type": "passive",
+    "level": "6",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_BO_BindAccuracyBoost_AA.webp"
+  },
+  "Longbow_Ensnaring Arrow": {
+    "name": "Ensnaring Arrow",
+    "icon": "icons/skills/Ensnaring-Arrow.webp",
+    "weapon": "Longbow",
+    "type": "active",
+    "level": "1",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_BO_BindShot_AA.webp"
+  },
+  "Longbow_Overtaker": {
+    "name": "Overtaker",
+    "icon": "icons/skills/Overtaker.webp",
+    "weapon": "Longbow",
+    "type": "defensive",
+    "level": "1",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_BO_DefenceAction_AA.webp"
+  },
+  "Longbow_Flash Arrow": {
+    "name": "Flash Arrow",
+    "icon": "icons/skills/Flash-Arrow.webp",
+    "weapon": "Longbow",
+    "type": "active",
+    "level": "50",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_BO_Detection.webp"
+  },
+  "Longbow_Sniper's Sense": {
+    "name": "Sniper's Sense",
+    "icon": "icons/skills/Sniper's-Sense.webp",
+    "weapon": "Longbow",
+    "type": "passive",
+    "level": "12",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_BO_DistanceCritical_AA.webp"
+  },
+  "Longbow_Blitz": {
+    "name": "Blitz",
+    "icon": "icons/skills/Blitz.webp",
+    "weapon": "Longbow",
+    "type": "active",
+    "level": "50",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_BO_DoubleShot.webp"
+  },
+  "Longbow_Brutal Arrow": {
+    "name": "Brutal Arrow",
+    "icon": "icons/skills/Brutal-Arrow.webp",
+    "weapon": "Longbow",
+    "type": "active",
+    "level": "15",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_BO_DropShot.webp"
+  },
+  "Longbow_Rapidfire Stance": {
+    "name": "Rapidfire Stance",
+    "icon": "icons/skills/Rapidfire-Stance.webp",
+    "weapon": "Longbow",
+    "type": "passive",
+    "level": "3",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_BO_InplaceAttack_AA.webp"
+  },
+  "Longbow_Strafing": {
+    "name": "Strafing",
+    "icon": "icons/skills/Strafing.webp",
+    "weapon": "Longbow",
+    "type": "active",
+    "level": "1",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_BO_MultiShot_AA.webp"
+  },
+  "Longbow_Earth's Blessing": {
+    "name": "Earth's Blessing",
+    "icon": "icons/skills/Earth's-Blessing.webp",
+    "weapon": "Longbow",
+    "type": "passive",
+    "level": "33",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_BO_NatureForce.webp"
+  },
+  "Longbow_Decisive Sniping": {
+    "name": "Decisive Sniping",
+    "icon": "icons/skills/Decisive-Sniping.webp",
+    "weapon": "Longbow",
+    "type": "active",
+    "level": "1",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_BO_PowerShot_AA.webp"
+  },
+  "Longbow_Nature's Blessing": {
+    "name": "Nature's Blessing",
+    "icon": "icons/skills/Nature's-Blessing.webp",
+    "weapon": "Longbow",
+    "type": "active",
+    "level": "9",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_BO_RegenAura_AA.webp"
+  },
+  "Longbow_Healing Touch": {
+    "name": "Healing Touch",
+    "icon": "icons/skills/Healing-Touch.webp",
+    "weapon": "Longbow",
+    "type": "active",
+    "level": "24",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_BO_S_RegenHeal.webp"
+  },
+  "Longbow_Zephyr's Nock": {
+    "name": "Zephyr's Nock",
+    "icon": "icons/skills/Zephyr's-Nock.webp",
+    "weapon": "Longbow",
+    "type": "active",
+    "level": "1",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_BO_StrongShot_AA.webp"
+  },
+  "Longbow_Arrow Vortex": {
+    "name": "Arrow Vortex",
+    "icon": "icons/skills/Arrow-Vortex.webp",
+    "weapon": "Longbow",
+    "type": "active",
+    "level": "18",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_BO_TornadoShot.webp"
+  },
+  "Longbow_Roxie's Arrowhead": {
+    "name": "Roxie's Arrowhead",
+    "icon": "icons/skills/Roxie's-Arrowhead.webp",
+    "weapon": "Longbow",
+    "type": "passive",
+    "level": "21",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_BO_WindBonusProjectile.webp"
+  },
+  "Crossbow_Mother Nature's Protest": {
+    "name": "Mother Nature's Protest",
+    "icon": "icons/skills/Mother-Nature's-Protest.webp",
+    "weapon": "Crossbow",
+    "type": "active",
+    "level": "18",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_CR_AddProjectile.webp"
+  },
+  "Crossbow_Mortal Mark": {
+    "name": "Mortal Mark",
+    "icon": "icons/skills/Mortal-Mark.webp",
+    "weapon": "Crossbow",
+    "type": "active",
+    "level": "1",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_CR_ArmorBreakShot_AA.webp"
+  },
+  "Crossbow_Basic Shot": {
+    "name": "Basic Shot",
+    "icon": "icons/skills/Basic-Shot.webp",
+    "weapon": "Crossbow",
+    "type": "active",
+    "level": "1",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_CR_BasicShot.webp"
+  },
+  "Crossbow_Mana Exchange": {
+    "name": "Mana Exchange",
+    "icon": "icons/skills/Mana-Exchange.webp",
+    "weapon": "Crossbow",
+    "type": "active",
+    "level": "24",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_CR_BloodToSoul.webp"
+  },
+  "Crossbow_Multi-Shot": {
+    "name": "Multi-Shot",
+    "icon": "icons/skills/Multi-Shot.webp",
+    "weapon": "Crossbow",
+    "type": "active",
+    "level": "9",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_CR_BuckShot_AA.webp"
+  },
+  "Crossbow_Eagle Vision": {
+    "name": "Eagle Vision",
+    "icon": "icons/skills/Eagle-Vision.webp",
+    "weapon": "Crossbow",
+    "type": "passive",
+    "level": "3",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_CR_DistanceRangeAcc_AA.webp"
+  },
+  "Crossbow_Nature's Power": {
+    "name": "Nature's Power",
+    "icon": "icons/skills/Nature's-Power.webp",
+    "weapon": "Crossbow",
+    "type": "passive",
+    "level": "6",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_CR_PeaceTimeBuff_AA.webp"
+  },
+  "Crossbow_Quick Fire": {
+    "name": "Quick Fire",
+    "icon": "icons/skills/Quick-Fire.webp",
+    "weapon": "Crossbow",
+    "type": "active",
+    "level": "1",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_CR_RapidShot_AA.webp"
+  },
+  "Crossbow_Nimble Leap": {
+    "name": "Nimble Leap",
+    "icon": "icons/skills/Nimble-Leap.webp",
+    "weapon": "Crossbow",
+    "type": "active",
+    "level": "1",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_CR_Step_AA.webp"
+  },
+  "Crossbow_Bloodlust": {
+    "name": "Bloodlust",
+    "icon": "icons/skills/Bloodlust.webp",
+    "weapon": "Crossbow",
+    "type": "passive",
+    "level": "27",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_ContinuousAttackBonus.webp"
+  },
+  "Crossbow_Recoil Shot": {
+    "name": "Recoil Shot",
+    "icon": "icons/skills/Recoil-Shot.webp",
+    "weapon": "Crossbow",
+    "type": "active",
+    "level": "1",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WP_CR_AddShot.webp"
+  },
+  "Crossbow_Wind Snatcher": {
+    "name": "Wind Snatcher",
+    "icon": "icons/skills/Wind-Snatcher.webp",
+    "weapon": "Crossbow",
+    "type": "active",
+    "level": "50",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_CR_RobShot.webp"
+  },
+  "Crossbow_Weak Point Shot": {
+    "name": "Weak Point Shot",
+    "icon": "icons/skills/Weak-Point-Shot.webp",
+    "weapon": "Crossbow",
+    "type": "active",
+    "level": "50",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_CR_WeakPointShot.webp"
+  },
+  "Crossbow_Merciless Barrage": {
+    "name": "Merciless Barrage",
+    "icon": "icons/skills/Merciless-Barrage.webp",
+    "weapon": "Crossbow",
+    "type": "active",
+    "level": "36",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_CR_FuriousFire.webp"
+  },
+  "Crossbow_Rupturing Parry": {
+    "name": "Rupturing Parry",
+    "icon": "icons/skills/Rupturing-Parry.webp",
+    "weapon": "Crossbow",
+    "type": "defensive",
+    "level": "1",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_CR_DefenseAction_Evasion_AA.webp"
+  },
+  "Crossbow_Detection": {
+    "name": "Detection",
+    "icon": "icons/skills/Detection.webp",
+    "weapon": "Crossbow",
+    "type": "passive",
+    "level": "39",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_CR_AfterImage.webp"
+  },
+  "Crossbow_Piercing Strike": {
+    "name": "Piercing Strike",
+    "icon": "icons/skills/Piercing-Strike.webp",
+    "weapon": "Crossbow",
+    "type": "passive",
+    "level": "21",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_CR_CriticalAttack.webp"
+  },
+  "Crossbow_Selfless Diffusion": {
+    "name": "Selfless Diffusion",
+    "icon": "icons/skills/Selfless-Diffusion.webp",
+    "weapon": "Crossbow",
+    "type": "active",
+    "level": "15",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_CR_GhostWalk_AA.webp"
+  },
+  "Crossbow_Ambidexterity": {
+    "name": "Ambidexterity",
+    "icon": "icons/skills/Ambidexterity.webp",
+    "weapon": "Crossbow",
+    "type": "passive",
+    "level": "12",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_CR_OffHandMaxDmg_AA.webp"
+  },
+  "Crossbow_Corrupt Nail": {
+    "name": "Corrupt Nail",
+    "icon": "icons/skills/Corrupt-Nail.webp",
+    "weapon": "Crossbow",
+    "type": "passive",
+    "level": "33",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_CR_S_WeakenAccuracy.webp"
+  },
+  "Crossbow_Explosive Trap": {
+    "name": "Explosive Trap",
+    "icon": "icons/skills/Explosive-Trap.webp",
+    "weapon": "Crossbow",
+    "type": "active",
+    "level": "30",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_CR_TauntTrap.webp"
+  },
+  "Daggers_Assassin's Step": {
+    "name": "Assassin's Step",
+    "icon": "icons/skills/Assassin's-Step.webp",
+    "weapon": "Daggers",
+    "type": "passive",
+    "level": "3",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_AS_CO_Acceleration_AA.webp"
+  },
+  "Daggers_Mutilation": {
+    "name": "Mutilation",
+    "icon": "icons/skills/Mutilation.webp",
+    "weapon": "Daggers",
+    "type": "active",
+    "level": "1",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_DA_BasicStrike.webp"
+  },
+  "Daggers_Shadow Strike": {
+    "name": "Shadow Strike",
+    "icon": "icons/skills/Shadow-Strike.webp",
+    "weapon": "Daggers",
+    "type": "active",
+    "level": "1",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_DA_BlinkStrike_AA.webp"
+  },
+  "Daggers_Vampiric Strike": {
+    "name": "Vampiric Strike",
+    "icon": "icons/skills/Vampiric-Strike.webp",
+    "weapon": "Daggers",
+    "type": "active",
+    "level": "9",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_DA_BloodStrike.webp"
+  },
+  "Daggers_Block Blade": {
+    "name": "Block Blade",
+    "icon": "icons/skills/Block-Blade.webp",
+    "weapon": "Daggers",
+    "type": "defensive",
+    "level": "1",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_DA_CounterMove_ActionSkill_Guard_AA.webp"
+  },
+  "Daggers_Cleaving Moonlight": {
+    "name": "Cleaving Moonlight",
+    "icon": "icons/skills/Cleaving-Moonlight.webp",
+    "weapon": "Daggers",
+    "type": "active",
+    "level": "1",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_DA_SpinAttack.webp"
+  },
+  "Daggers_Brutal Incision": {
+    "name": "Brutal Incision",
+    "icon": "icons/skills/Brutal-Incision.webp",
+    "weapon": "Daggers",
+    "type": "active",
+    "level": "1",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_DA_DeadlyStrike_AA.webp"
+  },
+  "Daggers_Fatal Stigma": {
+    "name": "Fatal Stigma",
+    "icon": "icons/skills/Fatal-Stigma.webp",
+    "weapon": "Daggers",
+    "type": "active",
+    "level": "36",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_DA_DelayDamage.webp"
+  },
+  "Daggers_Ankle Strike": {
+    "name": "Ankle Strike",
+    "icon": "icons/skills/Ankle-Strike.webp",
+    "weapon": "Daggers",
+    "type": "active",
+    "level": "24",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_DA_LegAttack.webp"
+  },
+  "Daggers_Shadow Walker": {
+    "name": "Shadow Walker",
+    "icon": "icons/skills/Shadow-Walker.webp",
+    "weapon": "Daggers",
+    "type": "passive",
+    "level": "21",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_DA_MoveSkillEvasion_AA.webp"
+  },
+  "Daggers_Knife Throwing": {
+    "name": "Knife Throwing",
+    "icon": "icons/skills/Knife-Throwing.webp",
+    "weapon": "Daggers",
+    "type": "active",
+    "level": "18",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_DA_PoisonDagger_AA.webp"
+  },
+  "Daggers_Inject Venom": {
+    "name": "Inject Venom",
+    "icon": "icons/skills/Inject-Venom.webp",
+    "weapon": "Daggers",
+    "type": "active",
+    "level": "1",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_AS_SR_Burning__AA.webp"
+  },
+  "Daggers_Umbral Spirit": {
+    "name": "Umbral Spirit",
+    "icon": "icons/skills/Umbral-Spirit.webp",
+    "weapon": "Daggers",
+    "type": "active",
+    "level": "15",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_DA_ShadowChaser.webp"
+  },
+  "Daggers_Phantom Smokescreen": {
+    "name": "Phantom Smokescreen",
+    "icon": "icons/skills/Phantom-Smokescreen.webp",
+    "weapon": "Daggers",
+    "type": "active",
+    "level": "50",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_DA_Smoke.webp"
+  },
+  "Daggers_Frenzied Sword Dance": {
+    "name": "Frenzied Sword Dance",
+    "icon": "icons/skills/Frenzied-Sword-Dance.webp",
+    "weapon": "Daggers",
+    "type": "active",
+    "level": "50",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WP_DA_DA_S_SonicAttack.webp"
+  },
+  "Daggers_Camouflage Cloak": {
+    "name": "Camouflage Cloak",
+    "icon": "icons/skills/Camouflage-Cloak.webp",
+    "weapon": "Daggers",
+    "type": "active",
+    "level": "30",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_AS_SR_Hide.webp"
+  },
+  "Daggers_Wrathful Edge": {
+    "name": "Wrathful Edge",
+    "icon": "icons/skills/Wrathful-Edge.webp",
+    "weapon": "Daggers",
+    "type": "passive",
+    "level": "39",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_DA_CriticalDamageUp.webp"
+  },
+  "Daggers_Assassination Stance": {
+    "name": "Assassination Stance",
+    "icon": "icons/skills/Assassination-Stance.webp",
+    "weapon": "Daggers",
+    "type": "passive",
+    "level": "33",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_DA_EvasionBuff.webp"
+  },
+  "Daggers_Assassin's Instincts": {
+    "name": "Assassin's Instincts",
+    "icon": "icons/skills/Assassin's-Instincts.webp",
+    "weapon": "Daggers",
+    "type": "passive",
+    "level": "6",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_DA_MeleeAccuracy_AA.webp"
+  },
+  "Daggers_Murderous Energy": {
+    "name": "Murderous Energy",
+    "icon": "icons/skills/Murderous-Energy.webp",
+    "weapon": "Daggers",
+    "type": "passive",
+    "level": "12",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_DA_PoisonBuff_AA.webp"
+  },
+  "Daggers_Destructive Fang": {
+    "name": "Destructive Fang",
+    "icon": "icons/skills/Destructive-Fang.webp",
+    "weapon": "Daggers",
+    "type": "passive",
+    "level": "27",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_DA_PoisonTargetOffHandAttack.webp"
+  },
+  "Spear_Unyielding Sentinel": {
+    "name": "Unyielding Sentinel",
+    "icon": "icons/skills/Unyielding-Sentinel.webp",
+    "weapon": "Spear",
+    "type": "active",
+    "level": "18",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SP_AbnormalTolerance.webp"
+  },
+  "Spear_Swing": {
+    "name": "Swing",
+    "icon": "icons/skills/Swing.webp",
+    "weapon": "Spear",
+    "type": "active",
+    "level": "1",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SP_BasicAttack.webp"
+  },
+  "Spear_Bloodleech Aura": {
+    "name": "Bloodleech Aura",
+    "icon": "icons/skills/Bloodleech-Aura.webp",
+    "weapon": "Spear",
+    "type": "active",
+    "level": "15",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SP_BloodAura.webp"
+  },
+  "Spear_Patient Block": {
+    "name": "Patient Block",
+    "icon": "icons/skills/Patient-Block.webp",
+    "weapon": "Spear",
+    "type": "defensive",
+    "level": "1",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SP_DefenceAction.webp"
+  },
+  "Spear_Rising Slash": {
+    "name": "Rising Slash",
+    "icon": "icons/skills/Rising-Slash.webp",
+    "weapon": "Spear",
+    "type": "active",
+    "level": "24",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SP_CrossAttack.webp"
+  },
+  "Spear_Gale Rush": {
+    "name": "Gale Rush",
+    "icon": "icons/skills/Gale-Rush.webp",
+    "weapon": "Spear",
+    "type": "active",
+    "level": "1",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SP_DashAttack.webp"
+  },
+  "Spear_Cataclysm": {
+    "name": "Cataclysm",
+    "icon": "icons/skills/Cataclysm.webp",
+    "weapon": "Spear",
+    "type": "active",
+    "level": "50",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SP_DefenceAttack.webp"
+  },
+  "Spear_Death From Above": {
+    "name": "Death From Above",
+    "icon": "icons/skills/Death-From-Above.webp",
+    "weapon": "Spear",
+    "type": "active",
+    "level": "50",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SP_DropAttack.webp"
+  },
+  "Spear_Malice Surge": {
+    "name": "Malice Surge",
+    "icon": "icons/skills/Malice-Surge.webp",
+    "weapon": "Spear",
+    "type": "passive",
+    "level": "39",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SP_AttackedBuff.webp"
+  },
+  "Spear_Retaliatory Strike": {
+    "name": "Retaliatory Strike",
+    "icon": "icons/skills/Retaliatory-Strike.webp",
+    "weapon": "Spear",
+    "type": "passive",
+    "level": "27",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SP_ComboBuff.webp"
+  },
+  "Spear_Death Knell": {
+    "name": "Death Knell",
+    "icon": "icons/skills/Death-Knell.webp",
+    "weapon": "Spear",
+    "type": "passive",
+    "level": "33",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SP_KillBonus.webp"
+  },
+  "Spear_Mortal Wrath": {
+    "name": "Mortal Wrath",
+    "icon": "icons/skills/Mortal-Wrath.webp",
+    "weapon": "Spear",
+    "type": "passive",
+    "level": "21",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SP_LowHpAttack.webp"
+  },
+  "Spear_Nimble Steps": {
+    "name": "Nimble Steps",
+    "icon": "icons/skills/Nimble-Steps.webp",
+    "weapon": "Spear",
+    "type": "passive",
+    "level": "3",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SP_MoveBuff.webp"
+  },
+  "Spear_Imposing Form": {
+    "name": "Imposing Form",
+    "icon": "icons/skills/Imposing-Form.webp",
+    "weapon": "Spear",
+    "type": "passive",
+    "level": "6",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SP_TwoHandWeapon.webp"
+  },
+  "Spear_Fatal Precision": {
+    "name": "Fatal Precision",
+    "icon": "icons/skills/Fatal-Precision.webp",
+    "weapon": "Spear",
+    "type": "passive",
+    "level": "12",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SP_WeakenBonus.webp"
+  },
+  "Spear_Tempest Strike": {
+    "name": "Tempest Strike",
+    "icon": "icons/skills/Tempest-Strike.webp",
+    "weapon": "Spear",
+    "type": "active",
+    "level": "30",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SP_PushAttack.webp"
+  },
+  "Spear_Cyclonic Fury": {
+    "name": "Cyclonic Fury",
+    "icon": "icons/skills/Cyclonic-Fury.webp",
+    "weapon": "Spear",
+    "type": "active",
+    "level": "36",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SP_RapidAttack.webp"
+  },
+  "Spear_Vicious Fury": {
+    "name": "Vicious Fury",
+    "icon": "icons/skills/Vicious-Fury.webp",
+    "weapon": "Spear",
+    "type": "active",
+    "level": "9",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SP_RapidThrust.webp"
+  },
+  "Spear_Javelin Surge": {
+    "name": "Javelin Surge",
+    "icon": "icons/skills/Javelin-Surge.webp",
+    "weapon": "Spear",
+    "type": "active",
+    "level": "1",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SP_SpearThrower.webp"
+  },
+  "Spear_Abyssal Cleave": {
+    "name": "Abyssal Cleave",
+    "icon": "icons/skills/Abyssal-Cleave.webp",
+    "weapon": "Spear",
+    "type": "active",
+    "level": "1",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SP_StunAttack.webp"
+  },
+  "Spear_Culling Arc": {
+    "name": "Culling Arc",
+    "icon": "icons/skills/Culling-Arc.webp",
+    "weapon": "Spear",
+    "type": "active",
+    "level": "1",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SP_ThrustPull.webp"
+  },
+  "Staff_Manaball Eruption": {
+    "name": "Manaball Eruption",
+    "icon": "icons/skills/Manaball-Eruption.webp",
+    "weapon": "Staff",
+    "type": "passive",
+    "level": "3",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_ST_AddProjectile_AA.webp"
+  },
+  "Staff_Frost Smokescreen": {
+    "name": "Frost Smokescreen",
+    "icon": "icons/skills/Frost-Smokescreen.webp",
+    "weapon": "Staff",
+    "type": "active",
+    "level": "1",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_ST_S_AoeTeleport_AA.webp"
+  },
+  "Staff_Manaball": {
+    "name": "Manaball",
+    "icon": "icons/skills/Manaball.webp",
+    "weapon": "Staff",
+    "type": "active",
+    "level": "1",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_ST_BasicAttack.webp"
+  },
+  "Staff_Salvation Chain": {
+    "name": "Salvation Chain",
+    "icon": "icons/skills/Salvation-Chain.webp",
+    "weapon": "Staff",
+    "type": "active",
+    "level": "50",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_ST_BringSkill.webp"
+  },
+  "Staff_Flame Condensation": {
+    "name": "Flame Condensation",
+    "icon": "icons/skills/Flame-Condensation.webp",
+    "weapon": "Staff",
+    "type": "passive",
+    "level": "21",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_ST_FireLightningForce_AA.webp"
+  },
+  "Staff_Mystic Shield": {
+    "name": "Mystic Shield",
+    "icon": "icons/skills/Mystic-Shield.webp",
+    "weapon": "Staff",
+    "type": "defensive",
+    "level": "1",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_ST_defenceAction_AA.webp"
+  },
+  "Staff_Fireball Barrage": {
+    "name": "Fireball Barrage",
+    "icon": "icons/skills/Fireball-Barrage.webp",
+    "weapon": "Staff",
+    "type": "active",
+    "level": "15",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_ST_FireCombo.webp"
+  },
+  "Staff_High Focus": {
+    "name": "High Focus",
+    "icon": "icons/skills/High-Focus.webp",
+    "weapon": "Staff",
+    "type": "active",
+    "level": "30",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_ST_GlobalCoolDownBuff.webp"
+  },
+  "Staff_Icebound Tomb": {
+    "name": "Icebound Tomb",
+    "icon": "icons/skills/Icebound-Tomb.webp",
+    "weapon": "Staff",
+    "type": "active",
+    "level": "24",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_ST_IceFreeze.webp"
+  },
+  "Staff_Ice Spear": {
+    "name": "Ice Spear",
+    "icon": "icons/skills/Ice-Spear.webp",
+    "weapon": "Staff",
+    "type": "active",
+    "level": "18",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_ST_IceSpear.webp"
+  },
+  "Staff_Chain Lightning": {
+    "name": "Chain Lightning",
+    "icon": "icons/skills/Chain-Lightning.webp",
+    "weapon": "Staff",
+    "type": "active",
+    "level": "1",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_ST_MainAttack_AA.webp"
+  },
+  "Staff_Asceticism": {
+    "name": "Asceticism",
+    "icon": "icons/skills/Asceticism.webp",
+    "weapon": "Staff",
+    "type": "passive",
+    "level": "6",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_ST_ManaRegenBuff_AA.webp"
+  },
+  "Staff_Inner Peace": {
+    "name": "Inner Peace",
+    "icon": "icons/skills/Inner-Peace.webp",
+    "weapon": "Staff",
+    "type": "active",
+    "level": "9",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_ST_ManaRengeUp_AA.webp"
+  },
+  "Staff_Mana Amp": {
+    "name": "Mana Amp",
+    "icon": "icons/skills/Mana-Amp.webp",
+    "weapon": "Staff",
+    "type": "passive",
+    "level": "12",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_ST_MaxManaUp_AA.webp"
+  },
+  "Staff_Judgment Lightning": {
+    "name": "Judgment Lightning",
+    "icon": "icons/skills/Judgment-Lightning.webp",
+    "weapon": "Staff",
+    "type": "active",
+    "level": "36",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_ST_PowerAttack.webp"
+  },
+  "Staff_Echoic Barrier": {
+    "name": "Echoic Barrier",
+    "icon": "icons/skills/Echoic-Barrier.webp",
+    "weapon": "Staff",
+    "type": "passive",
+    "level": "27",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_ST_S_SilenceToleranceBuff.webp"
+  },
+  "Staff_Forbidden Sanctuary": {
+    "name": "Forbidden Sanctuary",
+    "icon": "icons/skills/Forbidden-Sanctuary.webp",
+    "weapon": "Staff",
+    "type": "passive",
+    "level": "39",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_ST_S_HitDamageReductionBuff.webp"
+  },
+  "Staff_Frost Master": {
+    "name": "Frost Master",
+    "icon": "icons/skills/Frost-Master.webp",
+    "weapon": "Staff",
+    "type": "passive",
+    "level": "33",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_ST_SlowDuration.webp"
+  },
+  "Staff_Serial Fire Bombs": {
+    "name": "Serial Fire Bombs",
+    "icon": "icons/skills/Serial-Fire-Bombs.webp",
+    "weapon": "Staff",
+    "type": "active",
+    "level": "1",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_ST_WideAreaAttack_AA.webp"
+  },
+  "Staff_Inferno Wave": {
+    "name": "Inferno Wave",
+    "icon": "icons/skills/Inferno-Wave.webp",
+    "weapon": "Staff",
+    "type": "active",
+    "level": "1",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_ST_WideAreaDebuffAttack_AA.webp"
+  },
+  "Staff_Infernal Meteor": {
+    "name": "Infernal Meteor",
+    "icon": "icons/skills/Infernal-Meteor.webp",
+    "weapon": "Staff",
+    "type": "active",
+    "level": "50",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_ST_S_Meteor.webp"
+  },
+  "Greatsword_Double Slash": {
+    "name": "Double Slash",
+    "icon": "icons/skills/Double-Slash.webp",
+    "weapon": "Greatsword",
+    "type": "active",
+    "level": "1",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SW2_BasicAttack.webp"
+  },
+  "Greatsword_Death Blow": {
+    "name": "Death Blow",
+    "icon": "icons/skills/Death-Blow.webp",
+    "weapon": "Greatsword",
+    "type": "active",
+    "level": "1",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SW2_S_CounterAttack_AA.webp"
+  },
+  "Greatsword_Iron Point Parry": {
+    "name": "Iron Point Parry",
+    "icon": "icons/skills/Iron-Point-Parry.webp",
+    "weapon": "Greatsword",
+    "type": "defensive",
+    "level": "1",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SW2_Defense_AA.webp"
+  },
+  "Greatsword_Vital Force": {
+    "name": "Vital Force",
+    "icon": "icons/skills/Vital-Force.webp",
+    "weapon": "Greatsword",
+    "type": "passive",
+    "level": "6",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_KN_CO_BounceAttack_AA.webp"
+  },
+  "Greatsword_Blood Devotion": {
+    "name": "Blood Devotion",
+    "icon": "icons/skills/Blood-Devotion.webp",
+    "weapon": "Greatsword",
+    "type": "active",
+    "level": "50",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SW2_DamageReceive.webp"
+  },
+  "Greatsword_Precision Dash": {
+    "name": "Precision Dash",
+    "icon": "icons/skills/Precision-Dash.webp",
+    "weapon": "Greatsword",
+    "type": "active",
+    "level": "1",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_KN_SR_DashAttack_AA.webp"
+  },
+  "Greatsword_Willbreaker": {
+    "name": "Willbreaker",
+    "icon": "icons/skills/Willbreaker.webp",
+    "weapon": "Greatsword",
+    "type": "active",
+    "level": "24",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SW2_DefenseDebuffAttack.webp"
+  },
+  "Greatsword_Gaia Crash": {
+    "name": "Gaia Crash",
+    "icon": "icons/skills/Gaia-Crash.webp",
+    "weapon": "Greatsword",
+    "type": "active",
+    "level": "15",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SW2_GaiaCrash.webp"
+  },
+  "Greatsword_Indomitable Armor": {
+    "name": "Indomitable Armor",
+    "icon": "icons/skills/Indomitable-Armor.webp",
+    "weapon": "Greatsword",
+    "type": "passive",
+    "level": "39",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SW2_HittedBuff.webp"
+  },
+  "Greatsword_Devastating Smash": {
+    "name": "Devastating Smash",
+    "icon": "icons/skills/Devastating-Smash.webp",
+    "weapon": "Greatsword",
+    "type": "active",
+    "level": "36",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SW2_LeapAttack.webp"
+  },
+  "Greatsword_Valiant Brawl": {
+    "name": "Valiant Brawl",
+    "icon": "icons/skills/Valiant-Brawl.webp",
+    "weapon": "Greatsword",
+    "type": "active",
+    "level": "1",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SW2_MainAttack_AA.webp"
+  },
+  "Greatsword_Robust Constitution": {
+    "name": "Robust Constitution",
+    "icon": "icons/skills/Robust-Constitution.webp",
+    "weapon": "Greatsword",
+    "type": "passive",
+    "level": "3",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SW2_HPMaxUP_AA.webp"
+  },
+  "Greatsword_Guillotine Blade": {
+    "name": "Guillotine Blade",
+    "icon": "icons/skills/Guillotine-Blade.webp",
+    "weapon": "Greatsword",
+    "type": "active",
+    "level": "50",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SW2_PowerAttack.webp"
+  },
+  "Greatsword_DaVinci's Courage": {
+    "name": "DaVinci's Courage",
+    "icon": "icons/skills/DaVinci's-Courage.webp",
+    "weapon": "Greatsword",
+    "type": "active",
+    "level": "9",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SW2_ShieldBuff_AA.webp"
+  },
+  "Greatsword_Barbarian's Dash": {
+    "name": "Barbarian's Dash",
+    "icon": "icons/skills/Barbarian's-Dash.webp",
+    "weapon": "Greatsword",
+    "type": "passive",
+    "level": "33",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SW2_SkillMaster.webp"
+  },
+  "Greatsword_Devastating Tornado": {
+    "name": "Devastating Tornado",
+    "icon": "icons/skills/Devastating-Tornado.webp",
+    "weapon": "Greatsword",
+    "type": "active",
+    "level": "18",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SW2_BladeDance_1.webp"
+  },
+  "Greatsword_Stunning Blow": {
+    "name": "Stunning Blow",
+    "icon": "icons/skills/Stunning-Blow.webp",
+    "weapon": "Greatsword",
+    "type": "active",
+    "level": "1",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_KN_SR_ShockStun_AA.webp"
+  },
+  "Greatsword_Victor's Morale": {
+    "name": "Victor's Morale",
+    "icon": "icons/skills/Victor's-Morale.webp",
+    "weapon": "Greatsword",
+    "type": "passive",
+    "level": "21",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SW2_SkillSucceedRewardMana_AA.webp"
+  },
+  "Greatsword_Raging Frenzy": {
+    "name": "Raging Frenzy",
+    "icon": "icons/skills/Raging-Frenzy.webp",
+    "weapon": "Greatsword",
+    "type": "passive",
+    "level": "27",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SW2_StunSuccecsDamageBoost.webp"
+  },
+  "Greatsword_Cold Warrior": {
+    "name": "Cold Warrior",
+    "icon": "icons/skills/Cold-Warrior.webp",
+    "weapon": "Greatsword",
+    "type": "passive",
+    "level": "12",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_KN_CO_Focusattack_AA.webp"
+  },
+  "Greatsword_Ascending Slash": {
+    "name": "Ascending Slash",
+    "icon": "icons/skills/Ascending-Slash.webp",
+    "weapon": "Greatsword",
+    "type": "active",
+    "level": "30",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SW2_UpperAttack.webp"
+  },
+  "Sword_Aegis Shield": {
+    "name": "Aegis Shield",
+    "icon": "icons/skills/Aegis-Shield.webp",
+    "weapon": "Sword",
+    "type": "passive",
+    "level": "12",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SH_ArmorUp_AA.webp"
+  },
+  "Sword_Impenetrable": {
+    "name": "Impenetrable",
+    "icon": "icons/skills/Impenetrable.webp",
+    "weapon": "Sword",
+    "type": "passive",
+    "level": "33",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SW_SH_S_AroundCountBuff.webp"
+  },
+  "Sword_Slash": {
+    "name": "Slash",
+    "icon": "icons/skills/Slash.webp",
+    "weapon": "Sword",
+    "type": "active",
+    "level": "1",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SW_BasicAttack.webp"
+  },
+  "Sword_Gerad's Patience": {
+    "name": "Gerad's Patience",
+    "icon": "icons/skills/Gerad's-Patience.webp",
+    "weapon": "Sword",
+    "type": "passive",
+    "level": "27",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SH_BlockSucceedTolerance.webp"
+  },
+  "Sword_Resilient Mind": {
+    "name": "Resilient Mind",
+    "icon": "icons/skills/Resilient-Mind.webp",
+    "weapon": "Sword",
+    "type": "passive",
+    "level": "6",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SH_BlockSucceedRewardMana_AA.webp"
+  },
+  "Sword_Counter Barrier": {
+    "name": "Counter Barrier",
+    "icon": "icons/skills/Counter-Barrier.webp",
+    "weapon": "Sword",
+    "type": "active",
+    "level": "1",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SH_BuffAttack_AA.webp"
+  },
+  "Sword_Shield Survival Technique": {
+    "name": "Shield Survival Technique",
+    "icon": "icons/skills/Shield-Survival-Technique.webp",
+    "weapon": "Sword",
+    "type": "defensive",
+    "level": "1",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SW_DefenceAction_AA.webp"
+  },
+  "Sword_Morale Boost": {
+    "name": "Morale Boost",
+    "icon": "icons/skills/Morale-Boost.webp",
+    "weapon": "Sword",
+    "type": "passive",
+    "level": "39",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SH_CrashSucceedBuff.webp"
+  },
+  "Sword_Strategic Rush": {
+    "name": "Strategic Rush",
+    "icon": "icons/skills/Strategic-Rush.webp",
+    "weapon": "Sword",
+    "type": "active",
+    "level": "1",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SW_SH_DashAttack_AA.webp"
+  },
+  "Sword_Shield Strike": {
+    "name": "Shield Strike",
+    "icon": "icons/skills/Shield-Strike.webp",
+    "weapon": "Sword",
+    "type": "active",
+    "level": "1",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SW_SH_S_DebuffAttack_AA.webp"
+  },
+  "Sword_Witty Retort": {
+    "name": "Witty Retort",
+    "icon": "icons/skills/Witty-Retort.webp",
+    "weapon": "Sword",
+    "type": "active",
+    "level": "36",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SW_SH_S_ManaAttack.webp"
+  },
+  "Sword_Immortal Pride": {
+    "name": "Immortal Pride",
+    "icon": "icons/skills/Immortal-Pride.webp",
+    "weapon": "Sword",
+    "type": "active",
+    "level": "50",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WP_SW_S_MaxHealthUp.webp"
+  },
+  "Sword_Chain Hook": {
+    "name": "Chain Hook",
+    "icon": "icons/skills/Chain-Hook.webp",
+    "weapon": "Sword",
+    "type": "active",
+    "level": "1",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SW_MoveSkill_AA.webp"
+  },
+  "Sword_Fierce Clash": {
+    "name": "Fierce Clash",
+    "icon": "icons/skills/Fierce-Clash.webp",
+    "weapon": "Sword",
+    "type": "active",
+    "level": "30",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SH_PushAttack.webp"
+  },
+  "Sword_Stalwart Bastion": {
+    "name": "Stalwart Bastion",
+    "icon": "icons/skills/Stalwart-Bastion.webp",
+    "weapon": "Sword",
+    "type": "active",
+    "level": "18",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SH_ShieldBuff.webp"
+  },
+  "Sword_Shield Throw": {
+    "name": "Shield Throw",
+    "icon": "icons/skills/Shield-Throw.webp",
+    "weapon": "Sword",
+    "type": "active",
+    "level": "15",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SW_SH_S_ShieldThrow.webp"
+  },
+  "Sword_Provoking Roar": {
+    "name": "Provoking Roar",
+    "icon": "icons/skills/Provoking-Roar.webp",
+    "weapon": "Sword",
+    "type": "active",
+    "level": "9",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SW_SH_TauntBuff_AA.webp"
+  },
+  "Sword_Spectrum of Agony": {
+    "name": "Spectrum of Agony",
+    "icon": "icons/skills/Spectrum-of-Agony.webp",
+    "weapon": "Sword",
+    "type": "passive",
+    "level": "21",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SW_TauntBuff_Attack_AA.webp"
+  },
+  "Sword_Skillful Evasion": {
+    "name": "Skillful Evasion",
+    "icon": "icons/skills/Skillful-Evasion.webp",
+    "weapon": "Sword",
+    "type": "passive",
+    "level": "3",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SW_TheCloserEvasionUP_AA.webp"
+  },
+  "Sword_A Shot at Victory": {
+    "name": "A Shot at Victory",
+    "icon": "icons/skills/A-Shot-at-Victory.webp",
+    "weapon": "Sword",
+    "type": "active",
+    "level": "50",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SW_SH_S_DoubleChanceAttack_1.webp"
+  },
+  "Sword_Annihilating Slash": {
+    "name": "Annihilating Slash",
+    "icon": "icons/skills/Annihilating-Slash.webp",
+    "weapon": "Sword",
+    "type": "active",
+    "level": "24",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SW_SH_S_WhirlwindSlash.webp"
+  },
+  "Wand_Manaball": {
+    "name": "Manaball",
+    "icon": "icons/skills/Manaball.webp",
+    "weapon": "Wand",
+    "type": "active",
+    "level": "1",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_WA_GR_S_BasicAttack.webp"
+  },
+  "Wand_Touch of Despair": {
+    "name": "Touch of Despair",
+    "icon": "icons/skills/Touch-of-Despair.webp",
+    "weapon": "Wand",
+    "type": "active",
+    "level": "1",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_WA_Corruption_AA.webp"
+  },
+  "Wand_Chaotic Shield": {
+    "name": "Chaotic Shield",
+    "icon": "icons/skills/Chaotic-Shield.webp",
+    "weapon": "Wand",
+    "type": "defensive",
+    "level": "1",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_WA_DefenceAction.webp"
+  },
+  "Wand_Corrupted Magic Circle": {
+    "name": "Corrupted Magic Circle",
+    "icon": "icons/skills/Corrupted-Magic-Circle.webp",
+    "weapon": "Wand",
+    "type": "active",
+    "level": "1",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_WA_CurseArea_AA.webp"
+  },
+  "Wand_Vampiric Contract": {
+    "name": "Vampiric Contract",
+    "icon": "icons/skills/Vampiric-Contract.webp",
+    "weapon": "Wand",
+    "type": "passive",
+    "level": "21",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_WA_GR_CurseAttackHeal_AA.webp"
+  },
+  "Wand_Curse Explosion": {
+    "name": "Curse Explosion",
+    "icon": "icons/skills/Curse-Explosion.webp",
+    "weapon": "Wand",
+    "type": "active",
+    "level": "1",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_WA_GR_CurseBurst_AA.webp"
+  },
+  "Wand_Wraith's Beckon": {
+    "name": "Wraith's Beckon",
+    "icon": "icons/skills/Wraith's-Beckon.webp",
+    "weapon": "Wand",
+    "type": "passive",
+    "level": "12",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_WA_GR_CurseDuration_AA.webp"
+  },
+  "Wand_Full of Corruption": {
+    "name": "Full of Corruption",
+    "icon": "icons/skills/Full-of-Corruption.webp",
+    "weapon": "Wand",
+    "type": "passive",
+    "level": "3",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_WA_GR_CurseKillBonus_AA.webp"
+  },
+  "Wand_Karmic Haze": {
+    "name": "Karmic Haze",
+    "icon": "icons/skills/Karmic-Haze.webp",
+    "weapon": "Wand",
+    "type": "active",
+    "level": "24",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_WA_GR_CurseSpread.webp"
+  },
+  "Wand_Devotion and Emptiness": {
+    "name": "Devotion and Emptiness",
+    "icon": "icons/skills/Devotion-and-Emptiness.webp",
+    "weapon": "Wand",
+    "type": "passive",
+    "level": "6",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_WA_GR_DayHealNightCurse_AA.webp"
+  },
+  "Wand_Time for Punishment": {
+    "name": "Time for Punishment",
+    "icon": "icons/skills/Time-for-Punishment.webp",
+    "weapon": "Wand",
+    "type": "active",
+    "level": "18",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_WA_Decay.webp"
+  },
+  "Wand_Blessed Barrier": {
+    "name": "Blessed Barrier",
+    "icon": "icons/skills/Blessed-Barrier.webp",
+    "weapon": "Wand",
+    "type": "active",
+    "level": "30",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_WA_DefenseUp.webp"
+  },
+  "Wand_Swift Healing": {
+    "name": "Swift Healing",
+    "icon": "icons/skills/Swift-Healing.webp",
+    "weapon": "Wand",
+    "type": "active",
+    "level": "1",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_WA_GR_S_Heal_AA.webp"
+  },
+  "Wand_Clay's Salvation": {
+    "name": "Clay's Salvation",
+    "icon": "icons/skills/Clay's-Salvation.webp",
+    "weapon": "Wand",
+    "type": "active",
+    "level": "15",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_WA_GR_S_HealAll.webp"
+  },
+  "Wand_Saint's Oath": {
+    "name": "Saint's Oath",
+    "icon": "icons/skills/Saint's-Oath.webp",
+    "weapon": "Wand",
+    "type": "passive",
+    "level": "33",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_WA_HealEffectUpWhenSkillDamageTaken.webp"
+  },
+  "Wand_Noble Revival": {
+    "name": "Noble Revival",
+    "icon": "icons/skills/Noble-Revival.webp",
+    "weapon": "Wand",
+    "type": "passive",
+    "level": "27",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_WA_GR_HealEfficiencyByMaxCost.webp"
+  },
+  "Wand_Fountain of Life": {
+    "name": "Fountain of Life",
+    "icon": "icons/skills/Fountain-of-Life.webp",
+    "weapon": "Wand",
+    "type": "active",
+    "level": "50",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_WA_HealField.webp"
+  },
+  "Wand_Ray of Disaster": {
+    "name": "Ray of Disaster",
+    "icon": "icons/skills/Ray-of-Disaster.webp",
+    "weapon": "Wand",
+    "type": "active",
+    "level": "50",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_WA_LinkLaser_SP.webp"
+  },
+  "Wand_Invincible Wall": {
+    "name": "Invincible Wall",
+    "icon": "icons/skills/Invincible-Wall.webp",
+    "weapon": "Wand",
+    "type": "active",
+    "level": "36",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_WA_MagicShield_SP.webp"
+  },
+  "Wand_Cursed Nightmare": {
+    "name": "Cursed Nightmare",
+    "icon": "icons/skills/Cursed-Nightmare.webp",
+    "weapon": "Wand",
+    "type": "active",
+    "level": "9",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_WA_Sleep_AA.webp"
+  },
+  "Wand_Selfless Soul": {
+    "name": "Selfless Soul",
+    "icon": "icons/skills/Selfless-Soul.webp",
+    "weapon": "Wand",
+    "type": "passive",
+    "level": "39",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_WA_SupportAllyCostRegenUp.webp"
+  },
+  "tl.undefined_Devoted Sanctuary": {
+    "name": "Devoted Sanctuary",
+    "icon": "icons/skills/Devoted-Sanctuary.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SW2_DamageReceive_SP.webp"
+  },
+  "tl.undefined_Tornado": {
+    "name": "Tornado",
+    "icon": "icons/skills/Tornado.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_BO_TornadoShot_SP.webp"
+  },
+  "tl.undefined_Limit Break": {
+    "name": "Limit Break",
+    "icon": "icons/skills/Limit-Break.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_BO_S_DoubleShot.webp"
+  },
+  "tl.undefined_Strafing": {
+    "name": "Strafing",
+    "icon": "icons/skills/Strafing.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_BO_MultiShot_AA.webp"
+  },
+  "tl.undefined_Flash Wave": {
+    "name": "Flash Wave",
+    "icon": "icons/skills/Flash-Wave.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_BO_Detection_SP.webp"
+  },
+  "tl.undefined_Decisive Sniping": {
+    "name": "Decisive Sniping",
+    "icon": "icons/skills/Decisive-Sniping.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_BO_PowerShot_AA.webp"
+  },
+  "tl.undefined_Decisive Bombardment": {
+    "name": "Decisive Bombardment",
+    "icon": "icons/skills/Decisive-Bombardment.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WP_BO_S_PowerShot_Charge_SP.webp"
+  },
+  "tl.undefined_Annihilation Barrage Shot": {
+    "name": "Annihilation Barrage Shot",
+    "icon": "icons/skills/Annihilation-Barrage-Shot.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_CR_FuriousFire_SP.webp"
+  },
+  "tl.undefined_Quick Fire": {
+    "name": "Quick Fire",
+    "icon": "icons/skills/Quick-Fire.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_CR_RapidShot_AA.webp"
+  },
+  "tl.undefined_Mana Exchange": {
+    "name": "Mana Exchange",
+    "icon": "icons/skills/Mana-Exchange.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_CR_BloodToSoul.webp"
+  },
+  "tl.undefined_Rapid Shot": {
+    "name": "Rapid Shot",
+    "icon": "icons/skills/Rapid-Shot.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_CR_BuckShot_SP.webp"
+  },
+  "tl.undefined_Collision Shot": {
+    "name": "Collision Shot",
+    "icon": "icons/skills/Collision-Shot.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_CR_BuckShot_SP_2.webp"
+  },
+  "tl.undefined_Nimble Leap": {
+    "name": "Nimble Leap",
+    "icon": "icons/skills/Nimble-Leap.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_CR_Step_AA.webp"
+  },
+  "tl.undefined_Mother Nature's Protest": {
+    "name": "Mother Nature's Protest",
+    "icon": "icons/skills/Mother-Nature's-Protest.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_CR_ElementalBolt.webp"
+  },
+  "tl.undefined_Wild Barrage": {
+    "name": "Wild Barrage",
+    "icon": "icons/skills/Wild-Barrage.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_CR_FuriousFire_SP_2.webp"
+  },
+  "tl.undefined_Recoil Shot": {
+    "name": "Recoil Shot",
+    "icon": "icons/skills/Recoil-Shot.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/WP_CR_AddShot.webp"
+  },
+  "tl.undefined_Vampiric Strike": {
+    "name": "Vampiric Strike",
+    "icon": "icons/skills/Vampiric-Strike.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_DA_BloodStrike_SP.webp"
+  },
+  "tl.undefined_Thundering Bomb": {
+    "name": "Thundering Bomb",
+    "icon": "icons/skills/Thundering-Bomb.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_DA_DeadlyStrike_SP.webp"
+  },
+  "tl.undefined_Fatal Stigma": {
+    "name": "Fatal Stigma",
+    "icon": "icons/skills/Fatal-Stigma.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_DA_DelayDamage_SP.webp"
+  },
+  "tl.undefined_Lightning Throw": {
+    "name": "Lightning Throw",
+    "icon": "icons/skills/Lightning-Throw.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_DA_PoisonDagger_SP.webp"
+  },
+  "tl.undefined_Lightning Infusion": {
+    "name": "Lightning Infusion",
+    "icon": "icons/skills/Lightning-Infusion.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_DA_PoisonEnchant_SP.webp"
+  },
+  "tl.undefined_Thunder Spirit": {
+    "name": "Thunder Spirit",
+    "icon": "icons/skills/Thunder-Spirit.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_DA_ShadowChaser_SP.webp"
+  },
+  "tl.undefined_Mad Sword Dance": {
+    "name": "Mad Sword Dance",
+    "icon": "icons/skills/Mad-Sword-Dance.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_DA_SonicAttack_SP.webp"
+  },
+  "tl.undefined_Sentinel's Bastion": {
+    "name": "Sentinel's Bastion",
+    "icon": "icons/skills/Sentinel's-Bastion.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SP_AbnormalTolerance_SP.webp"
+  },
+  "tl.undefined_Enforcer": {
+    "name": "Enforcer",
+    "icon": "icons/skills/Enforcer.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SP_AbnormalTolerance_SP2.webp"
+  },
+  "tl.undefined_Slaughtering Slash": {
+    "name": "Slaughtering Slash",
+    "icon": "icons/skills/Slaughtering-Slash.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SP_CrossAttack_SP.webp"
+  },
+  "tl.undefined_Wreak Havoc": {
+    "name": "Wreak Havoc",
+    "icon": "icons/skills/Wreak-Havoc.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SP_DefenceAttack_SP.webp"
+  },
+  "tl.undefined_Cataclysm": {
+    "name": "Cataclysm",
+    "icon": "icons/skills/Cataclysm.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SP_DefenceAttack.webp"
+  },
+  "tl.undefined_Constricting Tempest": {
+    "name": "Constricting Tempest",
+    "icon": "icons/skills/Constricting-Tempest.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SP_PushAttack_SP_1.webp"
+  },
+  "tl.undefined_Tempest Strike": {
+    "name": "Tempest Strike",
+    "icon": "icons/skills/Tempest-Strike.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SP_PushAttack_SP_2.webp"
+  },
+  "tl.undefined_Phoenix Barrage": {
+    "name": "Phoenix Barrage",
+    "icon": "icons/skills/Phoenix-Barrage.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SP_RapidAttack_SP.webp"
+  },
+  "tl.undefined_Brutal Fury": {
+    "name": "Brutal Fury",
+    "icon": "icons/skills/Brutal-Fury.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SP_RapidThrust_SP_1.webp"
+  },
+  "tl.undefined_Explosive Fury": {
+    "name": "Explosive Fury",
+    "icon": "icons/skills/Explosive-Fury.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SP_RapidThrust_SP_2.webp"
+  },
+  "tl.undefined_Javelin Inferno": {
+    "name": "Javelin Inferno",
+    "icon": "icons/skills/Javelin-Inferno.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SP_SpearThrower_SP.webp"
+  },
+  "tl.undefined_Ascending Cleave": {
+    "name": "Ascending Cleave",
+    "icon": "icons/skills/Ascending-Cleave.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SP_StunAttack_SP.webp"
+  },
+  "tl.undefined_Frost Smokescreen": {
+    "name": "Frost Smokescreen",
+    "icon": "icons/skills/Frost-Smokescreen.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_ST_S_AoeTeleport_AA.webp"
+  },
+  "tl.undefined_Burning Smokescreen": {
+    "name": "Burning Smokescreen",
+    "icon": "icons/skills/Burning-Smokescreen.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_ST_S_AoeTeleport_SP.webp"
+  },
+  "tl.undefined_Jumping Chain": {
+    "name": "Jumping Chain",
+    "icon": "icons/skills/Jumping-Chain.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_ST_BringSkill.webp"
+  },
+  "tl.undefined_Redemptive Barrier": {
+    "name": "Redemptive Barrier",
+    "icon": "icons/skills/Redemptive-Barrier.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_ST_BringSkill_SP.webp"
+  },
+  "tl.undefined_Fireball Barrage": {
+    "name": "Fireball Barrage",
+    "icon": "icons/skills/Fireball-Barrage.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_ST_FireCombo.webp"
+  },
+  "tl.undefined_High Focus": {
+    "name": "High Focus",
+    "icon": "icons/skills/High-Focus.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_ST_GlobalCoolDownBuff_SP.webp"
+  },
+  "tl.undefined_Icebound Armor": {
+    "name": "Icebound Armor",
+    "icon": "icons/skills/Icebound-Armor.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_ST_IceFreeze.webp"
+  },
+  "tl.undefined_Ice Spear Bombardment": {
+    "name": "Ice Spear Bombardment",
+    "icon": "icons/skills/Ice-Spear-Bombardment.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_ST_IceSpear_SP.webp"
+  },
+  "tl.undefined_Ice Spear": {
+    "name": "Ice Spear",
+    "icon": "icons/skills/Ice-Spear.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_ST_IceSpear.webp"
+  },
+  "tl.undefined_Inner Peace": {
+    "name": "Inner Peace",
+    "icon": "icons/skills/Inner-Peace.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_ST_ManaRengeUp_AA.webp"
+  },
+  "tl.undefined_Hellfire Rain": {
+    "name": "Hellfire Rain",
+    "icon": "icons/skills/Hellfire-Rain.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_ST_S_Meteor_SP.webp"
+  },
+  "tl.undefined_Judgment Lightning": {
+    "name": "Judgment Lightning",
+    "icon": "icons/skills/Judgment-Lightning.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_ST_PowerAttack_SP.webp"
+  },
+  "tl.undefined_Focused Fire Bombs": {
+    "name": "Focused Fire Bombs",
+    "icon": "icons/skills/Focused-Fire-Bombs.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_ST_WideAreaAttack_SP.webp"
+  },
+  "tl.undefined_Serial Fire Bombs": {
+    "name": "Serial Fire Bombs",
+    "icon": "icons/skills/Serial-Fire-Bombs.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_ST_WideAreaAttack_AA.webp"
+  },
+  "tl.undefined_Frenzied Lightning Wave": {
+    "name": "Frenzied Lightning Wave",
+    "icon": "icons/skills/Frenzied-Lightning-Wave.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_ST_WideAreaDebuffAttack_SP.webp"
+  },
+  "tl.undefined_Death Blow": {
+    "name": "Death Blow",
+    "icon": "icons/skills/Death-Blow.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SW2_CounterAttack_SP.webp"
+  },
+  "tl.undefined_Precision Dash": {
+    "name": "Precision Dash",
+    "icon": "icons/skills/Precision-Dash.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_KN_SR_DashAttack_AA.webp"
+  },
+  "tl.undefined_Willbreaker": {
+    "name": "Willbreaker",
+    "icon": "icons/skills/Willbreaker.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SW2_DefenseDebuffAttack_SP.webp"
+  },
+  "tl.undefined_Frost Cleaving": {
+    "name": "Frost Cleaving",
+    "icon": "icons/skills/Frost-Cleaving.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SW2_GaiaCrash_SP.webp"
+  },
+  "tl.undefined_Guillotine Blade": {
+    "name": "Guillotine Blade",
+    "icon": "icons/skills/Guillotine-Blade.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SW2_PowerAttack_SP.webp"
+  },
+  "tl.undefined_DaVinci's Chill": {
+    "name": "DaVinci's Chill",
+    "icon": "icons/skills/DaVinci's-Chill.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SW2_ShieldBuff_SP.webp"
+  },
+  "tl.undefined_Ice Tornado": {
+    "name": "Ice Tornado",
+    "icon": "icons/skills/Ice-Tornado.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SW2_SpinAttack_SP.webp"
+  },
+  "tl.undefined_Charging Slash": {
+    "name": "Charging Slash",
+    "icon": "icons/skills/Charging-Slash.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SW2_UpperAttack_SP.webp"
+  },
+  "tl.undefined_Concentrated Barrier": {
+    "name": "Concentrated Barrier",
+    "icon": "icons/skills/Concentrated-Barrier.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SH_BuffAttack_SP.webp"
+  },
+  "tl.undefined_Strategic Rush": {
+    "name": "Strategic Rush",
+    "icon": "icons/skills/Strategic-Rush.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SW_SH_DashAttack_SP.webp"
+  },
+  "tl.undefined_Controlling Rake": {
+    "name": "Controlling Rake",
+    "icon": "icons/skills/Controlling-Rake.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SW_MoveSkill_SP.webp"
+  },
+  "tl.undefined_Chain Hook": {
+    "name": "Chain Hook",
+    "icon": "icons/skills/Chain-Hook.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SW_MoveSkill_AA.webp"
+  },
+  "tl.undefined_Desperate Clash": {
+    "name": "Desperate Clash",
+    "icon": "icons/skills/Desperate-Clash.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SH_PushAttack_SP.webp"
+  },
+  "tl.undefined_Righteous Fury": {
+    "name": "Righteous Fury",
+    "icon": "icons/skills/Righteous-Fury.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SH_ShieldBuff_SP.webp"
+  },
+  "tl.undefined_Stalwart Bastion": {
+    "name": "Stalwart Bastion",
+    "icon": "icons/skills/Stalwart-Bastion.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SH_ShieldBuff.webp"
+  },
+  "tl.undefined_Whirling Shield": {
+    "name": "Whirling Shield",
+    "icon": "icons/skills/Whirling-Shield.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SW_SH_S_ShieldThrow_SP.webp"
+  },
+  "tl.undefined_Annihilation Blade": {
+    "name": "Annihilation Blade",
+    "icon": "icons/skills/Annihilation-Blade.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SW_SH_S_DoubleChanceAttack_SP.webp"
+  },
+  "tl.undefined_Annihilating Slash": {
+    "name": "Annihilating Slash",
+    "icon": "icons/skills/Annihilating-Slash.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SW_SH_S_WhirlwindSlash.webp"
+  },
+  "tl.undefined_Blessing of Immortality": {
+    "name": "Blessing of Immortality",
+    "icon": "icons/skills/Blessing-of-Immortality.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_SW_S_MaxHealthUp_SP.webp"
+  },
+  "tl.undefined_Decaying Touch": {
+    "name": "Decaying Touch",
+    "icon": "icons/skills/Decaying-Touch.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_WA_CurseArea_SP.webp"
+  },
+  "tl.undefined_Curse Explosion": {
+    "name": "Curse Explosion",
+    "icon": "icons/skills/Curse-Explosion.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_WA_GR_CurseBurst_AA.webp"
+  },
+  "tl.undefined_Enchanting Time": {
+    "name": "Enchanting Time",
+    "icon": "icons/skills/Enchanting-Time.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_WA_GR_S_Decay_SP.webp"
+  },
+  "tl.undefined_Blessed Barrier": {
+    "name": "Blessed Barrier",
+    "icon": "icons/skills/Blessed-Barrier.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_WA_DefenseUp.webp"
+  },
+  "tl.undefined_Janice's Rage": {
+    "name": "Janice's Rage",
+    "icon": "icons/skills/Janice's-Rage.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_WA_GR_S_HealAll_SP.webp"
+  },
+  "tl.undefined_Fountain of Life": {
+    "name": "Fountain of Life",
+    "icon": "icons/skills/Fountain-of-Life.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_WA_HealField.webp"
+  },
+  "tl.undefined_Invincible Wall": {
+    "name": "Invincible Wall",
+    "icon": "icons/skills/Invincible-Wall.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_WA_MagicShield.webp"
+  },
+  "tl.undefined_Concentration Stance": {
+    "name": "Concentration Stance",
+    "icon": "icons/skills/Concentration-Stance.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_BO_SiegeMode.webp"
+  },
+  "Orb_Supernova Collapse": {
+    "name": "Supernova Collapse",
+    "icon": "icons/skills/Supernova-Collapse.webp",
+    "weapon": "Orb",
+    "type": "active",
+    "level": "36",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_ORB_Active_GravityCollapse.webp"
+  },
+  "Orb_Stellar Dash": {
+    "name": "Stellar Dash",
+    "icon": "icons/skills/Stellar-Dash.webp",
+    "weapon": "Orb",
+    "type": "active",
+    "level": "1",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_ORB_Active_Laser.webp"
+  },
+  "Orb_Interstellar Explosion": {
+    "name": "Interstellar Explosion",
+    "icon": "icons/skills/Interstellar-Explosion.webp",
+    "weapon": "Orb",
+    "type": "active",
+    "level": "1",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_ORB_Active_OrbExplosion.webp"
+  },
+  "Orb_Void Slash": {
+    "name": "Void Slash",
+    "icon": "icons/skills/Void-Slash.webp",
+    "weapon": "Orb",
+    "type": "active",
+    "level": "18",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_ORB_Active_OrbitSlash.webp"
+  },
+  "Orb_Summon Constellation": {
+    "name": "Summon Constellation",
+    "icon": "icons/skills/Summon-Constellation.webp",
+    "weapon": "Orb",
+    "type": "active",
+    "level": "9",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_ORB_Active_OrbShoot.webp"
+  },
+  "Orb_Starcalling": {
+    "name": "Starcalling",
+    "icon": "icons/skills/Starcalling.webp",
+    "weapon": "Orb",
+    "type": "active",
+    "level": "1",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_ORB_Active_OrbSummon.webp"
+  },
+  "Orb_Guardian Defensive Wall": {
+    "name": "Guardian Defensive Wall",
+    "icon": "icons/skills/Guardian-Defensive-Wall.webp",
+    "weapon": "Orb",
+    "type": "active",
+    "level": "50",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_ORB_Active_PartyBarrier.webp"
+  },
+  "Orb_Temporal Leap": {
+    "name": "Temporal Leap",
+    "icon": "icons/skills/Temporal-Leap.webp",
+    "weapon": "Orb",
+    "type": "active",
+    "level": "1",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_ORB_Active_Phasing.webp"
+  },
+  "Orb_Restoring Constellation": {
+    "name": "Restoring Constellation",
+    "icon": "icons/skills/Restoring-Constellation.webp",
+    "weapon": "Orb",
+    "type": "active",
+    "level": "50",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_ORB_Active_Restoration.webp"
+  },
+  "Orb_Star Destroyer": {
+    "name": "Star Destroyer",
+    "icon": "icons/skills/Star-Destroyer.webp",
+    "weapon": "Orb",
+    "type": "active",
+    "level": "24",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_ORB_Active_RollingBall.webp"
+  },
+  "Orb_Summon Satellite": {
+    "name": "Summon Satellite",
+    "icon": "icons/skills/Summon-Satellite.webp",
+    "weapon": "Orb",
+    "type": "active",
+    "level": "30",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_ORB_Active_Satellite.webp"
+  },
+  "Orb_Distortion Veil": {
+    "name": "Distortion Veil",
+    "icon": "icons/skills/Distortion-Veil.webp",
+    "weapon": "Orb",
+    "type": "active",
+    "level": "15",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_ORB_Active_Shield.webp"
+  },
+  "Orb_Dimensional Bomb": {
+    "name": "Dimensional Bomb",
+    "icon": "icons/skills/Dimensional-Bomb.webp",
+    "weapon": "Orb",
+    "type": "active",
+    "level": "1",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_ORB_BasicAttack.webp"
+  },
+  "Orb_Barrier": {
+    "name": "Barrier",
+    "icon": "icons/skills/Barrier.webp",
+    "weapon": "Orb",
+    "type": "defensive",
+    "level": "1",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_ORB_DefenseActionSkill.webp"
+  },
+  "Orb_Pulsating Galaxy": {
+    "name": "Pulsating Galaxy",
+    "icon": "icons/skills/Pulsating-Galaxy.webp",
+    "weapon": "Orb",
+    "type": "passive",
+    "level": "33",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_ORB_Passive_CastingMastery.webp"
+  },
+  "Orb_Stellar Cycle": {
+    "name": "Stellar Cycle",
+    "icon": "icons/skills/Stellar-Cycle.webp",
+    "weapon": "Orb",
+    "type": "passive",
+    "level": "21",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_ORB_Passive_Circulation.webp"
+  },
+  "Orb_Rift Fracture": {
+    "name": "Rift Fracture",
+    "icon": "icons/skills/Rift-Fracture.webp",
+    "weapon": "Orb",
+    "type": "passive",
+    "level": "12",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_ORB_Passive_ExpandRift.webp"
+  },
+  "Orb_Astral Overseer": {
+    "name": "Astral Overseer",
+    "icon": "icons/skills/Astral-Overseer.webp",
+    "weapon": "Orb",
+    "type": "passive",
+    "level": "6",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_ORB_Passive_OrbControl.webp"
+  },
+  "Orb_Eternal Veil": {
+    "name": "Eternal Veil",
+    "icon": "icons/skills/Eternal-Veil.webp",
+    "weapon": "Orb",
+    "type": "passive",
+    "level": "27",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_ORB_Passive_ShieldUp.webp"
+  },
+  "Orb_Constellation Link": {
+    "name": "Constellation Link",
+    "icon": "icons/skills/Constellation-Link.webp",
+    "weapon": "Orb",
+    "type": "passive",
+    "level": "39",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_ORB_Passive_SoulLink.webp"
+  },
+  "Orb_Stellar Echo": {
+    "name": "Stellar Echo",
+    "icon": "icons/skills/Stellar-Echo.webp",
+    "weapon": "Orb",
+    "type": "passive",
+    "level": "3",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_ORB_Passive_SubProjectile.webp"
+  },
+  "tl.undefined_Detonation Mark": {
+    "name": "Detonation Mark",
+    "icon": "icons/skills/Detonation-Mark.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_CR_ArmorBreakShot_SP.webp"
+  },
+  "tl.undefined_Healing Star": {
+    "name": "Healing Star",
+    "icon": "icons/skills/Healing-Star.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_ORB_Active_OrbSummon_SP_1.webp"
+  },
+  "tl.undefined_Healing Wave": {
+    "name": "Healing Wave",
+    "icon": "icons/skills/Healing-Wave.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_ORB_Active_OrbitSlashHeal.webp"
+  },
+  "tl.undefined_Milky Way": {
+    "name": "Milky Way",
+    "icon": "icons/skills/Milky-Way.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_ORB_Active_OrbShoot_SP_1.webp"
+  },
+  "tl.undefined_Guardian Defensive Wall": {
+    "name": "Guardian Defensive Wall",
+    "icon": "icons/skills/Guardian-Defensive-Wall.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_ORB_Active_PartyBarrier.webp"
+  },
+  "tl.undefined_Space Transition": {
+    "name": "Space Transition",
+    "icon": "icons/skills/Space-Transition.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_ORB_Active_Phasing_SP_1.webp"
+  },
+  "tl.undefined_Gravity Star Destroyer": {
+    "name": "Gravity Star Destroyer",
+    "icon": "icons/skills/Gravity-Star-Destroyer.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_ORB_Active_RollingBall_SP_1.webp"
+  },
+  "tl.undefined_Star Destroyer": {
+    "name": "Star Destroyer",
+    "icon": "icons/skills/Star-Destroyer.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_ORB_Active_RollingBall.webp"
+  },
+  "tl.undefined_Amplification Veil": {
+    "name": "Amplification Veil",
+    "icon": "icons/skills/Amplification-Veil.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_ORB_Active_Shield_SP_1.webp"
+  },
+  "tl.undefined_Time Dilation": {
+    "name": "Time Dilation",
+    "icon": "icons/skills/Time-Dilation.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_ORB_Active_TimeDelay.webp"
+  },
+  "tl.undefined_Echoes of Distortion": {
+    "name": "Echoes of Distortion",
+    "icon": "icons/skills/Echoes-of-Distortion.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_ORB_Active_TimeDelay_SP_1.webp"
+  },
+  "tl.undefined_Summon Guardian Satellite": {
+    "name": "Summon Guardian Satellite",
+    "icon": "icons/skills/Summon-Guardian-Satellite.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_ORB_Active_Satellite.webp"
+  },
+  "tl.undefined_Karmic Haze": {
+    "name": "Karmic Haze",
+    "icon": "icons/skills/Karmic-Haze.webp",
+    "weapon": "tl.undefined",
+    "type": "active",
+    "level": "",
+    "questlogUrl": "",
+    "iconUrl": "https://cdn.questlog.gg/throne-and-liberty/assets/Game/Image/Skill/Active/S_WP_WA_GR_CurseSpread.webp"
+  }
+}
